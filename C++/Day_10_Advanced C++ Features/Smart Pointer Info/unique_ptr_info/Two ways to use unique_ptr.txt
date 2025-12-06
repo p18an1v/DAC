@@ -1,0 +1,33 @@
+unique_ptr<int> p(new int(10));
+
+or
+
+unique_ptr<int> p;
+p.reset(new int(10));
+
+what if p contains a raw pointer which points to some existing memory inside heap?
+
+	reset(new int(10))
+		this invocation will first release the existing memory on the heap , create a new one [ new int(10) ] and make raw pointer points to this newly allocated memory.
+
+what if p contains a raw pointer which contains "NULL" ?
+		allcates a memory on heap [ new int(10) ] and make raw pointer points to this newly allocated memory.
+
+
+p.reset();  // without argument
+	what if p contains a raw pointer which points to some existing memory inside heap?
+		reset(); without argument will release the existing memory on the heap to which raw pointer points to and stores NULL inside the raw pointer.
+
+	what if p contains a raw pointer which contains "NULL" ?
+		no problem , no side effects.
+
+
+
+unique_ptr is a container for a raw pointer.
+
+unique_ptr explicitly prevents copying of its contained pointer , but "move()" function can be used to transfer ownership of the contained pointer to another unique_ptr. [ copy constructor and operator= of unique_ptr are marked as "delete" or "private" , but move constructor and move operator= are available in order to transfer the ownership of memory block from one raw pointer of an object of unique_ptr to another raw pointer of some another object of unique_ptr ]
+
+
+
+
+	

@@ -1,0 +1,34 @@
+/*
+When dealing with complex types, such as 
+iterators or custom classes, auto helps to 
+avoid verbose declarations.
+*/
+
+
+#include <iostream>
+#include <map>
+
+using namespace std;
+
+int main() {
+    map<string, int> ages = { {"Alice", 30}, {"Bob", 25}, {"Charlie", 35} };
+
+    // Using auto for map iterator
+    for (auto it = ages.begin(); it != ages.end(); ++it) {
+        cout << it->first << " is " << it->second << " years old." << endl;
+    }
+
+    /*
+    if "auto" keyword were not there , we would write
+    for loop like this:
+    
+    
+    for(map<string,int>::iterator it=ages.begin();it!=ages.end();++it)
+    {
+        cout << it->first << " is " << it->second << " years old." << endl;
+    }
+
+    */
+
+    return 0;
+}

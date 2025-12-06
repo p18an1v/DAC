@@ -1,0 +1,27 @@
+/*
+
+initializer_list is used to store a collection of arguments. It's a standard C++ container that provides easy iteration in a for loop.
+You pass an initializer list to disp(), and it can be iterated using a range-based for loop.
+
+*/
+
+#include <iostream>
+using namespace std;
+
+
+void disp(initializer_list<int> args...)
+{
+    for (int i : args)
+    {
+        cout << i << endl;
+    }
+}
+int main() 
+{
+    disp({ 10, 20, 30, 40, 50 });
+    cout << endl;
+    disp({1,2,3});
+    cout << endl;
+    disp({4,5,9,8,10,3,7,1});
+    return 0;
+}

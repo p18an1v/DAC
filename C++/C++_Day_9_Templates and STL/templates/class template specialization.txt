@@ -1,0 +1,59 @@
+/*
+
+Overloading cannot do this — you cannot overload 
+a class template; only specialize it.
+
+
+*/
+
+#include <iostream>
+using namespace std;
+
+template <typename T>
+class MyContainer {
+public:
+    void show() { cout << "Generic container" << endl; }
+};
+
+// Specialization for int
+template <>
+class MyContainer<int> {
+public:
+    void show() { cout << "Int container specialization" << endl; }
+};
+int main() 
+{
+    MyContainer<double> m1;
+    m1.show();
+
+    MyContainer<int> m2;
+    m2.show();
+
+    return 0;
+}
+
+/*
+
+“Overloading” with a normal class (Incorrect)
+
+template <typename T>
+class MyContainer {
+    T val;
+public:
+    void show() { cout << "Generic container" << endl; }
+};
+
+// Trying to overload with non-template version
+class MyContainer {
+    int val;
+public:
+    void show() { cout << "Int container overloading" << endl; }
+};
+
+
+ This will not compile.
+You’ll get an error like:
+
+error: redefinition of ‘class MyContainer’
+
+*/

@@ -1,0 +1,75 @@
+/*
+
+thread t1(myfun, ref(m1));
+thread t2(myfun, ref(m2));
+
+
+in the above code what is "ref"? can't we pass m1 or m2 only?
+
+
+
+When you call a function using std::thread, like:
+
+thread t1(myfun, m1);
+
+
+C++ actually copies all arguments that you pass to the thread function —
+just like normal function arguments passed by value.
+
+So this line:
+
+thread t1(myfun, m1);
+
+
+creates a copy of m1, and that copy is given to the thread.
+
+ That means your myfun() will receive a separate mutex copy, not the original one.
+
+But mutex objects cannot be copied — their copy constructor is deleted.
+That’s why this line causes a compilation error.
+
+The correct way — using std::ref
+
+When you write:
+
+thread t1(myfun, ref(m1));
+
+
+std::ref(m1) wraps m1 in a small object that says:
+
+“Don’t copy me — pass me by reference to the thread.”
+
+So now, your thread function receives the original mutex object, not a copy.
+
+
+*/
+
+
+#include <iostream>
+#include <thread>
+#include <windows.h>
+#include <mutex>
+using namespace std;
+
+void myfun(mutex& m)
+{
+    m.lock();  // Locking their OWN mutex (no effect between threads)
+    for (int i = 0; i < 5; i++)
+    {
+        cout << "Hello\t" << i << "\t by\t" << this_thread::get_id() << endl;
+        Sleep(100);
+    }
+    m.unlock();
+}
+
+int main()
+{
+    mutex m1;   //  Separate mutex for t1
+    mutex m2;   //  Separate mutex for t2
+
+    thread t1(myfun, ref(m1));
+    thread t2(myfun, ref(m2));
+
+    t1.join();
+    t2.join();
+}

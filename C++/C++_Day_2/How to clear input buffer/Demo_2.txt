@@ -1,0 +1,39 @@
+/*
+cin.ignore()
+→ Tells the input stream to ignore (throw away) some characters.
+
+numeric_limits<streamsize>::max()
+→ This gives the largest possible number of characters 
+that can be ignored — effectively “infinite” 
+[ to the limit beyond which user can not type ] for our purpose.
+
+'\n' (delimiter argument)
+→ cin.ignore() will keep ignoring characters until 
+it finds a newline ('\n')
+— or until it ignores the maximum number given.
+
+So, practically:
+
+cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+
+means:
+
+“Ignore everything left in the input buffer up to 
+and including the newline character.”
+
+*/
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int age;
+    char name[20];
+    cout << "Enter age" << endl;
+    cin >> age;         // Suppose user types: 25 and presses enter
+    cout << "Enter full name" << endl;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // cin.ignore(...) line clears the leftover newline before getline() runs
+    cin.getline(name, 19); 
+    cout << name << "\t" << age << endl;
+}

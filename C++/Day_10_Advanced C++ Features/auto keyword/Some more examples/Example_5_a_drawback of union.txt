@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+
+union MyUnion {
+    int intValue;
+    char strValue[20];
+};
+
+int main() {
+    MyUnion u;
+
+    // Storing an int
+    u.intValue = 42;
+
+    // Accessing the active member (int) is safe
+    cout << "Int value: " << u.intValue << endl;
+
+    // Now we store a string in the same union memory
+    // This overwrites the int, leading to potential issues
+    strcpy_s(u.strValue, "Hello"); // Writing to strValue
+
+    // Accessing the int value after overwriting it with a string
+    // This is undefined behavior
+    cout << "Int value (after writing to strValue): " << u.intValue << endl; // Undefined behavior
+
+    return 0;
+}

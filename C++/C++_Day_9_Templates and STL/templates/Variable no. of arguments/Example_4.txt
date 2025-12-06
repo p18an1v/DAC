@@ -1,0 +1,27 @@
+// needed C++17 for this example
+
+#include<iostream>
+using namespace std;
+
+template <typename... Rest>
+void disp(Rest... rest) 
+{
+  /* unpack "args" to print each argument
+  
+    The fold expression ((cout <<rest<< "\t"), ...) 
+    ensures that each subsequent argument is 
+    printed with a tab character
+    */
+    ((cout <<rest<< "\t"), ...);
+}
+
+int main() {
+    int i = 1;
+    double d = 3.4;
+    char str[] = "hello";
+    char c = 'A';
+    // Pass arguments of different types
+    disp(i, d, str, c);
+
+    return 0;
+}

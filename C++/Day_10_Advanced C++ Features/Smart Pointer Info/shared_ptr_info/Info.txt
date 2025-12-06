@@ -1,0 +1,2 @@
+A shared_ptr is a container for a raw pointer. It maintains reference counting ownership of its contained pointer in co-operation with all copies of the shared_ptr.
+An object referenced by the contained raw pointer will be destroyed when and only when all copies of the shared_ptr have been destroyed.

@@ -1,0 +1,50 @@
+/*
+Default behavior: First enumerator = 0, next = 1, next = 2…
+
+Enum class members have integer values internally, 
+but you must cast to int to see/use them.
+
+Strong typing and scoping make them safer than old-style enums.
+
+*/
+
+#include <iostream>
+using namespace std;
+
+enum class Color    // was introduced in C++11
+{
+    RED=11,
+    GREEN,
+    BLUE
+};
+
+/*
+Color::RED, Color::GREEN, Color::BLUE are also compile-time 
+constants, but strongly typed.
+
+They cannot be implicitly converted to int:
+
+*/
+
+Color c = Color::RED;
+
+
+int main()
+{
+    if (c == Color::GREEN)
+    {
+        cout << "it is green" << endl;
+    }
+    else
+    {
+        cout << "it is not green" << endl;
+    }
+    int x = static_cast<int>(c);
+    cout << x << endl;
+    c = Color::GREEN;
+    x = static_cast<int>(c);
+    cout << x << endl;
+    c = Color::BLUE;
+    x = static_cast<int>(c);
+    cout << x << endl;
+}

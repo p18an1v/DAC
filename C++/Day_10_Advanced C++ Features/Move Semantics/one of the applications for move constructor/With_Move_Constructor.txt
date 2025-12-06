@@ -1,0 +1,82 @@
+/* in this example resources (contents of ptr here) are moved from stack-based
+objects to those objects which are copied inside vector. Hence there is no duplication of resources.
+*/
+
+/*
+
+the C++ Standard Library (like std::vector, std::string, etc.)
+prefers move constructors that are marked noexcept.
+
+When a vector resizes its internal memory, it has to move its existing elements to a new location.
+
+If your move constructor might throw an exception (i.e., not marked noexcept),
+then vector will not use move, it will use copy instead — to be safe.
+
+But if your move constructor is noexcept,
+vector knows it’s safe to move objects (since no exceptions will break program state).
+
+So, marking move constructors as noexcept allows STL containers to move objects instead of copying them — improving performance.
+
+*/
+
+
+
+#include <iostream>
+#include<vector>
+using namespace std;
+
+class MyClass
+{
+private:
+    int* ptr;
+public:
+    MyClass(int num)
+    {
+        ptr = new int(num);
+        cout << "inside MyClass parameterized constructor" << endl;
+    }
+    MyClass(const MyClass& ref)
+    {
+        this->ptr = new int(*ref.ptr);
+        cout << "inside MyClass copy constructor" << endl;
+    }
+/*
+noexcept means:
+
+	"This function is guaranteed not to throw any exceptions."
+*/
+
+    MyClass(MyClass&& ref)noexcept   // move constructor
+    {
+        cout << "Inside Move Constructor" << endl;
+        ptr = ref.ptr;
+        ref.ptr = nullptr;
+    }
+
+    void disp()
+    {
+        if (ptr != nullptr)
+            cout << *ptr << endl;
+        else
+            cout << "object is empty" << endl;
+    }
+    ~MyClass()
+    {
+        cout << "inside MyClass destructor" << endl;
+        delete ptr;
+    }
+};
+
+int main()
+{
+    MyClass m1(10), m2(20);
+    m1.disp();
+    m2.disp();
+    vector<MyClass> v1;
+    v1.push_back(move(m1));
+    v1.push_back(move(m2));
+    cout << "data of m1 and m2 is" << endl;
+    m1.disp(); // use of a moved from object m1
+    m2.disp();// use of a moved from object m2
+    return 0;
+}

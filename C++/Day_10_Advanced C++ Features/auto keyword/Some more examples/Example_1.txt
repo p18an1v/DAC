@@ -1,0 +1,33 @@
+/*
+Using auto with range - based for loops makes
+the code cleaner and eliminates the need to 
+specify the type of the loop variable.
+*/
+
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() 
+{
+    vector<int> numbers = { 1, 2, 3, 4, 5 };
+
+    // Using auto to simplify type declaration
+    for (auto num : numbers) {
+        cout << num << " ";
+    }
+    
+    /*
+    if "auto" were not there we would write for loop
+    like this:
+
+    for(int num:numbers)
+    {
+        cout<<num<<"  ";
+    }
+    */
+    cout << endl;
+
+    return 0;
+}

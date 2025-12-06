@@ -1,0 +1,39 @@
+/*
+When working with variant, auto allows you to 
+deduce types without needing to specify them explicitly.
+*/
+
+
+#include <iostream>
+#include <variant>
+#include <string>
+using namespace std;
+
+int main() {
+    /*variant<int, string> value = "Hello";
+
+    // Using auto to deduce the type from variant
+    auto str = get<string>(value);
+   // string str = get<string>(value);
+   cout << str << endl;
+   */
+
+    /*
+    variant<int, string> value = 500;
+    auto val = get<int>(value);
+    // int val=get<int>(value);
+    cout << val << endl;
+    */
+    variant<int, string> value = 500;
+    auto val = get<int>(value);
+    cout << val << endl;
+    if (holds_alternative<int>(value))
+    {
+        cout << "variant holds int value" << endl;
+    }
+    else
+    {
+        cout << "variant doesn't hold int value" << endl;
+    }
+    return 0;
+}

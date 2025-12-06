@@ -1,0 +1,31 @@
+auto keyword
+
+Unified Initialization
+
+Delegating Constructors
+
+Move Semantics
+
+Lambda
+	Capture Clause
+
+decltype
+
+constexpr
+
+static inline
+
+final keyword in C++
+
+How to declare a function as delete
+
+Smart Pointer Info
+
+string_view  Fastest string in C++17
+
+Two ways to return multiple values from a function
+
+Multithreading
+
+
+

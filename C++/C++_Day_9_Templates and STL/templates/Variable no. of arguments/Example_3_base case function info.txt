@@ -1,0 +1,17 @@
+is it necessary that base case function (in our example "disp") should be parameter less?
+
+
+
+Yes, it should be paramterless. If you gave it parameters, e.g.
+
+void disp(int n);
+
+
+then the compiler would never match it when the argument pack becomes empty — because the recursive call disp() has no arguments left.
+
+So yes — the base case function must match the final recursive call, and for this pattern, that’s a parameterless function.
+
+
+what about a return type?
+	it can be anything but it is highly recommended that it should be "void".
+[ there is no point , base function returns some value ]

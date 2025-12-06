@@ -1,0 +1,19 @@
+
+#include <iostream>
+using namespace std;
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	const double d = 3.14;
+	int* p = (int*)&d;          // C-style cast allows it 
+	*p = 100;
+	cout << d << endl;
+
+	int* p1 = const_cast<int*>(&d);   //  compile-time error:  
+	// cannot convert from 'const double *' to 'int *'
+	// so it's safer
+}

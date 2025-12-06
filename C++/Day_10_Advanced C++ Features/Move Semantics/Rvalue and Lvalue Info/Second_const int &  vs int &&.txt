@@ -1,0 +1,68 @@
+/*
+in the following example,
+20 and 40 are pure rvalues (temporary values)
+they don't have a name or storage location in memory.
+
+Rvalue references (int&&) are designed specifically 
+to bind to such rvalues.
+
+k is a named variable, even though it's const
+That makes it a const lvalue.
+
+You cannot bind an int&& (rvalue reference) to an 
+lvalue, even if it's const.
+*/
+
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+
+    const int& ref1 = 20;
+    cout << ref1 << endl;
+   // ref1 = 30;  // not allowed
+    int&& ref2 = 40;
+    cout << ref2 << endl;
+    ref2 = 50;   // allwed
+    cout << ref2 << endl;
+    const int k = 200;
+    const int& ref3 = k; // possible
+   // int&& ref4 = k;   // not possible
+    return 0;
+}
+
+
+/*
+
+    int&& ref2 = 40;
+    cout << ref2 << endl;
+    ref2 = 50;   // allwed
+    cout << ref2 << endl;
+
+
+In the above code, 40 is an rvalue (temporary value)
+Normally, rvalues like 40 don’t have a memory address.
+They live in temporary storage and vanish at the end of the expression.
+
+When you bind it to an rvalue reference (int&& ref2)
+C++ says: “Okay, I’ll extend the lifetime of this temporary.”
+So now the temporary 40 is given a real memory location and lives as long as ref2.
+
+What happens in memory
+
+The compiler creates a temporary int object (say, at address 0x1000) and stores 40 there.
+
+ref2 is a reference (alias) to that memory location.
+
+Now you can use ref2 just like a normal variable, even modify it.
+
+When you do ref2 = 50;
+You’re modifying the same temporary object (which now exists with an extended lifetime).
+So the temporary now contains 50.
+
+When the scope ends
+The temporary object’s lifetime ends when ref2 goes out of scope.
+
+*/

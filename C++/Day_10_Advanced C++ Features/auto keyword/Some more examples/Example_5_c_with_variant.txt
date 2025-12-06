@@ -1,0 +1,70 @@
+/*
+When working with variant, auto allows you to 
+deduce types without needing to specify them explicitly.
+*/
+
+
+#include <iostream>
+#include <variant>
+#include <string>
+using namespace std;
+
+/*
+The using MyVariant part is an alias declaration. 
+It creates a new type alias named MyVariant for the 
+type std::variant<int, double, std::string>. 
+
+using: This is the C++ keyword used to create an 
+alias for a type, making the code easier to read and use. 
+The using keyword is an alternative to the older typedef 
+keyword in C++.
+
+MyVariant: This is the alias or new name you are creating 
+for the existing type.
+
+std::variant<int, double, std::string>: 
+This is the original type. 
+A std::variant is a type-safe union, which can hold 
+one of the specified types at a time. 
+In this case, MyVariant can hold either an int, a double, 
+or a std::string.
+
+
+*/
+int main() 
+{
+    using MyVariant = std::variant<int, double, std::string>;
+   
+    MyVariant v1 = 42;
+    // Creating a variant that holds a double
+    MyVariant v2 = 3.14;
+    // Creating a variant that holds a string
+    MyVariant v3 = "Hello, world!";
+
+    // Accessing and printing the value stored in the 
+    // variant
+    // Using std::get to retrieve the value of a 
+    // specific type
+
+    try {
+        // v1 holds an int, so this works
+        auto a = get<int>(v1);
+        cout << "v1 holds: " << a << endl;
+        auto b = get<double>(v2);
+        // v2 holds a double, so this works
+        cout << "v2 holds: " << b << endl;
+
+        auto c = get<string>(v3);
+        // v3 holds a string, so this works
+        cout << "v3 holds: " << get<string>(v3) << endl;
+
+        // Uncommenting this will cause a runtime error because v1 holds an int, not a string
+         cout << "v1 holds: " << get<std::string>(v1) << endl;
+
+    }
+    catch (const std::bad_variant_access& e) {
+        cout << "Error: " << e.what() << endl;
+    }
+
+    return 0;
+}

@@ -1,0 +1,28 @@
+ // in the following example,
+// unique_ptr (one of the smart pointers) 
+// is an inbuilt class template.
+// it maintains a raw pointer internally which
+// points to your "new int(10)" memory of 
+// heap area. 
+// Here advantage is that as soon as "p" goes
+// out of scope ,its destructor gets called
+// which releases the memory "new int(10)"
+// so you don't have to bother about releasing
+// it explicitly.
+
+#include<iostream>
+using namespace std;
+void fun(int val)
+{
+	unique_ptr<int> p(new int(10));
+	if (val <= 0)
+	{
+		return;
+	}
+	cout << "done with fun" << endl;
+}
+int main()
+{
+	fun(10);
+	// fun(-10); // what will happen here?
+}

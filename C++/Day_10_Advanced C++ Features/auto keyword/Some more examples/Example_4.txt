@@ -1,0 +1,34 @@
+/*
+When using functions that return complex types
+or templates, auto can simplify the code
+significantly.
+*/
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+vector<int> getNumbers() {
+    return { 1, 2, 3, 4, 5 }; // Example implementation
+}
+
+int main() {
+    /*
+    * 
+    *  without "auto" keyword
+    * 
+    vector<int> numbers = getNumbers();
+
+    for (int num : numbers) { // Explicitly specify int here
+        cout << num << " ";
+    }
+    */
+
+    auto numbers = getNumbers();
+    for (auto num : numbers)
+    {
+        cout << num << "    ";
+    }
+    cout << endl; // To add a newline after printing numbers
+    return 0;
+}

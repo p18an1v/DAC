@@ -1,0 +1,78 @@
+; 18   : 	int result1 = fun1(3);
+
+	mov	ecx, 3
+	call	?fun1@@YAHH@Z				; fun1
+	mov	DWORD PTR result1$[rbp], eax
+
+; 19   : 	//int arr[result1];  // not allowed
+; 20   : 	constexpr int result2 = fun2(3);   
+	mov	DWORD PTR result2$[rbp], 9
+
+; 21   : 	int arr[result2];
+
+
+
+Explanation:
+
+
+A constexpr function means:
+
+“If possible, evaluate this function at compile time.”
+
+Now when you call:
+
+constexpr int result2 = fun2(3);
+
+
+The compiler says:
+
+“fun2 is constexpr and the argument 3 is a constant expression.”
+
+“I can execute the function’s body right now during compilation, not at runtime.”
+
+So the compiler runs fun2(3) internally (not in our program, but inside the compiler itself).
+It substitutes the return expression:
+
+return k * k → 3 * 3 → 9
+
+ Step 3: Constant Folding and Code Generation
+
+Because the compiler now knows the result is 9 at compile time, it doesn’t need to call fun2 at all.
+
+Instead, it directly emits the instruction:
+
+mov DWORD PTR result2$[rbp], 9
+
+
+That means:
+
+“Just store the constant 9 into result2 — no function call needed.”
+
+ Step 4: How the compiler “knows” the logic of fun2
+
+It’s because the compiler parses and analyzes the entire function body during compilation.
+When it sees:
+
+constexpr int fun2(int k) { return k * k; }
+
+
+It stores this function’s logic as an inline evaluatable expression tree in memory.
+When you call fun2(3) in a constant context, the compiler simulates executing that function itself — it substitutes the argument, computes the expression, and stores the result — all before generating assembly.
+
+
+
+In Simple Terms
+		Function Type	
+			int fun1(int)
+
+		When evaluated	
+			Runtime	Uses call instruction
+		Assembly generated
+			Uses call instruction
+
+		Function type
+			constexpr int fun2(int)	
+		When evaluated
+			Compile-time (if argument is constant, only const is allowed in the argument)	
+		Assembly generated
+			Directly stores computed value

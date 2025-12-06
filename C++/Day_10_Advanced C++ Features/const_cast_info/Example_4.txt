@@ -1,0 +1,27 @@
+/*
+Safe use with non-const objects
+*/
+
+
+#include <iostream>
+using namespace std;
+
+void update(int* ptr)
+{
+    *ptr = 100;
+}
+
+int main()
+{
+    int y = 50;
+    const int* p = &y;
+    cout << "Value of y before update\t" << y << endl;
+    update(const_cast<int*>(p));  // Safe, because y is not const
+    cout << "Value of y after update\t" << y;  // Output: 100
+}
+
+/*
+This operation is Safe as here we only removed 
+const from a pointer pointing to a non-const variable.
+
+*/

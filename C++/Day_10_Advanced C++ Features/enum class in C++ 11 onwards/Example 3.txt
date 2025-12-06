@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+// Modern enum class (C++11)
+enum class TrafficLight
+{
+    RED,
+    YELLOW,
+    GREEN
+};
+
+int main()
+{
+    TrafficLight light = TrafficLight::RED;
+
+   // light = 10; not possible , so there is no danger of unpredictable result , this is safer than old-style enum.
+
+    if (light == TrafficLight::RED)
+    {
+        cout << "Stop! The light is RED." << endl;
+    }
+    else if (light == TrafficLight::YELLOW)
+    {
+        cout << "Get ready! The light is YELLOW." << endl;
+    }
+    else if (light == TrafficLight::GREEN)
+    {
+        cout << "Go! The light is GREEN." << endl;
+    }
+
+    // If we want to see the underlying value
+    cout << "Underlying integer value of RED: "
+        << static_cast<int>(TrafficLight::RED) << endl;
+
+    return 0;
+}

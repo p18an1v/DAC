@@ -1,0 +1,30 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+/*
+* 
+not allowed
+void disp(auto x)   
+{
+
+}
+
+*/
+auto disp(int x)   // allowed
+{
+	return x * x;
+}
+int main()
+{
+	cout<<disp(100)<<endl;
+	auto y = 10;
+	cout << y << endl;
+	y = 4.5;  // allowed
+	cout << y << endl;
+	// y = "hello";  // not allowed
+	y = NULL;    // allowed
+	cout << y << endl;
+	auto z = NULL;  // allowed
+	cout << typeid(z).name() << endl;
+	return 0;
+}

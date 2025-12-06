@@ -1,0 +1,65 @@
+// here we want that if tyre of Car goes to mechanic , the same tyre should go // , i.e. Car and mechanic must share same tyre.
+
+
+/*
+in the following code make_shared<Tyre>(),
+creates a new shared_ptr pointing to a 
+dynamically allocated Tyre object. 
+It dynamically allocates memory for a 
+Tyre object and constructs the object 
+within that memory.
+
+*/
+
+
+#include<iostream>
+using namespace std;
+class Tyre
+{
+private:
+	string name;
+public:
+	Tyre(string name)
+	{
+		this->name = name;
+	}
+	string getName()
+	{
+		return name;
+	}
+};
+class Car
+{
+private:
+	shared_ptr<Tyre> wheel1;
+public:
+	Car()
+	{
+		wheel1 = make_shared<Tyre>("Front Tier");
+	}
+	shared_ptr<Tyre> getWheel1()
+	{
+		return wheel1;
+	}
+};
+
+
+class Mechanic
+{
+public:
+	void doRepairTyre(shared_ptr<Tyre> ref)
+	{
+		cout << "Repairing tyre\t" << ref.get()->getName()<<"  at address\t" <<ref<< endl;
+	}
+};
+
+int main()
+{
+	Car c1;
+	shared_ptr<Tyre> mainwheel=c1.getWheel1();
+	cout << "Sending for repairing\t"<<mainwheel.get()->getName()<<"  at address\t"<<mainwheel<< endl;
+	Mechanic m;
+	m.doRepairTyre(mainwheel);
+}
+
+

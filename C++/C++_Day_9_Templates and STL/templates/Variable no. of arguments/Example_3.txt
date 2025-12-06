@@ -1,0 +1,95 @@
+/*
+
+	Java code to accept variable no. of arguments of any type
+
+void disp(Object ...args)
+{
+	for(k:args)
+	{
+		System.out.println(k);
+	}
+}
+
+main()
+{
+	disp(1,3.4,"hello",'A',new Thread());
+}
+
+
+In C++, to accept a variable number of arguments of any type, you can use "variadic templates" (introduced in C++11). This allows you to write a function that can handle a variable number of arguments of any type, much like how it's done in Java with Object...args. 
+
+In C++, this can be done by creating a template that accepts a parameter pack and processes each argument accordingly.
+
+
+"Variadic templates" allow functions to accept a variable number of arguments.
+
+The template parameter "T first" represents the first argument in each call, 
+and "Args... args"  represents the remaining arguments, which are passed recursively.
+The recursion continues until no arguments are left, at which point the "base case function disp()" is invoked to terminate the recursion.
+
+Args... is a parameter pack. (it can be any name instead of "Args") A parameter pack is a template parameter that can accept an arbitrary number of arguments, each of potentially different types.
+
+
+When print(1, 2.5, "hello", 'A') is called, Args holds:
+
+int for 1
+double for 2.5
+const char* (C-string) for "hello"
+char for 'A'
+
+
+
+What Happens Inside T first, Args... args Each Time?
+
+In each recursive call, the first argument (first) is the first item in the list of arguments passed to disp(), and Args... is the remaining arguments.
+
+The type T will correspond to the type of first, and Args... will contain the remaining arguments that will be passed on to the next recursive call.
+
+Here’s how T first, Args... args expands during the recursive calls:
+
+First call (i = 1, d = 3.4, str = "hello", c = 'A'):
+T = int, first = 1, Args... = (double, const char[6], char)
+
+Second call (d = 3.4, str = "hello", c = 'A'):
+T = double, first = 3.4, Args... = (const char[6], char)
+
+Third call (str = "hello", c = 'A'):
+T = const char[6], first = "hello", Args... = (char)
+
+Fourth call (c = 'A'):
+T = char, first = 'A', Args... = (empty)
+
+Base case call (()):  i.e.   void disp(){ cout << "terminating now" << endl; }
+
+No arguments remaining, the recursion terminates.
+
+*/
+
+#include<iostream>
+using namespace std;
+
+// Base case: No arguments remaining, simply end recursion
+void disp() 
+{
+    // End of recursion: nothing to print
+    cout << "terminating now" << endl;
+}
+
+// Recursive case: Print the first argument and recurse with the rest
+template <typename T, typename... Args>
+void disp(T first, Args... args) 
+{
+    cout << first << endl;  // Print the first argument
+    disp(args...);  // Recurse with the remaining arguments
+}
+
+int main() {
+    int i = 1;
+    double d = 3.4;
+    char str[] = "hello";
+    char c = 'A';
+    // Pass arguments of different types
+    disp(i, d, str, c);
+
+    return 0;
+}

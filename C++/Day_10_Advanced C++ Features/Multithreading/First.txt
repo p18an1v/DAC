@@ -1,0 +1,44 @@
+/*
+
+When a thread is created and started, it executes
+asynchronously with respect to the main thread.
+
+*/
+
+#include<iostream>
+#include<thread>
+using namespace std;
+
+
+void myfun1()
+{
+	cout << "inside myfun1 function of thread" << endl;
+}
+int main()
+{
+	cout << "in main function before" << endl;
+
+	/*
+	A new thread (t1) is created.
+
+It starts running myfun1() immediately, asynchronously 
+with the main thread.
+
+So now two threads are running at the same time:
+
+The main thread → executing main()
+
+The child thread (t1) → executing myfun1()
+	*/
+	thread t1(myfun1);  // thread is created and started
+
+	// thread t1{ myfun1 }; // this syntax is also valid
+	
+	/*
+	because of "join()"
+	main thread waits for t1 to finish before continuing.
+	*/
+	
+	t1.join();  // this is must
+	cout << "in main function after" << endl;
+}

@@ -1,0 +1,63 @@
+#include<iostream>
+// in the following example,
+// unique_ptr (one of the smart pointers) 
+// is an inbuilt class template.
+// it maintains a pointer internally which
+// points to your "new int(10)" memory of 
+// heap area. 
+// Here advantage is that as soon as "p" goes
+// out of scope ,its destructor gets called
+// which releases the memory "new int(10)"
+// so you don't have to bother about releasing
+// it explicitly.
+
+// operator * and operator->
+// have been overloaded inside unique_ptr class template.
+using namespace std;
+class MyClass
+{
+private:
+	int k;
+public:
+	MyClass(int k)
+	{
+		this->k = k;
+	}
+	void disp()
+	{
+		cout << "inside MyClass disp\t" <<k<< endl;
+	}
+	operator int()
+	{
+		return k;
+	}
+};
+void fun(int val)
+{
+	unique_ptr<MyClass> p(new MyClass(5));
+	if (val <= 0)
+	{
+		return;
+	}
+	cout <<"contents of p is\t"<< * p << endl;
+	p->disp();
+	
+
+	unique_ptr<MyClass> p1 = move(p);
+	// ownership transferred from "p" to "p1"
+	cout << "after transferring ownership from p to p1" << endl;
+	/*
+	following code will not work
+	cout << "contents of p is\t" << *p << endl;
+	p->disp();
+	*/
+	cout << "contents of p1 is\t" << *p1 << endl;
+	p1->disp();
+	cout << "done with fun" << endl;
+
+}
+int main()
+{
+	fun(10);
+	// fun(-10); // what will happen here?
+}

@@ -1,0 +1,44 @@
+/*
+Passing const data to a function expecting non-const
+
+Here, const_cast<char*>(msg) removes the const temporarily
+so show() (which expects a char*) can accept it.
+
+Note: We are not modifying the string inside show(), 
+so it’s safe.
+
+*/
+#include <iostream>
+using namespace std;
+
+void show(char* str)
+{
+    cout << "String is: " << str << endl;
+    str[0] = 'J';    // trying to modify the first character
+    // you cannot change str
+    cout << "After change: " << str << endl;
+    
+}
+
+int main()
+{
+    const char* msg = "Hello";   // msg is a pointer to constant
+    // show(msg); pointer to constant cannot be passed to char*
+    show(const_cast<char*>(msg));  // remove const and pass to function
+    //show((char*)msg); // also works
+}
+
+/*
+(char*)msg and const_cast<char*>(msg) do the same thing 
+at runtime — both remove the const and let you pass msg 
+to a function expecting char*.
+
+But the difference is in intent and safety:
+ const_cast is the only legal and safe way in C++ to remove 
+ const.
+
+ (char*)msg is an old C-style cast, and it does more than 
+ just remove const — it can also do type conversions, 
+ which is risky and unclear to the compiler.
+
+*/

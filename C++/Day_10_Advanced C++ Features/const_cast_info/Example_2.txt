@@ -1,0 +1,17 @@
+
+#include <iostream>
+using namespace std;
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int x = 10;
+	const int* p = &x;
+	//int* q = const_cast<int*>(p);  // safer and type-checked
+	int* q = (int*)p; // not type-safe, may cause undefined behavior on some platforms
+	*q = 20;
+	cout << x << " " << *q << endl; //  20 20
+}

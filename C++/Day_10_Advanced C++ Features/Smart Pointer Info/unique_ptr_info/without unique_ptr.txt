@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+void fun(int val)
+{
+	int* p = new int(10);
+	if (val <= 0)
+	{
+		return;
+	}
+	cout << "done with fun" << endl;
+	delete p;  // it will not always execute
+	// and that can cause memory leak
+}
+int main()
+{
+	fun(10);
+	// fun(-10); // what will happen here?
+}

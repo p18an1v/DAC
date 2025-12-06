@@ -1,0 +1,12 @@
+Advantages of Smart pointers
+
+1) Resource management
+2) Avoiding memory leaks
+3) Avoiding dangling pointers
+4) pointer ownership
+	means if one pointer points to a resource, the other pointer should not point to that same resource.
+5) simplify memory management
+	w/o smart pointers you've to be very careful about calling "delete" at the right moment. with smart pointers you don't have to bother about it now.
+
+6) Avoiding manual memory management errors
+

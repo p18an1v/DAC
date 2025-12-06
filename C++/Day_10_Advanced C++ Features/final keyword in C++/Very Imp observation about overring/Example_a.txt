@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+class A
+{
+public:
+	virtual void disp()
+	{
+
+	}
+};
+class B :public A
+{
+public:
+	void disp(int k)override   // error
+	{
+
+	}
+};
+int main()
+{
+	B obj;
+	cout << sizeof(obj) << endl;
+}

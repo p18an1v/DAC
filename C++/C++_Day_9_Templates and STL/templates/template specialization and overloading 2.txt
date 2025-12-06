@@ -1,0 +1,73 @@
+/*
+you explicitly specify the template argument <int>.
+
+This tells the compiler:
+
+"don't do overload resolution — I specifically want to 
+instantiate the print template with T = int."
+
+Even though a normal overload exists, the compiler 
+skips it because you’ve explicitly chosen the template path.
+
+
+
+Summary:
+
+Both overloading and specialization achieve the same visible effect — the compiler will pick the correct version depending on the argument type.
+
+So if your goal is just to print a special message for int,
+then overloading is easier and perfectly fine.
+
+
+	Where specialization works and overloading does not work ?
+
+
+Template specialization can be used for class templates (overloading cannot)
+
+Example:
+
+template <typename T>
+class MyContainer {
+public:
+    void show() { cout << "Generic container" << endl; }
+};
+
+// Specialization for int
+template <>
+class MyContainer<int> {
+public:
+    void show() { cout << "Int container specialization" << endl; }
+};
+
+
+Overloading cannot do this — you cannot overload a class template; only specialize it.
+
+*/
+
+#include <iostream>
+using namespace std;
+
+// Primary template
+template <typename T>
+void print(T value) {
+    cout << "General template: " << value << endl;
+}
+
+// Full specialization for int
+template <>
+void print<int>(int value) {
+    cout << "Specialized template for int: " << value << endl;
+}
+
+// this is overloading of "print"
+void print(int k)
+{
+    cout << "inside overloaded print\t" << k << endl;
+}
+
+int main() {
+    print<int>(5);      // Will call the specialized version for int
+    print(3.14);   // Will call the general template version
+
+    return 0;
+}

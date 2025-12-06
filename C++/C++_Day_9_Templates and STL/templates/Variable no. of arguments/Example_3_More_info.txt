@@ -1,0 +1,81 @@
+First Call
+
+disp(i, d, str, c);
+
+Arguments: i = 1, d = 3.4, str = "hello", c = 'A'
+
+T: int (the type of the first argument, i)
+
+Args...: double, const char[6], char (the remaining arguments after i)
+
+Inside the function:
+
+first = 1 (value of i)
+args... = (d, str, c) — These are passed on recursively.
+
+Now the function prints 1, and recursively calls:
+
+disp(d, str, c);
+
+Second Call
+
+disp(d, str, c);
+
+Arguments: d = 3.4, str = "hello", c = 'A'
+ 
+T: double (the type of the first argument, d)
+Args...: const char[6], char (the remaining arguments after d)
+
+Inside the function:
+first = 3.4 (value of d)
+args... = (str, c) — These are passed on recursively.
+
+Now the function prints 3.4, and recursively calls:
+
+disp(str, c);
+
+Third Call
+
+disp(str, c);
+
+Arguments: str = "hello", c = 'A'
+
+T: const char[6] (the type of the first argument, str)
+Args...: char (the remaining argument after str)
+
+Inside the function:
+first = "hello" (value of str)
+args... = (c) — This is passed on recursively.
+
+Now the function prints "hello", and recursively calls:
+
+disp(c);
+
+Fourth Call
+
+disp(c);
+
+Arguments: c = 'A'
+
+T: char (the type of the first argument, c)
+Args...: Empty (no remaining arguments)
+
+Inside the function:
+first = 'A' (value of c)
+
+args... = () — No arguments left, so the function will now call the base case i.e."disp()".
+
+Now the function prints A, and recursively calls:
+
+disp(); // Base case: no arguments
+Base Case Call
+
+disp(); // No arguments left
+
+This is the base case of the recursion. Since there are no arguments left, it simply prints "terminating now" and ends the recursion.
+
+so,
+Args... is a parameter pack that holds the remaining arguments in each recursive call.
+
+In each recursive call, Args... contains the types of the remaining arguments, and the first argument (first) is handled separately.
+As the recursion proceeds, Args... progressively shrinks, until it becomes empty, at which point the base case (empty "disp") is triggered.

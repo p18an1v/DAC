@@ -1,0 +1,33 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+    // Write numbers to file
+    ofstream outFile("c:\\temp\\numbers.txt");
+    if (!outFile) {
+        cerr << "Error opening file for writing!" << endl;
+        return 1;
+    }
+
+    for (int i = 1; i <= 5; ++i) {
+        outFile << i << endl;
+    }
+    outFile.close();
+    cout << "Numbers written to file." << endl;
+
+    // Read numbers from file
+    ifstream inFile("c:\\temp\\numbers.txt");
+    if (!inFile) {
+        cerr << "Error opening file for reading!" << endl;
+        return 1;
+    }
+
+    int num;
+    while (inFile >> num) {
+        cout << num << endl;
+    }
+    inFile.close();
+
+    return 0;
+}

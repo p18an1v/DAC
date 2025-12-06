@@ -1,0 +1,40 @@
+/*
+in the following code make_shared<int>(),
+creates a new shared_ptr pointing to a 
+dynamically allocated int object. 
+It dynamically allocates memory for a 
+int object and constructs the object 
+within that memory.
+
+
+in the following code make_unique<int>(),
+creates a new unique_ptr pointing to a 
+dynamically allocated int object. 
+It dynamically allocates memory for a 
+int object and constructs the object 
+within that memory.
+
+*/
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	unique_ptr<int> u1 = make_unique<int>();
+	cout <<"raw pointer inside u1 is pointing at\t"<< u1 << endl;
+	//unique_ptr<int> u2 = u1; // not possible
+	unique_ptr<int> u2 = move(u1);
+	cout << "After move" << endl;
+	cout << "raw pointer inside u2 is pointing at\t" << u2 << endl;
+	cout << "raw pointer inside u1 is pointing at\t" << u1 << endl;
+
+	cout << "Now let's see shared_ptr" <<endl << endl << endl;
+
+	shared_ptr<int> s1 = make_shared<int>();
+	cout << "raw pointer inside s1 is pointing at\t" << s1 << endl;
+	shared_ptr<int> s2 = s1; // possible
+	cout << "After copy" << endl;
+	cout << "raw pointer inside s2 is pointing at\t" << s2 << endl;
+	cout << "raw pointer inside s1 is pointing at\t" << s1 << endl;
+}
+

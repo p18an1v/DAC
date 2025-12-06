@@ -1,0 +1,64 @@
+/*
+
+
+What the Compiler Does:
+
+Step 1️ — It sees three viable candidates for print(5):
+
+	template <typename T> void print(T) — generic template
+
+	template <> void print<int>(int) — full specialization of (1)
+
+	void print(int) — normal overloaded non-template function
+
+
+Step 2️ — Compiler applies overload resolution rules
+
+	When both template and non-template functions are viable:
+
+	The non-template function is preferred if it matches exactly.
+
+So:
+
+	void print(int) is a perfect match for the call print(5).
+
+Template specialization is part of the template system, but still lower priority than a direct non-template overload.
+
+Hence, the compiler picks:
+
+void print(int k) { ... }   //  Overloaded non-template function
+
+
+*/
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+// Primary template
+template <typename T>
+void print(T value) {
+    cout << "General template: " << value << endl;
+}
+
+// Full specialization for int
+template <>
+void print<int>(int value) {
+    cout << "Specialized template for int: " << value << endl;
+}
+
+// this is overloading of "print"
+void print(int k)
+{
+    cout << "inside overloaded print\t" << k << endl;
+}
+
+int main() {
+    print(5);      // Will call the overloaded version and not the specialized version for int
+    print(3.14);   // Will call the general template version
+
+    return 0;
+}

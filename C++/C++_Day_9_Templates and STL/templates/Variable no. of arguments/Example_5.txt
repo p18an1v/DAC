@@ -1,0 +1,46 @@
+/*
+
+Print all arguments	
+	((cout << args << "\t"), ...);	Applies cout << on each argument
+
+
+Sum all arguments	
+	(args + ...);	Adds all arguments
+
+Count arguments	
+	sizeof...(args)	Returns number of arguments
+
+*/
+
+
+
+#include <iostream>
+using namespace std;
+
+// Template function that prints and sums all arguments
+template <typename... Args>
+auto dispAndSum(Args... args)
+{
+    cout << "Count = " << sizeof...(args) << endl;
+    cout << "Arguments are: ";
+    ((cout << args << "\t"), ...);  // Fold expression to print all arguments
+    cout << endl;
+
+    // Fold expression to compute sum of all arguments
+    auto total = (args + ...);  // Left fold using + operator
+    return total;
+}
+
+int main()
+{
+    int a = 10;
+    double b = 5.5;
+    float c = 4.5;
+
+    // Call the function with mixed types
+    auto result = dispAndSum(a, b, c);
+
+    cout << "Sum = " << result << endl;
+
+    return 0;
+}
