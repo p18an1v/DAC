@@ -1,0 +1,10 @@
+<script>
+let promise = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("RESULT"), 1000);
+});
+
+promise.then(alert); 
+promise.finally(() =>alert("Result ready")); 
+
+//promise.finally(() =>alert("Result ready")).then(alert)
+</script>

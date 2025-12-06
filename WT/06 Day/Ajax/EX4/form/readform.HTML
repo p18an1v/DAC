@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>    <h2>The XMLHttpRequest Object</h2>
+    <p id="demo"></p>
+    <form>
+        <label>Name</label><input name="name" />
+        <label>Email</label><input name="email" />
+        <label>Department</label><input name="department" />
+        <button type="button" onclick="loadDoc()">Send Form data </button>
+    </form>
+    <script>
+//id=2 name=VITAlal email=Vit@gmail.com departmentId=2
+
+        function loadDoc() {
+            var form = document.querySelector('form');
+            // let sdata= new URLSearchParams(new FormData(form)).toString()
+  //console.log(sdata)
+
+       /*     var data = {
+                "name": form.name.value,
+                "email": form.email.value,
+                "department": form.department.value
+            };
+            console.log(data);*/
+            var data = new FormData(form);
+            console.log("new Formdata(form)"+data)
+
+            for (var pair of data.entries()) {
+                console.log(pair);
+            }
+            for (var [key, value] of data) {
+                console.log(key + ', ' + value);
+
+            }
+
+           jsondata = {}
+            for (var [key, value] of data) {
+                jsondata[key] = value;
+            }
+            console.log(jsondata)
+            let jdata = JSON.stringify(jsondata);
+            console.log(jdata)
+            
+        }
+    </script>
+
+</body>
+
+
+</html>

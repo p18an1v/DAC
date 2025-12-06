@@ -1,0 +1,187 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\DAC_notes\\WT\\06 Day\\Ajax\\API_Two_Table\\API_Two_Table\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DAC_notes\\WT\\06 Day\\Ajax\\API_Two_Table\\API_Two_Table\\API_Two_Table\\Migrations\\20251205032608_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:API_Two_Table\\Migrations\\20251205032608_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F217F57F-4730-4F67-97C4-A4A266B9D745}|API_Two_Table\\API_Two_Table.csproj|d:\\dac_notes\\wt\\06 day\\ajax\\api_two_table\\api_two_table\\api_two_table\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F217F57F-4730-4F67-97C4-A4A266B9D745}|API_Two_Table\\API_Two_Table.csproj|solutionrelative:api_two_table\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F217F57F-4730-4F67-97C4-A4A266B9D745}|API_Two_Table\\API_Two_Table.csproj|d:\\dac_notes\\wt\\06 day\\ajax\\api_two_table\\api_two_table\\api_two_table\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F217F57F-4730-4F67-97C4-A4A266B9D745}|API_Two_Table\\API_Two_Table.csproj|solutionrelative:api_two_table\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F217F57F-4730-4F67-97C4-A4A266B9D745}|API_Two_Table\\API_Two_Table.csproj|d:\\dac_notes\\wt\\06 day\\ajax\\api_two_table\\api_two_table\\api_two_table\\services\\sqlemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F217F57F-4730-4F67-97C4-A4A266B9D745}|API_Two_Table\\API_Two_Table.csproj|solutionrelative:api_two_table\\services\\sqlemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F217F57F-4730-4F67-97C4-A4A266B9D745}|API_Two_Table\\API_Two_Table.csproj|d:\\dac_notes\\wt\\06 day\\ajax\\api_two_table\\api_two_table\\api_two_table\\services\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F217F57F-4730-4F67-97C4-A4A266B9D745}|API_Two_Table\\API_Two_Table.csproj|solutionrelative:api_two_table\\services\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F217F57F-4730-4F67-97C4-A4A266B9D745}|API_Two_Table\\API_Two_Table.csproj|d:\\dac_notes\\wt\\06 day\\ajax\\api_two_table\\api_two_table\\api_two_table\\repository\\appdbcontextrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F217F57F-4730-4F67-97C4-A4A266B9D745}|API_Two_Table\\API_Two_Table.csproj|solutionrelative:api_two_table\\repository\\appdbcontextrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F217F57F-4730-4F67-97C4-A4A266B9D745}|API_Two_Table\\API_Two_Table.csproj|d:\\dac_notes\\wt\\06 day\\ajax\\api_two_table\\api_two_table\\api_two_table\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F217F57F-4730-4F67-97C4-A4A266B9D745}|API_Two_Table\\API_Two_Table.csproj|solutionrelative:api_two_table\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F217F57F-4730-4F67-97C4-A4A266B9D745}|API_Two_Table\\API_Two_Table.csproj|d:\\dac_notes\\wt\\06 day\\ajax\\api_two_table\\api_two_table\\api_two_table\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F217F57F-4730-4F67-97C4-A4A266B9D745}|API_Two_Table\\API_Two_Table.csproj|solutionrelative:api_two_table\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F217F57F-4730-4F67-97C4-A4A266B9D745}|API_Two_Table\\API_Two_Table.csproj|d:\\dac_notes\\wt\\06 day\\ajax\\api_two_table\\api_two_table\\api_two_table\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F217F57F-4730-4F67-97C4-A4A266B9D745}|API_Two_Table\\API_Two_Table.csproj|solutionrelative:api_two_table\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 13,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20251205032608_InitialCreate.cs",
+              "DocumentMoniker": "D:\\DAC_notes\\WT\\06 Day\\Ajax\\API_Two_Table\\API_Two_Table\\API_Two_Table\\Migrations\\20251205032608_InitialCreate.cs",
+              "RelativeDocumentMoniker": "API_Two_Table\\Migrations\\20251205032608_InitialCreate.cs",
+              "ToolTip": "D:\\DAC_notes\\WT\\06 Day\\Ajax\\API_Two_Table\\API_Two_Table\\API_Two_Table\\Migrations\\20251205032608_InitialCreate.cs",
+              "RelativeToolTip": "API_Two_Table\\Migrations\\20251205032608_InitialCreate.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAQwD8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T03:26:08.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\DAC_notes\\WT\\06 Day\\Ajax\\API_Two_Table\\API_Two_Table\\API_Two_Table\\appsettings.json",
+              "RelativeDocumentMoniker": "API_Two_Table\\appsettings.json",
+              "ToolTip": "D:\\DAC_notes\\WT\\06 Day\\Ajax\\API_Two_Table\\API_Two_Table\\API_Two_Table\\appsettings.json",
+              "RelativeToolTip": "API_Two_Table\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-05T03:20:43.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IEmployeeService.cs",
+              "DocumentMoniker": "D:\\DAC_notes\\WT\\06 Day\\Ajax\\API_Two_Table\\API_Two_Table\\API_Two_Table\\Services\\IEmployeeService.cs",
+              "RelativeDocumentMoniker": "API_Two_Table\\Services\\IEmployeeService.cs",
+              "ToolTip": "D:\\DAC_notes\\WT\\06 Day\\Ajax\\API_Two_Table\\API_Two_Table\\API_Two_Table\\Services\\IEmployeeService.cs",
+              "RelativeToolTip": "API_Two_Table\\Services\\IEmployeeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T09:05:24.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "D:\\DAC_notes\\WT\\06 Day\\Ajax\\API_Two_Table\\API_Two_Table\\API_Two_Table\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "API_Two_Table\\Controllers\\EmployeeController.cs",
+              "ToolTip": "D:\\DAC_notes\\WT\\06 Day\\Ajax\\API_Two_Table\\API_Two_Table\\API_Two_Table\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "API_Two_Table\\Controllers\\EmployeeController.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAowDsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T09:01:12.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppdbContextRepository.cs",
+              "DocumentMoniker": "D:\\DAC_notes\\WT\\06 Day\\Ajax\\API_Two_Table\\API_Two_Table\\API_Two_Table\\Repository\\AppdbContextRepository.cs",
+              "RelativeDocumentMoniker": "API_Two_Table\\Repository\\AppdbContextRepository.cs",
+              "ToolTip": "D:\\DAC_notes\\WT\\06 Day\\Ajax\\API_Two_Table\\API_Two_Table\\API_Two_Table\\Repository\\AppdbContextRepository.cs",
+              "RelativeToolTip": "API_Two_Table\\Repository\\AppdbContextRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T08:58:01.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SqlEmployeeService.cs",
+              "DocumentMoniker": "D:\\DAC_notes\\WT\\06 Day\\Ajax\\API_Two_Table\\API_Two_Table\\API_Two_Table\\Services\\SqlEmployeeService.cs",
+              "RelativeDocumentMoniker": "API_Two_Table\\Services\\SqlEmployeeService.cs",
+              "ToolTip": "D:\\DAC_notes\\WT\\06 Day\\Ajax\\API_Two_Table\\API_Two_Table\\API_Two_Table\\Services\\SqlEmployeeService.cs",
+              "RelativeToolTip": "API_Two_Table\\Services\\SqlEmployeeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T08:58:28.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\DAC_notes\\WT\\06 Day\\Ajax\\API_Two_Table\\API_Two_Table\\API_Two_Table\\Program.cs",
+              "RelativeDocumentMoniker": "API_Two_Table\\Program.cs",
+              "ToolTip": "D:\\DAC_notes\\WT\\06 Day\\Ajax\\API_Two_Table\\API_Two_Table\\API_Two_Table\\Program.cs",
+              "RelativeToolTip": "API_Two_Table\\Program.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwDgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T08:58:11.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Department.cs",
+              "DocumentMoniker": "D:\\DAC_notes\\WT\\06 Day\\Ajax\\API_Two_Table\\API_Two_Table\\API_Two_Table\\Models\\Department.cs",
+              "RelativeDocumentMoniker": "API_Two_Table\\Models\\Department.cs",
+              "ToolTip": "D:\\DAC_notes\\WT\\06 Day\\Ajax\\API_Two_Table\\API_Two_Table\\API_Two_Table\\Models\\Department.cs",
+              "RelativeToolTip": "API_Two_Table\\Models\\Department.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T08:41:13.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "D:\\DAC_notes\\WT\\06 Day\\Ajax\\API_Two_Table\\API_Two_Table\\API_Two_Table\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "API_Two_Table\\Models\\Employee.cs",
+              "ToolTip": "D:\\DAC_notes\\WT\\06 Day\\Ajax\\API_Two_Table\\API_Two_Table\\API_Two_Table\\Models\\Employee.cs",
+              "RelativeToolTip": "API_Two_Table\\Models\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T08:40:39.838Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

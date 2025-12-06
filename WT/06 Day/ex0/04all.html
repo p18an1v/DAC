@@ -1,0 +1,12 @@
+<script>
+let promise = new Promise(function(resolve, reject) {
+ //setTimeout(() => reject(new Error("err---")), 1000);
+  setTimeout(() => resolve("done!"), 1000);
+});
+// resolve runs the first function in .then
+promise.then(
+  result => alert(result), // shows "done!" after 1 second
+  error => alert("err"+error) // doesn't run
+);
+//The first function was executed
+</script>

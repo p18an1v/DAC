@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>The XMLHttpRequest Object</h2>
+    <p id="demo"></p>
+    <form>
+        <label>Name</label><input name="name" />
+        <label>Email</label><input name="email" />
+        <label>Department</label><input name="department" />
+        <button type="button" onclick="loadDoc()">Send Form data </button>
+    </form>
+    <script>
+
+
+        function loadDoc() {
+            var form = document.querySelector('form');
+             let sdata= new URLSearchParams(new FormData(form)).toString()
+  console.log(sdata)
+
+           var data = {
+                "name": form.name.value,
+                "email": form.email.value,
+                "departmentId": form.department.value
+            };
+            console.log(data);
+            var data = new FormData(form);
+            console.log(data)
+
+            for (var pair of data.entries()) {
+                console.log(pair);
+            }
+            for (var [key, value] of data) {
+                console.log(key + ', ' + value);
+
+            }
+
+            jsondata = {}
+            for (var [key, value] of data) {
+                jsondata[key] = value;
+            }
+            console.log(jsondata)
+            let jdata = JSON.stringify(jsondata);
+            console.log(jdata)
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+
+                    document.getElementById("demo").innerHTML = "Data inserted"
+                }
+            };
+            xhttp.open("POST", "https://localhost:7067/api/Employee", true);
+            xhttp.setRequestHeader('Content-Type', 'application/json');
+            xhttp.send(sdata);
+        }
+    </script>
+
+</body>
+
+
+</html>
