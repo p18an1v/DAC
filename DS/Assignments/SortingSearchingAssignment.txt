@@ -1,0 +1,109 @@
+
+//Name: Pranav Mhargude
+//PRN: 250844520057
+//Email: pranavmhargude@gmail.com
+
+public class Assignment {
+
+    public static void mergeSort(int arr[], int start,int end){
+
+        if(start<end) {
+            int mid = (start + end) / 2;
+            mergeSort(arr, start, mid);
+            mergeSort(arr, mid + 1, end);
+            merge(arr, start, mid, end);
+
+        }
+    }
+
+    public static void merge(int arr[], int start, int mid, int end){
+
+        int i,j,tindex,temp[];
+        i=start;
+        j=mid+1;
+
+        tindex = start;
+        temp = new int[arr.length];
+
+        while(i<=mid && j<=end){
+            if(arr[i]<arr[j]){
+                temp[tindex++] = arr[i++];
+            }else{
+                temp[tindex++] = arr[j++];
+            }
+        }
+
+        while(i<=mid){
+            temp[tindex++] = arr[i++];
+        }
+
+        while(j<=end){
+            temp[tindex++] = arr[j++];
+        }
+
+        for(i = start;i<=end;i++){
+            arr[i] = temp[i];
+        }
+    }
+
+    public static  int recBinarySearch(int arr[], int start, int end,int key){
+
+        //recursion is better then while
+        if(start<=end){
+            int mid = (start+end)/2;
+            if(key == arr[mid]){
+                return mid;
+            }else{
+
+                if(key<=arr[mid]){
+                    return recBinarySearch(arr, start,mid-1,key);
+                }else{
+                    return recBinarySearch(arr,mid+1,end,key);
+                }
+            }
+        }else {
+            return -1;
+        }
+
+    }
+
+    public static void print(int arr[]){
+        for(int i = 0; i<arr.length;i++){
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println();
+    }
+
+    public static void main(String args[]){
+
+//        Input Example
+//        Array of mobile prices:
+//        {14999, 8999, 12999, 19999, 9999, 17999, 7999}
+//        User searches for:
+//        9999
+
+//        Expected Output
+//        Original Prices: 14999 8999 12999 19999 9999 17999 7999
+//        Sorted Prices:   7999 8999 9999 12999 14999 17999 19999
+//
+//        Enter price to search: 9999
+//        Price found at index: 2
+
+        int arr[] = {14999, 8999, 12999, 19999, 9999, 17999, 7999};
+
+        System.out.println("Before sorting..");
+        print(arr);
+
+        mergeSort(arr,0,arr.length-1);
+        System.out.println("After sorting..");
+        print(arr);
+
+        int idx = recBinarySearch(arr,0,arr.length-1,9999);
+        if(idx!=-1){
+            System.out.println("Price Found at idx "+idx);
+        }else{
+            System.out.println("Price not Found ");
+        }
+
+    }
+}

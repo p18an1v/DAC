@@ -1,0 +1,69 @@
+     //PRN: 250844520057
+     //Name: Pranav Mhargude
+     //Email: pranavmhargude@gmail.com
+
+public class Polynomial {
+	int coef;
+	int pow;
+	Polynomial next;
+	
+	Polynomial(int coef,int pow){
+		this.coef=coef;
+		this.pow=pow;
+	}
+	
+	public String toString() {
+		return ""+coef+"x^"+pow+"+";
+	}
+	
+}
+
+import java.util.LinkedList;
+import java.util.Scanner;
+public class Addition {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LinkedList<Polynomial> one=new LinkedList<>();
+		LinkedList<Polynomial> two=new LinkedList<>();
+		LinkedList<Polynomial> result=new LinkedList<>();
+		Scanner sc=new Scanner(System.in);
+		int i=0,j=0;
+		System.out.println("Enter how many value you have to enter");
+		int size=sc.nextInt();
+		for(int k=0;k<size;k++) {
+			System.out.println("Enter the coef and pow for 1st");
+			int coef=sc.nextInt();
+			int pow=sc.nextInt();
+			one.add(new Polynomial(coef,pow));
+		}
+		System.out.println("--------------------");
+		for(int k=0;k<size;k++) {
+			System.out.println("Enter the coef and pow for 2nd");
+			int coef=sc.nextInt();
+			int pow=sc.nextInt();
+			two.add(new Polynomial(coef,pow));
+		}
+		
+		while(i<one.size() || j<two.size()) {
+			if(one.get(i).pow==two.get(j).pow) {
+				int cf=one.get(i).coef+two.get(j).coef;
+				Polynomial temp=new Polynomial(cf,one.get(i).pow);
+				result.add(temp);
+				i++;
+				j++;
+			}
+			else if(one.get(i).pow>two.get(j).pow) {
+				result.add(one.get(i));
+				i++;
+			}
+			else {
+				result.add(two.get(j));
+				j++;
+			}
+		}
+		for(Polynomial p:result)
+			System.out.print(p);
+	}
+
+}

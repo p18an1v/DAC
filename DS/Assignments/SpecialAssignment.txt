@@ -1,0 +1,365 @@
+ //PRN: 250844520057
+ //Name :Pranav Mhargude
+ //Email : pranavmhargude@gmail.com
+
+
+Q1.
+
+public class LongestSubString {
+
+    public static void longestSub(String str){
+
+        HashSet<Character> set = new HashSet<>();
+        int len = str.length();
+        int i = 0, j = 0;
+        int max = 0;
+        while(j<len){
+
+            while(set.contains(str.charAt(j))){
+                set.remove(str.charAt(i));
+                i++;
+            }
+            set.add(str.charAt(j));
+            max = Math.max(max,j-i+1);
+            j++;
+        }
+        System.out.println("max len is : "+ max);
+    }
+
+    public static void main(String[] args) {
+
+        String str= "abcabcbb"; //3
+        String str1 = "bbbbbb"; //0
+        longestSub(str);
+        longestSub(str1);
+
+    }
+}
+
+Q2.
+
+public class StackRemoveMiddle {
+
+
+    public static void remove_mid(Stack<Integer> s){
+        int mid = s.size()/2;
+        int cnt = 0;
+        int dif = 0;
+        int last_elm = s.peek();
+        int mid_elm = 0;
+
+        while(cnt!=mid+1){
+            mid_elm = s.pop();
+            dif = mid_elm-s.peek();
+            cnt++;
+        }
+        System.out.println("mid elm is removed "+ mid_elm);
+
+        while(mid_elm!=last_elm){
+            mid_elm = mid_elm+dif;
+            s.push(mid_elm);
+        }
+
+        System.out.println("stack now " + s);
+    }
+
+    public static void main(String[] args) {
+        Stack<Integer> s = new Stack<>();
+
+//        Input: stack = [1, 2, 3, 4, 5]  (Top is 5)
+//        Output: [1, 2, 4, 5]
+
+//        s.add(1);
+//        s.add(2);
+//        s.add(3);
+//        s.add(4);
+//        s.add(5);
+//        remove_mid(s);
+
+
+//        Input: stack = [10, 20, 30, 40] (Top is 40)
+//        Output: [10, 30, 40]
+        s.push(10);
+        s.push(20);
+        s.push(30);
+        s.push(40);
+        remove_mid(s);
+
+
+
+    }
+}
+
+Q3.
+
+public class ParenthesesExpBalanceOrNot {
+
+    public static boolean checkExp(String str) {
+
+        int i = 0;
+        int j = str.length();
+        Stack<Character> stack = new Stack<>();
+        while (i < j) {
+            char ch = str.charAt(i);
+
+            if (ch == ')' || ch == '}' || ch == ']') {
+                if(ch==')'){
+                    while (ch!='('){
+                        if(stack.isEmpty()){
+                            return false;
+                        }
+                        ch = stack.pop();
+                    }
+                }else if(ch=='}'){
+                    while (ch!='{'){
+                        if(stack.isEmpty()){
+                            return false;
+                        }
+                        ch = stack.pop();
+                    }
+                }else{
+                    while (ch!='['){
+                        if(stack.isEmpty()){
+                            return false;
+                        }
+                        ch = stack.pop();
+                    }
+                }
+            } else {
+                stack.push(str.charAt(i));
+            }
+            i++;
+        }
+        return stack.isEmpty();
+    }
+
+    public static boolean exp(String str){
+
+        Stack<Character> stack = new Stack<>();
+
+        int j = str.length();
+
+        for(int i=0;i<j;i++){
+
+            char ch = str.charAt(i);
+
+            if(ch=='(' || ch=='{'  || ch=='['){
+                stack.push(ch);
+            }else if(ch==')' && !stack.isEmpty() && stack.peek()=='('){
+                stack.pop();
+            }else if(ch=='}' && !stack.isEmpty() && stack.peek()=='{'){
+                stack.pop();
+            }else if(ch==']' && !stack.isEmpty() && stack.peek()=='['){
+                stack.pop();
+            }else{
+                return false;
+            }
+
+        }
+
+        return stack.isEmpty();
+
+    }
+
+    public static void main(String[] args) {
+        String str = "{[()()]}";
+        String str1 = "([)]";
+        System.out.println(checkExp(str));
+        System.out.println(checkExp(str1));
+
+        System.out.println(exp(str));
+        System.out.println(exp(str1));
+    }
+}
+
+
+Q4.
+
+public class MergeSortedList {
+
+    class Node{
+        int data;
+        Node next;
+
+        Node(int data){
+            this.data = data;
+            next = null;
+        }
+    }
+
+    Node root1 = null;
+    Node root2 = null;
+
+    public Node insert_left(int data,Node root){
+        Node newNode = new Node(data);
+        if(root==null){
+            root = newNode;
+        }else {
+            newNode.next = root;
+            root = newNode;
+        }
+        return newNode;
+    }
+
+    public Node insert_right(int data,Node root){
+        Node newNode = new Node(data);
+        if(root==null){
+            root = newNode;
+        }else {
+            Node temp = root;
+
+            while(temp.next!=null){
+                temp=temp.next;
+            }
+            temp.next = newNode;
+        }
+
+        return root;
+    }
+    public  void print(Node head){
+        Node temp = head;
+
+        while(temp!=null){
+            System.out.print(temp.data+"->");
+            temp=temp.next;
+        }
+        System.out.print("null");
+    }
+
+
+    public Node mergeSortList(Node root1, Node root2){
+
+        Node temp1 = root1;
+        Node temp2 = root2;
+        Node dummy = new Node(-1);
+        Node tail = dummy;
+
+        while(temp1!=null && temp2!=null){
+
+            if(temp1.data<temp2.data){
+                tail.next = temp1;
+                temp1 = temp1.next;
+            }else{
+                //temp1.data>temp2.data
+
+                tail.next = temp2;
+                temp2 = temp2.next;
+            }
+            tail=tail.next;
+        }
+
+        if(temp1!=null)temp1 = temp1.next;
+        else temp2 = temp2.next;
+
+        return dummy.next;
+    }
+
+    public static void main(String args[]){
+
+//        Input: list1 = 1 -> 3 -> 5, list2 = 2 -> 4 -> 6
+//        Output: 1 -> 2 -> 3 -> 4 -> 5 -> 6
+
+        MergeSortedList l = new MergeSortedList();
+        l.root1 = l.insert_left(5, l.root1);
+        l.root1 = l.insert_left(3, l.root1);
+        l.root1 = l.insert_left(1, l.root1);
+
+        l.print(l.root1);
+        System.out.println();
+
+        l.root2 = l.insert_left(6, l.root2);
+        l.root2 = l.insert_left(4, l.root2);
+        l.root2 = l.insert_left(2, l.root2);
+
+        l.print(l.root2);
+
+        System.out.println();
+        Node root = l.mergeSortList(l.root1, l.root2);
+        l.print(root);
+
+    }
+}
+
+Q5.
+
+public class MergeKSortedLists {
+
+    static class Node{
+      int data;
+      Node next;
+      Node(int data){
+          this.data =data;
+          next = null;
+      }
+    }
+
+    public void print(Node r){
+        Node temp = r;
+        while (temp!=null){
+            System.out.print(temp.data+"->");
+            temp = temp.next;
+        }
+        System.out.print("null");
+    }
+
+    public Node mergeLists(Node lists[]){
+        ArrayList<Integer> arr = new ArrayList<>();
+        for(Node n:lists){
+            while(n!=null){
+                arr.add(n.data);
+                n=n.next;
+            }
+        }
+
+        Collections.sort(arr);
+
+        return addIn(arr);
+    }
+
+    public Node addIn(ArrayList<Integer> arr){
+
+        if(arr==null){
+            return null;
+        }
+        Node head = null;
+        int l = arr.size()-1;
+        for(int i = l;i>=0;i--){
+            Node newNode = new Node(arr.get(i));
+
+            if(head==null){
+                head = newNode;
+            }else{
+                newNode.next = head;
+                head = newNode;
+            }
+        }
+
+        System.out.println("sorted single lsit");
+        System.out.println();
+        print(head);
+        return head;
+    }
+
+    public static void main(String[] args){
+
+
+        MergeKSortedLists m = new MergeKSortedLists();
+        Node l1 = new Node(1);
+        l1.next = new Node(4);
+        l1.next.next = new Node(5);
+
+        Node l2 = new Node(1);
+        l2.next = new Node(3);
+        l2.next.next = new Node(4);
+
+        Node l3 = new Node(2);
+        l3.next = new Node(6);
+
+        Node[] nodeList= {l1,l2,l3};
+        m.mergeLists(nodeList);
+    }
+}
+
+
+Q6.
+

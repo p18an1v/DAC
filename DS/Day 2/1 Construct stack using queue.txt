@@ -1,0 +1,2 @@
+1 Construct stack using queue
+2 construct queue using stack.

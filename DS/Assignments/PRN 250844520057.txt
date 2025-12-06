@@ -1,0 +1,193 @@
+     PRN: 250844520057
+     Name: Pranav Mhargude
+     Email: pranavmhargude@gmail.com
+
+
+Q1.
+
+import java.util.Scanner;
+
+//Construct stack using queue\
+public class Q1 {
+
+    Queue q1 = new Queue();
+    Queue q2 = new Queue();
+
+    public void push(int data){
+        while(!q1.queue_isEmpty()){
+            q2.equeue((q1.dequeue()));
+        }
+
+        q1.equeue(data);
+
+        while(!q2.queue_isEmpty()){
+            q1.equeue((q2.dequeue()));
+        }
+
+        System.out.println("Data is pushed");
+    }
+
+    public int pop(){
+        if(q1.queue_isEmpty()){
+            System.out.println("Stack is empty");
+            return -1;
+        }
+
+        int rev = q1.dequeue();
+        System.out.println("data is pop");
+        return  rev;
+    }
+
+    public int top(){
+        if(q1.queue_isEmpty()){
+            System.out.println("Stack is empty");
+            return -1;
+        }
+        return q1.peek();
+    }
+
+    public boolean isEmpty(){
+        return q1.queue_isEmpty();
+    }
+
+    public void print(){
+        if(q1.queue_isEmpty()){
+            System.out.println("Stack is empty");
+            return;
+        }
+
+        for(int x: q1.queue ){
+            System.out.println(x+" ");
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        Q1 q = new Q1();
+        int ch;
+        while(true){
+            System.out.println("Enter your choice");
+            System.out.println("1.push  2.pop 3.peek 4.print 5.Exit for 0");
+            ch = sc.nextInt();
+
+            switch (ch){
+                case 1:
+                    System.out.println("Enter your data");
+                    int data = sc.nextInt();
+                    q.push(data);
+                    break;
+                case 2:
+                    q.pop();
+                    break;
+                case 3:
+                    q.top();
+                case 4:
+                    q.print();
+                    break;
+                case 5:
+                    System.out.println("Thank you for using my code");
+                    return;
+                default:
+                    System.out.println("Enter proper choice ");
+            }
+        }
+    }
+}
+
+Q2.
+
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.Scanner;
+
+//Construct queue using stack
+public class Q2 {
+
+    Deque<Integer> stack = new ArrayDeque<>();
+    Deque<Integer> helper = new ArrayDeque<>();
+
+    public void equeue(int data){
+        stack.push(data);
+        System.out.println("Data is equeue..");
+    }
+
+    public void shiftDataToHelper(){
+        //stack to helperstack
+        while(!stack.isEmpty()) {
+            int temp = stack.pop();
+            helper.push(temp);
+        }
+    }
+
+    public void shiftDataToStack(){
+        //move elm from helper to stack
+        while(!helper.isEmpty()){
+            int c = helper.pop();
+            stack.push(c);
+        }
+    }
+
+    public int dequeue(){
+
+        shiftDataToHelper();
+        int temp = helper.pop();
+        shiftDataToStack();
+        System.out.println("Data is dequeue " + temp);
+        return temp;
+    }
+
+    public int peek(){
+        //stack to helperstack
+        shiftDataToHelper();
+        int temp = helper.peek();
+        shiftDataToStack();
+        System.out.println("Peek is " + temp);
+        return temp;
+    }
+
+    public boolean isEmpty(){
+        return stack.isEmpty();
+    }
+
+    public void print(){
+        shiftDataToHelper();
+        System.out.println(helper);
+        shiftDataToStack();
+    }
+
+
+    public static void main(String[] args){
+
+        Scanner sc = new Scanner(System.in);
+        Q2 q = new Q2();
+        int ch;
+        while(true){
+            System.out.println("Enter your choice");
+            System.out.println("1.equeue  2.dequeue 3.peek 4.print 5.Exit for 0");
+            ch = sc.nextInt();
+
+            switch (ch){
+                case 1:
+                    System.out.println("Enter your data");
+                    int data = sc.nextInt();
+                    q.equeue(data);
+                    break;
+                case 2:
+                    q.dequeue();
+                    break;
+                case 3:
+                    q.peek();
+                case 4:
+                    q.print();
+                    break;
+                case 5:
+                    System.out.println("Thank you for using my code");
+                    return;
+                default:
+                    System.out.println("Enter proper choice ");
+            }
+        }
+    }
+
+}

@@ -1,0 +1,148 @@
+     PRN: 250844520057
+     Name: Pranav Mhargude
+     Email: pranavmhargude@gmail.com
+
+
+Q1.
+
+public class Q1{
+
+    public static int precedence(char ch){
+
+        if(ch=='+' || ch=='-')return 1;
+        if(ch=='*' || ch=='/')return 2;
+
+        return 0;
+    }
+
+    public static String infix_toPost(String infix){
+
+        Deque<Character> stack = new ArrayDeque<>();
+        String post = "";
+
+        for(char ch : infix.toCharArray()) {
+
+            if(precedence(ch)==0 && ch!='(' && ch!=')'){
+                post+=ch;
+            }
+            else if(ch=='('){
+                stack.push(ch);
+            }else if(ch==')') {
+                while(!stack.isEmpty() && stack.peek()!='('){
+                    post+=stack.pop();
+                }
+
+                if(!stack.isEmpty()){
+                    stack.pop();
+                }
+
+            }
+            else{
+                while(!stack.isEmpty() && stack.peek()!='(' && precedence(stack.peek()) >= precedence(ch)){
+                    post+=stack.pop();
+                }
+                stack.push(ch);
+            }
+        }
+
+        while (!stack.isEmpty()){
+            post+=stack.pop();
+        }
+
+        return post;
+    }
+
+    public static void main(String args[]){
+        //(A+B)*(C-D) input
+        //AB+CD-*     ouput
+        System.out.println(infix_toPost("(A+B)*(C-D)"));
+
+    }
+}
+
+
+Q2.
+
+public class Q2 {
+
+    static boolean is_operator(char ch)
+    {
+        if(ch=='+' || ch == '-'|| ch=='/' || ch=='*' || ch=='(' || ch==')' || ch=='^')
+        {
+            return true;
+        }
+        return false;
+    }
+
+    static int precedance(char ch)
+    {
+        if(ch=='*'||ch=='/')
+        {
+            return 2;
+        }
+        else if(ch=='+'||ch=='-')
+        {
+            return 1;
+        }
+        else if(ch=='^')
+        {
+            return 3;
+        }
+        return 0;
+    }
+
+    static int evaluation(String str)
+    {
+        Deque <Integer> stack = new ArrayDeque<>();
+
+        int len=str.length();
+        int res=0;
+
+        char ch[]=str.toCharArray();
+        int a=0;
+        int b=0;
+
+        for(int i=len-1;i>=0;i--)
+        {
+            if(!is_operator(ch[i]))
+            {
+                stack.push(ch[i]-'0');
+            }
+            else
+            {
+                a=stack.pop();
+                b=stack.pop();
+
+                stack.push(perform(a,b,ch[i]));
+            }
+        }
+        return stack.pop();
+    }
+
+    static int perform(int a,int b,char ch)
+    {
+        switch(ch) {
+            case '+':
+                return a+b;
+
+            case '-':
+                return a-b;
+
+            case '*':
+                return a*b;
+
+            case '/':
+                return a/b;
+
+            case '^':
+                return a^b;
+            default:
+                return 0;
+        }
+    }
+
+    public static void main(String[] args) {
+        String str = "-+7*45+20";
+        System.out.println(evaluation(str));
+    }
+}

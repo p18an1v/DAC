@@ -1,0 +1,144 @@
+
+//PRN: 250844520057
+//Name: Pranav Mhargude
+//Email: pranavmhargude@gmail.com
+
+/Q
+
+public class D_LinkedList {
+
+    D_Node root;
+
+
+    public void insert_left(int data){
+        D_Node newNode = new D_Node(data);
+        if(root == null){
+            root = newNode;
+        }else{
+            root.left=newNode;
+            newNode.right = root;
+            root = newNode;
+        }
+        System.out.println("Data is inserted..");
+    }
+
+
+    public void delete_left(){
+
+        if(root ==null){
+            System.out.println("List is Empty..");
+        }else{
+            root = root.right;
+            root.left = null;
+            System.out.println("Node is removed..");
+        }
+    }
+
+    public void insert_right(int data){
+
+        D_Node newNode = new D_Node(data);
+        if(root == null){
+            root = newNode;
+        }else{
+
+            D_Node temp = root;
+            while(temp.right!=null){
+                temp = temp.right;
+            }
+            newNode.left = temp;
+            temp.right = newNode;
+
+        }
+        System.out.println("Data is inserted..");
+    }
+
+    public void delete_right(){
+        if(root ==null){
+            System.out.println("List is Empty..");
+        }else{
+            if(root.right==null){
+                root = null;
+            }else {
+                D_Node temp = root;
+                while (temp.right != null) {
+                    temp = temp.right;
+                }
+
+                D_Node prev = temp.left;
+                prev.right=null;
+                temp.left = null;
+                //temp.left.right=null;
+            }
+            System.out.println("Node is removed..");
+        }
+    }
+
+    public void printList(){
+
+        D_Node temp = root;
+        while (temp != null) {
+            System.out.println("|<-"+temp.data+"->|");
+            temp = temp.right;
+        }
+
+
+    }
+
+    public void printListRev(){
+        D_Node temp = root;
+        while (temp.right != null) {
+            temp = temp.right;
+        }
+
+        while(temp.left!=null){
+            System.out.println("|<-"+temp.data+"->|");
+            temp = temp.left;
+        }
+    }
+
+    public static void main(String[] args) {
+
+        D_LinkedList l = new D_LinkedList();
+        Scanner sc = new Scanner(System.in);
+        int ch;
+        while (true) {
+            System.out.println();
+            System.out.println("1.Insert left 2.Insert right  3.Delete left 4.Delete right  5.Print  6.revers Pint 7.Exit");
+            System.out.println("Enter your choice ");
+            ch = sc.nextInt();
+            int data;
+            int pos;
+            switch (ch) {
+                case 1:
+                    System.out.println("Enter data for node left root: ");
+                    data = sc.nextInt();
+                    l.insert_left(data);
+                    break;
+                case 2:
+                    System.out.println("Enter data for right node: ");
+                    data = sc.nextInt();
+                    l.insert_right(data);
+                    break;
+                case 3:
+                    l.delete_left();
+                    break;
+                case 4:
+                    l.delete_right();
+                    break;
+                case 5:
+                    l.printList();
+                    break;
+                case 6:
+                    l.printListRev();
+                    break;
+                case 7:
+                    System.out.println("Thank you for using my code...");
+                    return;
+                default:
+                    System.out.println("Enter valid option");
+            }
+
+        }
+
+    }
+}

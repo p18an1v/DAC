@@ -1,0 +1,2 @@
+Insert left, insert right, delete left, delete right, print normal, print reverse. 
+Along with menu-driven.
