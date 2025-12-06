@@ -1,0 +1,482 @@
+OS Lecture No 2
+
+ls 
+green colour mai .sh files (shell script)
+white are txt
+blue one are directory
+
+only list down sh files
+
+ls *.sh
+
+ls --help
+
+info ls
+
+q is cmd kaha pr bhi atko aur bahar ana hai 
+
+whatis ls : one line ans
+
+whatis mkdir 
+
+whatis grep
+
+
+help full cmd and mcq
+----------------
+help
+info 
+man 
+whatis 
+----------------
+
+| Level | Command | Detail Level                   |
+| ----- | ------- | ------------------------------ |
+| 1     | help    | Least detailed                 |
+| 2     | --help  | Short usage info               |
+| 3     | whatis  | One-line description only      |
+| 4     | man     | Full manual                    |
+| 5     | info    | Most detailed for GNU commands |
+
+
+
+cat cmd :
+cat > myfile.txt : this whatever you type will save in the file
+ctrl+d : bahar ajayega (to stop writing)
+
+it will create file if not exits 
+and override the old file
+
+.dat extension is there old extension
+
+
+cat >> myfile.dat // .sh
+ye bina override kare data file mai dalta hai
+(append data in the file)
+
+
+cat name_details.txt
+cat email_details.txt
+cat phone_details.txt
+
+combining all data in one file
+
+cat name_details email_details.txt phone_details.txt > all_details.txt
+
+it will create all_details file and put data from every file in new file
+
+drawback of cat
+head file.txt 
+it will give 10 line of start
+tail file.txt
+last kay 10 line
+
+head -n 5 file.txt
+this will give 5 line only
+
+Q.. oracle
+if u wants to continuously monitor updates what you do
+
+
+tail -f file.txt
+for continuously monitor logs 
+-f used for cntinously work 
+you have to stop it 
+
+
+more file.txt
+less file.txt
+press q to come out
+
+less cmd is more efficient
+
+
+nl text.txt 
+number of line 
+
+wc text.txt
+count deta hat
+number of lines , number of words , number of char
+
+
+wc -w text.tx
+words only
+
+wc -l text.txt
+lines onlu
+
+wc -c text.txt 
+char only
+
+
+note : space ko bhi count karta hai
+
+
+Piping :
+
+head -n 5 filename.txt
+nl filename.txt
+
+phele ka data dusre ko connect karte ho tab jaa kay tumko data milta hai
+
+head -n 5 text.txt | nl
+head -n 5 text.txt  iss se jo output nikale ga wo nl ko doge 
+
+creating a shell script 
+nano combiner.sh
+
+Q..
+read n files given by user on prompt while running
+combiner.sh amp1.txt amp2.txt amp3.txt
+show all files given (name only)
+
+if [ $# -eq 0 ]
+then 
+echo "error"
+else 
+for file in "$@"
+do 
+ echo "$file"
+done
+fi
+
+
+$a jitney details uthaya hai string mai lakar detga
+
+check if file exits
+
+if [ -f "filename" ]
+then 
+  # exists
+else
+  #not
+
+
+
+if [ $# -eq 0 ]
+then 
+echo "error"
+else 
+for file in "$@"
+do 
+  if [ -f "$file" ]
+ then 
+ echo "$file exisiting"
+else 
+ 
+ echo "$file not exits"
+ fi
+done
+fi
+
+check if file exists then print its data on screen else error
+
+
+if [ $# -eq 0 ]
+then 
+echo "error"
+else 
+for file in "$@"
+do 
+  if [ -f "$file" ]
+ then 
+ echo "-------------------------"
+  echo "$file"
+  echo "------------------------"
+  cat "$file"
+else 
+ 
+ echo "$file not exits"
+ fi
+done
+fi
+
+
+and combine all data in final.txt and at end show context of final.txt
+
+
+outfile = "$filename.txt"
+if [ $# -eq 0 ]
+then 
+ echo "no file is there"
+else
+  for file in "$@"
+  do
+  if [ -f "$file" ]
+  echo "-------------------------"
+  echo "$file"
+  echo "------------------------"
+  cat "$file"
+  cat "$file" >> "$outfile"
+  echo "--------------------------"
+  echo "added content of $file to $outfile"
+ else
+   echp "$file not existing or can not be accessed"
+ fi
+done
+fi
+
+
+also print words lines and characters of combined file
+
+
+
+what is grep
+ searches content and return data found
+ - print lines that match pattern
+searches content of a fle
+
+ grep "key" filename.txt
+
+ grep -i "key" filename.txt
+ -i removes the case sensitivity
+
+ grep -i -n "key" filename.txt
+
+ muje data cahiye sare files mai se tho use this kiskay andaar hai wo file la kar do
+ grep -l "data" *.txt
+
+ 
+
+Q..
+-search and print from all files that has data using searching.sh
+
+nano searching.sh
+-search all files that has word given by user via positional argument
+word = "data"
+list_of_file = $(grep -l "$word" *.txt)
+echo -e "data extracted:\n $list_of_file"
+
+-use loop to print one file at a time
+for file in "$list_of_file"
+do
+ echo "file:$file has $word"
+done
+
+-print all lines that has data
+ grep -n -i "$word" "$file"
+
+
+-using script
+
+
+Q morning star company
+nano count_shell_scripts.sh
+
+list all *.sh files
+count total lines generated
+
+count = $(ls *.sh | wc  -l)
+echo "$count"
+
+
+count = $(ls "*$1"| wc  -l)
+echo "$count"
+
+
+mv cmd is rename cmd also
+
+su - 
+give root access
+
+cut -d: -f /etc/passwd
+
+
+interview perspective
+grep
+find
+search
+
+
+grep searches content of file
+ls searches file at most on extenstion
+find will search file/s dir on more than just extention
+find can search on day/size/update/group/ mode
+
+find . 
+(.)dot current working directory
+
+find . <option> <file type> <pattern>
+
+find . -type f -name "*.txt"
+find . -type f -iname "*.txt"
+
+-atime -ctime -mtime days
+
+a access
+m modifi
+c change
+
+-amin -cmin -mmin
+
+m -min
+
+size can be c:bytes k:KB M:MB G:GB
+
+Q..
+shells.txt 
+text.txt
+dats.txt
+separate separate file kay name in files mai chahinye
+
+find . -type f -name "*.txt" > text.txt
+find . -type f -name "*.sh" > shells.txt
+find . -type f -name "*.dats" > dats.txt
+
+ 
+
+wc -l < shells.txt
+6 
+its only give data
+
+wc -l shells.txt
+6 shells.txt
+
+
+shells.txt se data lo and wc me dooo
+
+create a single file which will group shells file 
+*.sh files 1day , 2days , 3days... 10 days created
+-atime -1 -2 -3 -4 -5... -10 (for loops) ((i=;i<;i--)
+
+also add total number of files added on that day
+
+echp "file is sorted manner" >> "$output"
+echo "-----------------------------------">>"$output"
+
+
+output="$output.txt"
+for((i=0;i<=10;i++))
+do
+echo -e "files $i days\n" >> "$output"
+echo "--------------------------------" >> "$output"
+find . -type -name "*.sh" -atime -$i >> "$output"
+
+
+count=$(find . -type f -name "*.sh" -mtime -$i | wc -l)
+echo " Total cout  >> "$output.txt"
+
+output = "shells.txt"
+> "$shells.txt" 
+//remove all datah
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+exams -> terms / facts / Algo / definations
+           |
+     1.    Basics
+deadlock handling
+
+2. facts -> types
+      unis || single || time || mutli os
+
+
+processes -> 5 states of processes
+cache -> 2 types s and d
+static and dynamic 
+
+user process vs os process
+
+kernel types
+mono  hybrid 
+
+batch processing
+
+
+3. Algo
+page replacement
+process scheduling 
+
+4. what wale ans
+what is so and so and so and so..
+1] to do xyz -> which cmd to use
+reverse
+2] cmd -> use for
+
+
+1st phase
+interview
+basics of programing
+basics of os
+basics data structure
+basic of computer networking and http (start of interviews)
+
+
+base
+concepts
+cloud company -> shell script
+basic syntax and shell scripts (if/for.while)
+cmd-related questions (show us...)
+
+Adv :
+data extraction and cleaning
+
+
+2nd phase of interview
+purely tech concepts
+project : yours
+why question on it
+
+related tech : company pr question what company require
+
+future of teach
+
+depth in explaination
+
+note -> as if now im not able to reconnect this
+
+
+paper
+
+till breaker
+Ethics + HR
+
+any questions for us
+
+presser question
+
+
+create: notes
+read -- 1 write -3 mins - 5 mins recap :
+
+code 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

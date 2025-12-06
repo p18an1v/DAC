@@ -1,0 +1,358 @@
+what is oops ?...
+way of nature thinking where use start form o/p needed understand process and then start with i/p
+
+what is OS ?
+a software which allow user of computer to control or connect with hardware of computer
+generations ?
+
+1g - machine lang
+2g - assembly lang -> operation code
+problem with first 2g is hardware dependent
+lang change hardware band
+
+3g - high level lang
+what is compiler : translator to binary
+4g - sql -> extract data from database->crud
+5g - NLP+AI
+
+prompts -> (3+4+5)g
+
+
+
+
+user -> gui -> api -> os -> kernel ->llc (low level calls)(system calls) ->  (device controller) ->to device driver -> device
+
+High level calls - > api's
+low level calls -> system calls
+
+significane of power button - on/off both
+
+os services
+ui: cli + batch processing + gui + aui
+
+cli:one by one cmd
+batch processing : n cmd in a file , run file  shell script
+gui : pointing device
+aui : aural ui (oral user interface)
+
+
+commmunocation
+ message oriented ,broadcast comm
+ inter ,intra pricess
+
+
+Process management :
+ new, runnable , running, blocked(waiting), terminating
+ 1 time -> new , terminate
+ n times -> other;
+
+Memory managemet
+ handles all layers
+
+cpu -> register -> cache -> primary memary(ram) -> secondary storage(ssd/hdd)
+         kb          mb           gb                         tb
+
+
+space decrease
+speed increase
+cost/bit increase
+
+
+mcq exame
+what is purging
+process of shifting data from one layer to another -> either side
+what is Archival
+process of shifting data down in a hierarchy
+
+
+what is cache memory
+it is a buffer for faster access
+we fill cash on the basis of locality of refrence , spatial or temporal
+locality of references : Predicting what will be or can be used
+
+5Q...
+1.introduce your self -> 2/3 min
+2.locality question -> eg: why you wana work with us
+do proper home work about company
+
+3.strength and weakness
+4.where you see in next five year
+5. ethic base questions ->
+
+
+spatial (on address)
+if somebody has acesss block 17 and 18 be ready with 19-20-21.
+
+temporal (on time)
+check what is being access again and again and keep it ready every time.
+
+
+file rakho - resume + certificate+ extracurricular activity certificates
+
+
+error handling :
+
+
+error
+state onwards which normal execution is not possible.(h/w,s/w, logical,i/p)
+exception : reporting of errors , it rases the exception
+exception handling : the pricess of either continuing with normal flow in prsenece of error or trying an alternate flow with error itselg
+
+
+what if the use of exception handling
+why need of exception handling in project
+needed system does not crash
+tesla example
+hardware handling.
+
+
+
+Kernal
+user -> os -> kernel -> device controller + driver -> device
+        brain  heart
+slow process
+
+kernel -> high level calls ko low level call main convert karega
+
+shell scripting is fast directly connection to kernel
+
+shell is mid level programming lang
+rigid lang
+strictly language
+
+
+monolithic : one large code capable of doing everthing that you require
+-ve : maintaining , managing , updating would always be troublesome. Restart on every change
++ve : fast
+
+micro : code only provides an interface to use various devices and services Managing coding done entirely by the application and the coder
+-ve : app development and managing became difficult/speed issues
+
+
+hybrid : best of both
+major sevices and access by kernel but can add new needed module
+
+
+what is syntax
+grammer of programing language
+
+what is semantics 
+when and why to use
+when and what to
+
+
+
+nano filename.sh
+create or open file
+
+
+imp
+751
+all read write  7
+all read to execute 5
+only execute to the write public 1 
+
+
+
+#!/bin/bash
+echo "hi testing this"
+
+
+
+
+nano myfile.sh
+
+#!/bin/bash
+The system looks at the first line. Since it sees #!/bin/bash, it launches Bash to interpret and execute the script.
+jaar nasel tar default shell use kar 
+which could lead to errors if the script uses Bash-specific syntax.
+
+other wise you have to specify which on bash you want to execute cmd
+bash script.sh 
+
+echo ""
+echo "worked"
+
+
+ctrl + o
+ctrl + x
+
+chmod 777 ./filename.sh
+./filename.sh
+
+cat cmd show file details on screen
+
+read name
+echo "hi $name how are you"
+
+read -p "where are you from " native
+
+read -p "who are you where are you from " name native
+
+echo -e "so your name $name \n and your from $native"
+to active \n give -e
+
+crossover :- 
+
+
+
+
+positional parameter
+
+
+        0        1    2   3
+./ filename.sh arg1 arg2 arg3
+name of the file $0
+$# total count
+$* arguments are
+$1,$2 for specific 
+
+
+Arithmatic operators
+$(($a+$b)) best option
+$((a+b)) may work maynot there are deffrent version
+
+
+relational oprator for number
+int1 -eq int2  =
+int1 -ne int2  !=
+int1 -gt int2   >
+int1 -ge       >=
+int1 -lt       <
+int1 -le       =<
+
+
+Q..
+double the number without using arithmetic oprator
+<< increase by *2
+
+>> divide by /2
+
+Q.
+give me 1's or 2's compluments if ~128
+
+rev sign  and -1
+
+-128-1
+ans = -129
+
+for ~(-226)
++226-1
+ans = 225
+
+
+conditional statements
+
+if [test] expression
+then
+ echo
+else
+ echo
+fi
+
+
+
+read -p "Enter your name and age " name age
+if [ age -gt 18 ]             // if(( age>=18 )) only in modern base activate internally
+then 
+   echo "$name you can vote"
+else 
+   echo "$name you cant vote"
+fi
+
+
+interview question
+check that user has given positional argument or not if not then give error 
+
+if [ $# -ne 0 ]
+then 
+   if [ $1 -gt 18 ]
+   then 
+       echo "you can vote"
+   else 
+       echo "you cant vote"
+   fi
+else 
+  echo "error : no argument is passed"
+fi
+
+
+add 2 number but if less or more than 2 given show error
+
+
+sytax
+if [ [ condition ] ]
+then 
+  statement
+elif [ [ condition ] ]
+  statement
+else
+ do this by default
+fi
+
+
+Loops
+
+ for <var> in <a list of items>
+   do 
+    <some command>$<variable name>   
+ done
+  
+       
+for i in {10..50..10} // range
+        start end  increment kitini pahije
+          10   50   10
+for i in 10 20 30 40 50  // list
+
+
+
+for((i = 0; i<num; i++))
+do 
+ echo $i
+done
+
+Q.
+read start and end print start to end
+start 4 and end 6 then 4,5,6
+start 2 and end -1 then 2,1,0,-1
+
+what is program is made up of
+sequence 
+branch   (condition) 
+loops
+
+
+
+while loop
+
+while command
+do
+ statement(s) to be executed if command is true
+done
+
+
+
+a = 0
+
+while [ $a -lt 10 ]
+do 
+echo $a
+ a = $(($a+1)))
+
+  # in new bash only
+  or 
+  ((a++))
+  or 
+  ((a--))
+done
+
+
+
+
+
+
+
+
+
+
+

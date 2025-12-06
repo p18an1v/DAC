@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Linux & Shell Scripting Tutorial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        /* Basic styles for code blocks */
+        pre {
+            background-color: #f4f4f5; /* zinc-100 */
+            color: #3f3f46; /* zinc-700 */
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+        }
+        pre code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        /* Custom syntax highlighting */
+        .code-keyword { color: #d946ef; font-weight: 600; } /* fuchsia-600 */
+        .code-comment { color: #65a30d; } /* lime-600 */
+        .code-string { color: #ea580c; } /* orange-600 */
+        .code-var { color: #2563eb; } /* blue-600 */
+        .code-op { color: #64748b; } /* slate-500 */
+        .code-num { color: #059669; } /* emerald-600 */
+
+        /* Hide all sections by default */
+        .content-section {
+            display: none;
+        }
+        /* Show the active section */
+        .content-section.active {
+            display: block;
+        }
+
+        /* Sidebar link styling */
+        .sidebar-link {
+            transition: all 0.2s ease-in-out;
+        }
+        .sidebar-link.active, .sidebar-link:hover {
+            background-color: #f59e0b; /* amber-500 */
+            color: #ffffff;
+            transform: translateX(4px);
+        }
+        
+        /* Sub-tab styling */
+        .tab-link {
+            transition: all 0.2s ease-in-out;
+            border-bottom: 2px solid transparent;
+        }
+        .tab-link.active, .tab-link:hover {
+            border-color: #f59e0b; /* amber-500 */
+            color: #b45309; /* amber-700 */
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+    <!-- Chosen Palette: Warm Neutral (Stone/Amber) -->
+    <!-- Application Structure Plan: Designed a SPA with a persistent sidebar navigation and a main content area. This thematic structure (Home, Distros, Commands, Scripting Basics, Operators, Control Flow) is better for a tutorial than the report's linear flow. It allows users to jump to any topic, facilitating learning and reference. Key interactions include dynamic content switching (SPA mechanic), a searchable command list, and tabbed sections for dense topics (Operators, Control Flow) to reduce cognitive load. -->
+    <!-- Visualization & Content Choices: Report: Linux Structure Diagram -> Goal: Show hierarchy -> Viz: Recreated diagram with nested HTML/Tailwind divs (NO SVG). Report: Distro List -> Goal: Explore options -> Viz: Interactive grid of buttons; click to show description (JS data array). Report: Command List -> Goal: Quick reference -> Viz: Searchable/filterable list of cards (JS data array + filter logic). Report: Chmod table -> Goal: Understand permissions -> Viz: Recreated as an easy-to-read HTML table. Report: Scripting examples (if, for, while) -> Goal: Teach syntax -> Viz: Styled code blocks. NO CHARTS in source, so Chart.js/Plotly.js not used. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+</head>
+<body class="bg-stone-100 text-stone-800">
+
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <aside id="sidebar" class="w-64 bg-white p-6 shadow-lg fixed top-0 left-0 h-full z-20 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out">
+            <h1 class="text-2xl font-bold text-amber-600 mb-2">Linux Tutorial</h1>
+            <p class="text-xs text-stone-500 mb-3">Created by Dr. Amar Panchal</p>
+            <div class="flex space-x-3 mb-6 text-stone-500 text-lg">
+                <a href="https://amarpanchal.in/" target="_blank" class="hover:text-amber-600 transition-colors" title="Dr. Amar Panchal's Website">🔗</a>
+                <a href="https://www.linkedin.com/in/theamarpanchal/" target="_blank" class="hover:text-amber-600 transition-colors" title="LinkedIn Profile">🌐</a>
+                <a href="https://www.instagram.com/amar.career/" target="_blank" class="hover:text-amber-600 transition-colors" title="Instagram (@amar.career)">📸</a>
+                <a href="https://www.youtube.com/@amar.career" target="_blank" class="hover:text-amber-600 transition-colors" title="YouTube Channel">▶️</a>
+            </div>
+            <nav id="sidebar-nav" class="space-y-2">
+                <a href="#home" class="sidebar-link active block py-2 px-4 rounded-lg font-medium" data-section="home">Introduction</a>
+                <a href="#distros" class="sidebar-link block py-2 px-4 rounded-lg font-medium" data-section="distros">Distributions</a>
+                <a href="#concepts" class="sidebar-link block py-2 px-4 rounded-lg font-medium" data-section="concepts">Core Concepts</a>
+                <a href="#commands" class="sidebar-link block py-2 px-4 rounded-lg font-medium" data-section="commands">Basic Commands</a>
+                <a href="#scripting" class="sidebar-link block py-2 px-4 rounded-lg font-medium" data-section="scripting">Scripting Basics</a>
+                <a href="#operators" class="sidebar-link block py-2 px-4 rounded-lg font-medium" data-section="operators">Operators</a>
+                <a href="#controlflow" class="sidebar-link block py-2 px-4 rounded-lg font-medium" data-section="controlflow">Control Flow</a>
+                <a href="#advanced" class="sidebar-link block py-2 px-4 rounded-lg font-medium" data-section="advanced">Advanced Scripting</a>
+            </nav>
+        </aside>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="menu-toggle" class="md:hidden fixed top-4 left-4 z-30 p-2 bg-amber-500 text-white rounded-lg shadow-md">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+        
+        <!-- Overlay for mobile menu -->
+        <div id="overlay" class="md:hidden fixed inset-0 bg-black opacity-50 z-10 hidden"></div>
+
+        <!-- Main Content -->
+        <main class="flex-1 md:ml-64 p-6 md:p-10">
+            
+            <!-- Section: Home -->
+            <section id="home" class="content-section active">
+                <h2 class="text-3xl font-bold text-amber-700 mb-6">Introduction to Linux</h2>
+                <p class="text-lg text-stone-700 mb-6">This interactive guide, based on the work of Dr. Amar Panchal, provides a comprehensive overview of the Linux operating system and the fundamentals of shell scripting. Navigate through the topics on the left to explore.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- What is Linux? -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold text-amber-600 mb-4">What is Linux?</h3>
+                        <p class="text-stone-600 mb-4">Linux is a Unix-like, open-source, and community-developed operating system (OS) for computers, servers, mainframes, mobile devices, and embedded devices.</p>
+                        <p class="text-stone-600">Developed by Linus Torvalds in 1991, it originated as an idea to improve the UNIX OS.</p>
+                    </div>
+
+                    <!-- Linux Structure Diagram -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold text-amber-600 mb-4">Linux OS Structure</h3>
+                        <p class="text-stone-600 mb-4">The Linux system is built in layers, from the physical hardware to the applications you use. This separation makes the system modular and secure.</p>
+                        <div class="border-4 border-stone-700 rounded-lg p-4 bg-stone-50 text-center font-medium">
+                            Hardware (CPU, RAM, I/O)
+                            <div class="border-2 border-sky-600 rounded-lg p-4 mt-4 bg-sky-50">
+                                Kernel Modules
+                                <div class="border-2 border-emerald-600 rounded-lg p-4 mt-4 bg-emerald-50">
+                                    Kernel
+                                    <div class="border-2 border-indigo-600 rounded-lg p-4 mt-4 bg-indigo-50">
+                                        System Libraries
+                                        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 mt-4">
+                                            <div class="border border-amber-500 bg-amber-50 rounded p-2">System Softwares</div>
+                                            <div class="border border-amber-500 bg-amber-50 rounded p-2">User Process</div>
+                                            <div class="border border-amber-500 bg-amber-50 rounded p-2">User Utility</div>
+                                            <div class="border border-amber-500 bg-amber-50 rounded p-2">Compilers</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Where is Linux Used? -->
+                <h3 class="text-2xl font-semibold text-amber-600 mt-8 mb-4">Where is Linux Used?</h3>
+                <p class="text-stone-700 mb-6">Linux is one of the most versatile operating systems in the world. You can find it in many different settings, from tiny embedded devices to massive supercomputers.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
+                        <h4 class="font-bold text-lg text-amber-700">Desktop OS</h4>
+                        <p class="text-stone-600 text-sm">For personal productivity computing, with distributions like Ubuntu and Linux Mint.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
+                        <h4 class="font-bold text-lg text-amber-700">Headless Server OS</h4>
+                        <p class="text-stone-600 text-sm">For remotely managed servers that don't need a graphical user interface (GUI).</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
+                        <h4 class="font-bold text-lg text-amber-700">Embedded Devices</h4>
+                        <p class="text-stone-600 text-sm">For appliances and systems with limited computing functions, like smart TVs and routers.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
+                        <h4 class="font-bold text-lg text-amber-700">Network OS</h4>
+                        <p class="text-stone-600 text-sm">For routers, switches, and domain name system (DNS) servers.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
+                        <h4 class="font-bold text-lg text-amber-700">Software Development</h4>
+                        <p class="text-stone-600 text-sm">A favorite for developers, with tools like git, vim, emacs, and compilers for every language.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
+                        <h4 class="font-bold text-lg text-amber-700">Cloud OS</h4>
+                        <p class="text-stone-600 text-sm">Major cloud providers offer countless Linux instances for servers, desktops, and services.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Distributions -->
+            <section id="distros" class="content-section">
+                <h2 class="text-3xl font-bold text-amber-700 mb-6">Popular Linux Distributions</h2>
+                <p class="text-lg text-stone-700 mb-6">A "distribution" (or "distro") is a complete operating system built on top of the Linux kernel, which includes the GNU system utilities, libraries, and other software. Here are some of the most popular ones.</p>
+                
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div class="w-full md:w-1/3">
+                        <div id="distro-list" class="flex flex-wrap gap-2 md:flex-col md:gap-2">
+                            <!-- Distro buttons will be injected here by JS -->
+                        </div>
+                    </div>
+                    <div class="w-full md:w-2/3">
+                        <div id="distro-details" class="bg-white p-6 rounded-lg shadow-md min-h-[200px]">
+                            <p class="text-stone-500">Select a distribution on the left to see its details.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Section: Core Concepts -->
+            <section id="concepts" class="content-section">
+                <h2 class="text-3xl font-bold text-amber-700 mb-6">Core Concepts</h2>
+                <p class="text-lg text-stone-700 mb-6">Understand the key components that make up a complete Linux system and the shell that lets you interact with it.</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- OS Components -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold text-amber-600 mb-4">Components of the OS</h3>
+                        <div id="components-accordion" class="space-y-2">
+                            <!-- Accordion items will be injected by JS -->
+                        </div>
+                    </div>
+                    
+                    <!-- The Shell -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold text-amber-600 mb-4">The Shell</h3>
+                        <p class="text-stone-600 mb-4">The **Shell** is a special program that provides an interface for you to use the operating system's services. It accepts human-readable commands (like `ls` or `cd`) and converts them into something the kernel can understand.</p>
+                        <p class="text-stone-600 mb-4">When you log in or open a terminal, you are interacting with a shell. While Linus Torvalds developed the Linux *kernel*, the complete Linux system also relies on GNU system utilities, libraries, and a shell.</p>
+                        <h4 class="text-xl font-semibold text-stone-700 mb-2">Common Shell Types</h4>
+                        <ul class="list-disc list-inside space-y-1 text-stone-600">
+                            <li><strong>BASH (Bourne Again SHell):</strong> The most widely used and default shell in most Linux systems and macOS.</li>
+                            <li><strong>CSH (C Shell):</strong> Uses syntax similar to the C programming language.</li>
+                            <li><strong>KSH (Korn SHell):</strong> Was the base for the POSIX Shell standard.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Basic Commands -->
+            <section id="commands" class="content-section">
+                <h2 class="text-3xl font-bold text-amber-700 mb-6">Basic Shell Commands</h2>
+                <p class="text-lg text-stone-700 mb-6">These are the fundamental commands for navigating and interacting with your system in the shell. Use the search box to filter the commands.</p>
+                
+                <input type="text" id="command-search" class="w-full p-3 border border-stone-300 rounded-lg shadow-sm mb-6" placeholder="Search for a command (e.g., ls, cp, mkdir)...">
+                
+                <div id="command-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Command cards will be injected here by JS -->
+                </div>
+            </section>
+
+            <!-- Section: Scripting Basics -->
+            <section id="scripting" class="content-section">
+                <h2 class="text-3xl font-bold text-amber-700 mb-6">Shell Scripting Basics</h2>
+                <p class="text-lg text-stone-700 mb-6">A shell script is simply a file containing a list of commands that the shell can execute. This is powerful for automating repetitive tasks, performing system backups, monitoring, and much more.</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- How to Write a Script -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold text-amber-600 mb-4">How to Write a Script</h3>
+                        <ol class="list-decimal list-inside space-y-4 text-stone-700">
+                            <li>
+                                <strong class="font-medium text-stone-800">Create a file</strong> with a `.sh` extension (e.g., `myscript.sh`).
+                            </li>
+                            <li>
+                                <strong class="font-medium text-stone-800">Add the "Shebang"</strong> as the very first line. This tells the system which shell to use.
+                                <pre><code class="code-comment">#!/bin/bash</code></pre>
+                            </li>
+                            <li>
+                                <strong class="font-medium text-stone-800">Add commands</strong> and comments (comments start with `#`).
+                                <pre><code class="code-comment"># This is a comment</code>
+<code class="code-keyword">echo</code> <code class="code-string">"Hello, World!"</code></pre>
+                            </li>
+                            <li>
+                                <strong class="font-medium text-stone-800">Make the script executable</strong> using `chmod`.
+                                <pre>chmod 755 myscript.sh</pre>
+                            </li>
+                            <li>
+                                <strong class="font-medium text-stone-800">Run the script</strong> from your local directory.
+                                <pre>./myscript.sh</pre>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <!-- Chmod Permissions -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold text-amber-600 mb-4">Understanding `chmod`</h3>
+                        <p class="text-stone-600 mb-4">The `chmod 755` command sets permissions. The numbers represent **User**, **Group**, and **Public**.</p>
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-stone-50 border-b">
+                                    <th class="p-2 font-semibold">Value</th>
+                                    <th class="p-2 font-semibold">Permission</th>
+                                    <th class="p-2 font-semibold">Meaning (Binary)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="p-2 font-mono">0</td>
+                                    <td class="p-2">---</td>
+                                    <td class="p-2">No Permission (0+0+0)</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-2 font-mono">1</td>
+                                    <td class="p-2">--x</td>
+                                    <td class="p-2">Execute (0+0+1)</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-2 font-mono">2</td>
+                                    <td class="p-2">-w-</td>
+                                    <td class="p-2">Write (0+2+0)</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-2 font-mono">3</td>
+                                    <td class="p-2">-wx</td>
+                                    <td class="p-2">Write + Execute (0+2+1)</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-2 font-mono">4</td>
+                                    <td class="p-2">r--</td>
+                                    <td class="p-2">Read (4+0+0)</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-2 font-mono">5</td>
+                                    <td class="p-2">r-x</td>
+                                    <td class="p-2">Read + Execute (4+0+1)</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-2 font-mono">6</td>
+                                    <td class="p-2">rw-</td>
+                                    <td class="p-2">Read + Write (4+2+0)</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-2 font-mono">7</td>
+                                    <td class="p-2">rwx</td>
+                                    <td class="p-2">All Permissions (4+2+1)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="text-stone-600 mt-4">So, <code class="font-mono bg-stone-200 px-1 rounded">chmod 755</code> means: <br>
+                            • **User:** 7 (rwx) <br>
+                            • **Group:** 5 (r-x) <br>
+                            • **Public:** 5 (r-x)
+                        </p>
+                    </div>
+
+                    <!-- Variables & I/O -->
+                    <div class="bg-white p-6 rounded-lg shadow-md lg:col-span-2">
+                        <h3 class="text-2xl font-semibold text-amber-600 mb-4">Variables and I/O</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="text-xl font-semibold text-stone-700 mb-2">Variables</h4>
+                                <p class="text-stone-600 mb-2">Store and access data.</p>
+                                <pre><code class="code-comment"># Create (no spaces, no $)</code>
+<code class="code-var">VARNAME</code><code class="code-op">=</code><code class="code-string">"value"</code>
+
+<code class="code-comment"># Access (use $)</code>
+<code class="code-keyword">echo</code> <code class="code-var">$VARNAME</code></pre>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-stone-700 mb-2">Input / Output</h4>
+                                <p class="text-stone-600 mb-2">Communicate with the user.</p>
+                                <pre><code class="code-comment"># Output a message</code>
+<code class="code-keyword">echo</code> <code class="code-string">"Hello, World!"</code>
+
+<code class="code-comment"># Read input into a variable</code>
+<code class="code-keyword">read</code> <code class="code-var">VARNAME</code>
+
+<code class="code-comment"># Prompt and read (easier)</code>
+<code class="code-keyword">read</code> -p <code class="code-string">"Enter your name: "</code> <code class="code-var">NAME</code>
+<code class="code-keyword">echo</code> <code class="code-string">"Hello, </code><code class="code-var">$NAME</code><code class="code-string">"</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Section: Operators -->
+            <section id="operators" class="content-section">
+                <h2 class="text-3xl font-bold text-amber-700 mb-6">Operators in Shell Scripting</h2>
+                <p class="text-lg text-stone-700 mb-6">Operators are symbols that tell the shell to perform specific operations, such as arithmetic or logical comparisons. Use the tabs below to explore the different types.</p>
+                
+                <!-- Operator Tabs -->
+                <div class="mb-4 border-b border-stone-300">
+                    <nav id="operators-tabs" class="flex space-x-4">
+                        <button class="tab-link active py-2 px-4 font-medium text-stone-600" data-tab="op-arithmetic">Arithmetic</button>
+                        <button class="tab-link py-2 px-4 font-medium text-stone-600" data-tab="op-test">Test (Integer)</button>
+                        <button class="tab-link py-2 px-4 font-medium text-stone-600" data-tab="op-logical">Logical</button>
+                        <button class="tab-link py-2 px-4 font-medium text-stone-600" data-tab="op-string">Test (String)</button>
+                    </nav>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <!-- Arithmetic Tab -->
+                    <div id="op-arithmetic" class="tab-content active">
+                        <h3 class="text-2xl font-semibold text-amber-600 mb-4">Arithmetic Operators</h3>
+                        <p class="text-stone-600 mb-4">Used for math operations. The modern way is to use <code class="font-mono bg-stone-200 px-1 rounded">$(( ... ))</code>.</p>
+                        <pre><code class="code-var">A</code><code class="code-op">=</code><code class="code-num">10</code>
+<code class="code-var">B</code><code class="code-op">=</code><code class="code-num">20</code>
+<code class="code-keyword">echo</code> <code class="code-string">"Sum is: </code><code class="code-var">$((</code> <code class="code-var">$A</code> <code class="code-op">+</code> <code class="code-var">$B</code> <code class="code-var">))</code><code class="code-string">"</code> <code class="code-comment"># Outputs 30</code></pre>
+                        <table class="w-full mt-4 text-left border-collapse">
+                            <thead><tr class="bg-stone-50 border-b"><th class="p-2 font-semibold">Operator</th><th class="p-2 font-semibold">Description</th><th class="p-2 font-semibold">Example</th></tr></thead>
+                            <tbody>
+                                <tr class="border-b"><td class="p-2 font-mono">+</td><td class="p-2">Addition</td><td class="p-2 font-mono">$(( 10 + 5 ))</td></tr>
+                                <tr class="border-b"><td class="p-2 font-mono">-</td><td class="p-2">Subtraction</td><td class="p-2 font-mono">$(( 10 - 5 ))</td></tr>
+                                <tr class="border-b"><td class="p-2 font-mono">*</td><td class="p-2">Multiplication</td><td class="p-2 font-mono">$(( 10 * 5 ))</td></tr>
+                                <tr class="border-b"><td class="p-2 font-mono">/</td><td class="p-2">Division (Integer)</td><td class="p-2 font-mono">$(( 10 / 5 ))</td></tr>
+                                <tr class="border-b"><td class="p-2 font-mono">%</td><td class="p-2">Modulus (Remainder)</td><td class="p-2 font-mono">$(( 10 % 3 )) <code class="code-comment"># Result is 1</code></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Test (Integer) Tab -->
+                    <div id="op-test" class="tab-content">
+                        <h3 class="text-2xl font-semibold text-amber-600 mb-4">Test Operators (for Integers)</h3>
+                        <p class="text-stone-600 mb-4">Used inside <code class="font-mono bg-stone-200 px-1 rounded">[ ... ]</code> or <code class="font-mono bg-stone-200 px-1 rounded">[[ ... ]]</code> to compare numbers.</p>
+                        <pre><code class="code-var">A</code><code class="code-op">=</code><code class="code-num">10</code>
+<code class="code-keyword">if</code> <code class="code-op">[[</code> <code class="code-var">$A</code> -gt <code class="code-num">5</code> <code class="code-op">]]</code><code class="code-keyword">; then</code>
+  <code class="code-keyword">echo</code> <code class="code-string">"A is greater than 5"</code>
+<code class="code-keyword">fi</code></pre>
+                        <table class="w-full mt-4 text-left border-collapse">
+                            <thead><tr class="bg-stone-50 border-b"><th class="p-2 font-semibold">Operator</th><th class="p-2 font-semibold">Description</th></tr></thead>
+                            <tbody>
+                                <tr class="border-b"><td class="p-2 font-mono">-eq</td><td class="p-2">is **eq**ual to</td></tr>
+                                <tr class="border-b"><td class="p-2 font-mono">-ne</td><td class="p-2">is **n**ot **e**qual to</td></tr>
+                                <tr class="border-b"><td class="p-2 font-mono">-gt</td><td class="p-2">is **g**reater **t**han</td></tr>
+                                <tr class="border-b"><td class="p-2 font-mono">-ge</td><td class="p-2">is **g**reater than or **e**qual to</td></tr>
+                                <tr class="border-b"><td class="p-2 font-mono">-lt</td><td class="p-2">is **l**ess **t**han</td></tr>
+                                <tr class="border-b"><td class="p-2 font-mono">-le</td><td class="p-2">is **l**ess than or **e**qual to</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Logical Tab -->
+                    <div id="op-logical" class="tab-content">
+                        <h3 class="text-2xl font-semibold text-amber-600 mb-4">Logical Operators</h3>
+                        <p class="text-stone-600 mb-4">Used to combine conditional tests.</p>
+                        <pre><code class="code-var">A</code><code class="code-op">=</code><code class="code-num">10</code>
+<code class="code-var">B</code><code class="code-op">=</code><code class="code-num">20</code>
+<code class="code-keyword">if</code> <code class="code-op">[[</code> <code class="code-var">$A</code> -lt <code class="code-num">15</code> <code class="code-op">&&</code> <code class="code-var">$B</code> -gt <code class="code-num">15</code> <code class="code-op">]]</code><code class="code-keyword">; then</code>
+  <code class="code-keyword">echo</code> <code class="code-string">"Both are true"</code>
+<code class="code-keyword">fi</code></pre>
+                        <table class="w-full mt-4 text-left border-collapse">
+                            <thead><tr class="bg-stone-50 border-b"><th class="p-2 font-semibold">Modern <code class="font-mono">[[ ... ]]</code></th><th class="p-2 font-semibold">Old <code class="font-mono">[ ... ]</code></th><th class="p-2 font-semibold">Description</th></tr></thead>
+                            <tbody>
+                                <tr class="border-b"><td class="p-2 font-mono">&&</td><td class="p-2 font-mono">-a</td><td class="p-2">Logical AND</td></tr>
+                                <tr class="border-b"><td class="p-2 font-mono">||</td><td class="p-2 font-mono">-o</td><td class="p-2">Logical OR</td></tr>
+                                <tr class="border-b"><td class="p-2 font-mono">!</td><td class="p-2 font-mono">!</td><td class="p-2">Logical NOT (inverts the test)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Test (String) Tab -->
+                    <div id="op-string" class="tab-content">
+                        <h3 class="text-2xl font-semibold text-amber-600 mb-4">Test Operators (for Strings)</h3>
+                        <p class="text-stone-600 mb-4">Used inside <code class="font-mono bg-stone-200 px-1 rounded">[ ... ]</code> or <code class="font-mono bg-stone-200 px-1 rounded">[[ ... ]]</code> to compare strings.</p>
+                        <pre><code class="code-var">NAME</code><code class="code-op">=</code><code class="code-string">"Amar"</code>
+<code class="code-keyword">if</code> <code class="code-op">[[</code> <code class="code-var">$NAME</code> <code class="code-op">==</code> <code class="code-string">"Amar"</code> <code class="code-op">]]</code><code class="code-keyword">; then</code>
+  <code class="code-keyword">echo</code> <code class="code-string">"Hello, Amar"</code>
+<code class="code-keyword">fi</code></pre>
+                        <table class="w-full mt-4 text-left border-collapse">
+                            <thead><tr class="bg-stone-50 border-b"><th class="p-2 font-semibold">Operator</th><th class="p-2 font-semibold">Description</th></tr></thead>
+                            <tbody>
+                                <tr class="border-b"><td class="p-2 font-mono">=</td><td class="p-2">Strings are equal (use <code class="font-mono">==</code> in <code class="font-mono">[[ ... ]]</code> for clarity)</td></tr>
+                                <tr class="border-b"><td class="p-2 font-mono">!=</td><td class="p-2">Strings are not equal</td></tr>
+                                <tr class="border-b"><td class="p-2 font-mono">-z string</td><td class="p-2">True if string length is **z**ero</td></tr>
+                                <tr class="border-b"><td class="p-2 font-mono">-n string</td><td class="p-2">True if string length is **n**on-zero</td></tr>
+                                <tr class="border-b"><td class="p-2 font-mono">string</td><td class="p-2">True if string is not null (same as -n)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Section: Control Flow -->
+            <section id="controlflow" class="content-section">
+                <h2 class="text-3xl font-bold text-amber-700 mb-6">Control Flow</h2>
+                <p class="text-lg text-stone-700 mb-6">Control flow structures like loops and conditionals allow you to direct the order in which your script's commands are executed.</p>
+
+                <!-- Control Flow Tabs -->
+                <div class="mb-4 border-b border-stone-300">
+                    <nav id="controlflow-tabs" class="flex flex-wrap space-x-4">
+                        <button class="tab-link active py-2 px-4 font-medium text-stone-600" data-tab="flow-if">if / elif / else</button>
+                        <button class="tab-link py-2 px-4 font-medium text-stone-600" data-tab="flow-case">case</button>
+                        <button class="tab-link py-2 px-4 font-medium text-stone-600" data-tab="flow-for">for loop</button>
+                        <button class="tab-link py-2 px-4 font-medium text-stone-600" data-tab="flow-while">while loop</button>
+                        <button class="tab-link py-2 px-4 font-medium text-stone-600" data-tab="flow-until">until loop</button>
+                    </nav>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <!-- if / elif / else Tab -->
+                    <div id="flow-if" class="tab-content active">
+                        <h3 class="text-2xl font-semibold text-amber-600 mb-4">if / elif / else</h3>
+                        <p class="text-stone-600 mb-4">Executes blocks of code based on conditions. Use <code class="font-mono bg-stone-200 px-1 rounded">[[ ... ]]</code> for modern, safer tests.</p>
+<pre><code class="code-keyword">read</code> -p <code class="code-string">"Enter a number: "</code> <code class="code-var">X</code>
+
+<code class="code-keyword">if</code> <code class="code-op">[[</code> <code class="code-var">$X</code> -gt <code class="code-num">100</code> <code class="code-op">]]</code><code class="code-keyword">; then</code>
+    <code class="code-keyword">echo</code> <code class="code-string">"X is greater than 100"</code>
+<code class="code-keyword">elif</code> <code class="code-op">[[</code> <code class="code-var">$X</code> -eq <code class="code-num">100</code> <code class="code-op">]]</code><code class="code-keyword">; then</code>
+    <code class="code-keyword">echo</code> <code class="code-string">"X is exactly 100"</code>
+<code class="code-keyword">else</code>
+    <code class="code-keyword">echo</code> <code class="code-string">"X is less than 100"</code>
+<code class="code-keyword">fi</code></pre>
+                    </div>
+
+                    <!-- case Tab -->
+                    <div id="flow-case" class="tab-content">
+                        <h3 class="text-2xl font-semibold text-amber-600 mb-4">case</h3>
+                        <p class="text-stone-600 mb-4">A cleaner way to handle multiple <code class="font-mono bg-stone-200 px-1 rounded">if</code> statements when checking one variable against multiple patterns.</p>
+<pre><code class="code-keyword">read</code> -p <code class="code-string">"Enter 'start' or 'stop': "</code> <code class="code-var">ACTION</code>
+
+<code class="code-keyword">case</code> <code class="code-string">"</code><code class="code-var">$ACTION</code><code class="code-string">"</code> <code class="code-keyword">in</code>
+    <code class="code-string">"start"</code><code class="code-op">)</code>
+        <code class="code-keyword">echo</code> <code class="code-string">"Starting service..."</code>
+        <code class="code-op">;;</code>
+    <code class="code-string">"stop"</code><code class="code-op">)</code>
+        <code class="code-keyword">echo</code> <code class="code-string">"Stopping service."</code>
+        <code class="code-op">;;</code>
+    <code class="code-string">"status"</code><code class="code-op">|</code><code class="code-string">"check"</code><code class="code-op">)</code>
+        <code class="code-keyword">echo</code> <code class="code-string">"Checking status..."</code>
+        <code class="code-op">;;</code>
+    <code class="code-op">*)</code> <code class="code-comment"># Default (catch-all) case</code>
+        <code class="code-keyword">echo</code> <code class="code-string">"Usage: start|stop|status"</code>
+        <code class="code-op">;;</code>
+<code class="code-keyword">esac</code></pre>
+                    </div>
+
+                    <!-- for loop Tab -->
+                    <div id="flow-for" class="tab-content">
+                        <h3 class="text-2xl font-semibold text-amber-600 mb-4">for loop</h3>
+                        <p class="text-stone-600 mb-4">Executes a block of code for each item in a list.</p>
+<pre><code class="code-comment"># 1. Loop over a list of strings</code>
+<code class="code-keyword">for</code> <code class="code-var">NAME</code> <code class="code-keyword">in</code> <code class="code-string">"Amar"</code> <code class="code-string">"Teach"</code> <code class="code-string">"This"</code><code class="code-keyword">; do</code>
+    <code class="code-keyword">echo</code> <code class="code-string">"Name: </code><code class="code-var">$NAME</code><code class="code-string">"</code>
+<code class="code-keyword">done</code>
+
+<code class="code-comment"># 2. Loop over a range of numbers (Bash brace expansion)</code>
+<code class="code-keyword">for</code> <code class="code-var">i</code> <code class="code-keyword">in</code> <code class="code-op">{</code><code class="code-num">1</code><code class="code-op">..</code><code class="code-num">5</code><code class="code-op">}</code><code class="code-keyword">; do</code>
+    <code class="code-keyword">echo</code> <code class="code-string">"Number: </code><code class="code-var">$i</code><code class="code-string">"</code>
+<code class="code-keyword">done</code></pre>
+                    </div>
+
+                    <!-- while loop Tab -->
+                    <div id="flow-while" class="tab-content">
+                        <h3 class="text-2xl font-semibold text-amber-600 mb-4">while loop</h3>
+                        <p class="text-stone-600 mb-4">Executes a block of code *as long as* a condition is true.</p>
+<pre><code class="code-var">A</code><code class="code-op">=</code><code class="code-num">0</code>
+<code class="code-keyword">while</code> <code class="code-op">[[</code> <code class="code-var">$A</code> -lt <code class="code-num">5</code> <code class="code-op">]]</code><code class="code-keyword">; do</code>
+    <code class="code-keyword">echo</code> <code class="code-var">$A</code>
+    <code class="code-var">A</code><code class="code-op">=</code><code class="code-var">$((</code> <code class="code-var">$A</code> <code class="code-op">+</code> <code class="code-num">1</code> <code class="code-var">))</code>
+<code class="code-keyword">done</code></pre>
+                    </div>
+
+                    <!-- until loop Tab -->
+                    <div id="flow-until" class="tab-content">
+                        <h3 class="text-2xl font-semibold text-amber-600 mb-4">until loop</h3>
+                        <p class="text-stone-600 mb-4">The opposite of <code class="font-mono bg-stone-200 px-1 rounded">while</code>. Executes a block of code *until* a condition becomes true.</p>
+<pre><code class="code-var">A</code><code class="code-op">=</code><code class="code-num">0</code>
+<code class="code-keyword">until</code> <code class="code-op">[[</code> <code class="code-var">$A</code> -eq <code class="code-num">5</code> <code class="code-op">]]</code><code class="code-keyword">; do</code>
+    <code class="code-keyword">echo</code> <code class="code-var">$A</code>
+    <code class="code-var">A</code><code class="code-op">=</code><code class="code-var">$((</code> <code class="code-var">$A</code> <code class="code-op">+</code> <code class="code-num">1</code> <code class="code-var">))</code>
+<code class="code-keyword">done</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Advanced Scripting -->
+            <section id="advanced" class="content-section">
+                <h2 class="text-3xl font-bold text-amber-700 mb-6">Advanced Scripting Concepts</h2>
+                <p class="text-lg text-stone-700 mb-6">These concepts help you write more flexible and robust scripts that can accept arguments and handle success or failure.</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- Positional Parameters -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold text-amber-600 mb-4">Positional Parameters</h3>
+                        <p class="text-stone-600 mb-4">These are variables that hold the arguments passed to your script when you run it. For a command like <code class="font-mono bg-stone-200 px-1 rounded">./script.sh arg1 arg2</code>:</p>
+                        <table class="w-full text-left border-collapse">
+                            <thead><tr class="bg-stone-50 border-b"><th class="p-2 font-semibold">Parameter</th><th class="p-2 font-semibold">What It References</th></tr></thead>
+                            <tbody>
+                                <tr class="border-b"><td class="p-2 font-mono">$0</td><td class="p-2">The name of the script itself (e.g., <code class="font-mono">./script.sh</code>)</td></tr>
+                                <tr class="border-b"><td class="p-2 font-mono">$1</td><td class="p-2">The first argument (e.g., <code class="font-mono">arg1</code>)</td></tr>
+                                <tr class="border-b"><td class="p-2 font-mono">$2</td><td class="p-2">The second argument (e.g., <code class="font-mono">arg2</code>)</td></tr>
+                                <tr class="border-b"><td class="p-2 font-mono">${10}</td><td class="p-2">Arguments after 9 must use braces.</td></tr>
+                                <tr class="border-b"><td class="p-2 font-mono">$#</td><td class="p-2">The total number of arguments (e.g., <code class="font-mono">2</code>)</td></tr>
+                                <tr class="border-b"><td class="p-2 font-mono">$*</td><td class="p-2">All arguments as a single string (e.g., <code class="font-mono">"arg1 arg2"</code>)</td></tr>
+                                <tr class="border-b"><td class="p-2 font-mono">$@</td><td class="p-2">All arguments as a list of separate strings (e.g., <code class="font-mono">"arg1" "arg2"</code>)</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="text-stone-600 mt-4"><strong>Key difference:</strong> Always use <code class="font-mono bg-stone-200 px-1 rounded">"$@"</code> in loops to handle arguments with spaces correctly!</p>
+<pre><code class="code-comment"># This loop handles "arg 1" and "arg 2" correctly</code>
+<code class="code-keyword">for</code> <code class="code-var">arg</code> <code class="code-keyword">in</code> <code class="code-string">"</code><code class="code-var">$@</code><code class="code-string">"</code><code class="code-keyword">; do</code>
+    <code class="code-keyword">echo</code> <code class="code-string">"Argument: </code><code class="code-var">$arg</code><code class="code-string">"</code>
+<code class="code-keyword">done</code></pre>
+                    </div>
+
+                    <!-- Exit Status -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold text-amber-600 mb-4">Exit Status</h3>
+                        <p class="text-stone-600 mb-4">Every command you run finishes with an **exit status** (a number between 0 and 255). This is how the shell signals success or failure.</p>
+                        <ul class="list-disc list-inside space-y-2 text-stone-600 mb-4">
+                            <li><code class="font-mono bg-stone-200 px-1 rounded">0</code> = Success</li>
+                            <li><code class="font-mono bg-stone-200 px-1 rounded">1</code> (or any non-zero) = Failure</li>
+                        </ul>
+                        <p class="text-stone-600 mb-4">The special variable <code class="font-mono bg-stone-200 px-1 rounded">$?</code> holds the exit status of the *last command that just ran*.</p>
+<pre><code class="code-keyword">grep</code> <code class="code-string">"some_text"</code> file.txt
+<code class="code-keyword">echo</code> <code class="code-var">$?</code> <code class="code-comment"># Will be 0 if 'some_text' was found, 1 if not</code>
+
+<code class="code-keyword">if</code> <code class="code-op">[[</code> <code class="code-var">$?</code> -ne <code class="code-num">0</code> <code class="code-op">]]</code><code class="code-keyword">; then</code>
+    <code class="code-keyword">echo</code> <code class="code-string">"Grep failed to find the text!"</code>
+<code class="code-keyword">fi</code></pre>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- Data for Interactive Sections ---
+            
+            const distros = [
+                { name: 'Ubuntu', desc: 'One of the most popular Linux distributions, Ubuntu is based on Debian Linux and is great for beginners and desktops.' },
+                { name: 'Linux Mint', desc: 'A popular desktop Linux distribution, Linux Mint is based on Debian Linux and is known for its ease of use and traditional desktop environment.' },
+                { name: 'Puppy Linux', desc: 'A lightweight Linux distro, intended to be run from removable media. It\'s very fast and works on older computers.' },
+                { name: 'Fedora', desc: 'A community-supported distribution sponsored by Red Hat. It focuses on new technologies. Red Hat Enterprise Linux (RHEL) is based on Fedora.' },
+                { name: 'RHEL', desc: 'Red Hat Enterprise Linux is a commercial enterprise distribution, available via subscription. It offers patches, bug fixes, updates, and technical support.' },
+                { name: 'Debian', desc: 'One of the first Linux distributions (1993). Many other distros, including Ubuntu and Kali, are based on Debian. Known for its stability.' },
+                { name: 'TAILS', desc: 'The Amnesic Incognito Live System is a lightweight distribution intended to preserve user privacy and anonymity. It runs from removable media.' },
+                { name: 'SUSE Linux', desc: 'Includes openSUSE (a community distribution) and SUSE Linux Enterprise (a commercial distribution designed for enterprise use).' },
+                { name: 'Kali Linux', desc: 'Kali provides users with a hacker\'s toolkit and is widely used for penetration testing by information security professionals. Based on Debian.' }
+            ];
+
+            const commands = [
+                { cmd: 'ls', args: '[-l, -h, -a]', desc: 'The **list** command. Shows files and directories in the current location. `-l` for long format, `-h` for human-readable, `-a` for all (hidden) files.' },
+                { cmd: 'cp', args: '<source> <destination>', desc: 'The **copy** command. Copies a file from one location to another.' },
+                { cmd: 'rm', args: '<file>', desc: 'The **remove** command. Deletes a file. Use `rm -r` to remove a directory recursively (use with caution!).' },
+                { cmd: 'mv', args: '<source> <destination>', desc: 'The **move** command. Moves a file or renames it.' },
+                { cmd: 'mkdir', args: '<directory_name>', desc: 'The **make directory** command. Creates a new directory.' },
+                { cmd: 'cd', args: '<directory_name>', desc: 'The **change directory** command. Moves you into a different directory. `cd ..` moves up one level.' },
+                { cmd: 'cat', args: '<file>', desc: 'Concatenates and displays the content of a file on the screen.' },
+                { cmd: 'man', args: '<command>', desc: 'The **manual** command. Shows the manual page (help documentation) for a given command.' },
+                { cmd: 'touch', args: '<file_name>', desc: 'Creates a new, empty file with the specified name. Also updates the timestamp of an existing file.' },
+                { cmd: 'clear', args: '', desc: 'Clears all text and readouts from the terminal screen.' }
+            ];
+
+            const components = [
+                { name: 'Bootloader', desc: 'The software that manages the boot process of your computer (e.g., GRUB). It loads the kernel.' },
+                { name: 'Kernel', desc: 'The core of the system, often called "Linux" itself. It manages the CPU, memory, and peripheral devices.' },
+                { name: 'Init System', desc: 'The first process started by the kernel (e.g., systemd). It bootstraps the user space and manages daemons (services).' },
+                { name: 'Daemons', desc: 'Background services (printing, sound, scheduling, etc.) that start up during boot or after you log in.' },
+                { name: 'Graphical Server', desc: 'The sub-system that displays the graphics on your monitor. Commonly referred to as the X server or just X (or Wayland).' },
+                { name: 'Desktop Environment', desc: 'The piece that users interact with (e.g., GNOME, KDE, Xfce). It includes file managers, configuration tools, and web browsers.' },
+                { name: 'Applications', desc: 'High-quality software titles (like Firefox, LibreOffice, etc.) that can be easily installed.' }
+            ];
+
+            // --- Populate Interactive Elements ---
+
+            // Populate Distros
+            const distroList = document.getElementById('distro-list');
+            const distroDetails = document.getElementById('distro-details');
+            distros.forEach((distro, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'w-full md:w-auto text-left py-2 px-4 rounded-lg bg-stone-100 hover:bg-amber-100 text-stone-700 font-medium transition-colors';
+                btn.textContent = distro.name;
+                btn.onclick = () => {
+                    distroDetails.innerHTML = `
+                        <h3 class="text-2xl font-semibold text-amber-600 mb-4">${distro.name}</h3>
+                        <p class="text-stone-600">${distro.desc}</p>
+                    `;
+                    // Active state for button
+                    distroList.querySelectorAll('button').forEach(b => b.classList.remove('bg-amber-500', 'text-white'));
+                    btn.classList.add('bg-amber-500', 'text-white');
+                };
+                distroList.appendChild(btn);
+                if (index === 0) btn.click(); // Show first item by default
+            });
+
+            // Populate Commands
+            const commandList = document.getElementById('command-list');
+            const commandSearch = document.getElementById('command-search');
+            
+            const renderCommands = (filter = '') => {
+                commandList.innerHTML = '';
+                const filteredCommands = commands.filter(c => 
+                    c.cmd.toLowerCase().includes(filter.toLowerCase()) || 
+                    c.desc.toLowerCase().includes(filter.toLowerCase())
+                );
+                
+                if (filteredCommands.length === 0) {
+                    commandList.innerHTML = `<p class="text-stone-500">No commands found matching "${filter}".</p>`;
+                    return;
+                }
+
+                filteredCommands.forEach(cmd => {
+                    const card = document.createElement('div');
+                    card.className = 'bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow';
+                    card.innerHTML = `
+                        <h4 class="font-bold text-lg text-amber-700 font-mono">${cmd.cmd} ${cmd.args}</h4>
+                        <p class="text-stone-600 text-sm">${cmd.desc}</p>
+                    `;
+                    commandList.appendChild(card);
+                });
+            };
+            
+            commandSearch.addEventListener('input', (e) => renderCommands(e.target.value));
+            renderCommands(); // Initial render
+
+            // Populate OS Components Accordion
+            const accordion = document.getElementById('components-accordion');
+            components.forEach((component, index) => {
+                const item = document.createElement('div');
+                item.className = 'border border-stone-200 rounded-lg overflow-hidden';
+                item.innerHTML = `
+                    <button class="accordion-toggle w-full text-left p-4 bg-stone-50 hover:bg-stone-100 flex justify-between items-center" data-target="comp-${index}">
+                        <span class="font-semibold text-amber-700">${component.name}</span>
+                        <svg class="w-5 h-5 transform transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="comp-${index}" class="accordion-content p-4 text-stone-600 text-sm" style="display: ${index === 0 ? 'block' : 'none'};">
+                        ${component.desc}
+                    </div>
+                `;
+                accordion.appendChild(item);
+                if(index === 0) item.querySelector('svg').style.transform = 'rotate(180deg)';
+            });
+
+            accordion.addEventListener('click', (e) => {
+                const toggle = e.target.closest('.accordion-toggle');
+                if (!toggle) return;
+                
+                const targetId = toggle.dataset.target;
+                const content = document.getElementById(targetId);
+                const svg = toggle.querySelector('svg');
+
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                    svg.style.transform = 'rotate(0deg)';
+                } else {
+                    content.style.display = 'block';
+                    svg.style.transform = 'rotate(180deg)';
+                }
+            });
+
+
+            // --- SPA Navigation Logic ---
+
+            const sidebarNav = document.getElementById('sidebar-nav');
+            const sidebarLinks = sidebarNav.querySelectorAll('.sidebar-link');
+            const contentSections = document.querySelectorAll('.content-section');
+            const menuToggle = document.getElementById('menu-toggle');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+
+            const showSection = (sectionId) => {
+                contentSections.forEach(section => {
+                    section.classList.remove('active');
+                });
+                document.getElementById(sectionId).classList.add('active');
+
+                sidebarLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.dataset.section === sectionId) {
+                        link.classList.add('active');
+                    }
+                });
+                
+                // Close mobile menu on navigation
+                if (window.innerWidth < 768) {
+                    sidebar.classList.add('-translate-x-full');
+                    overlay.classList.add('hidden');
+                }
+            };
+            
+            sidebarNav.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A' && e.target.dataset.section) {
+                    e.preventDefault();
+                    const sectionId = e.target.dataset.section;
+                    showSection(sectionId);
+                    window.location.hash = sectionId;
+                }
+            });
+            
+            // Mobile menu toggle
+            menuToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('-translate-x-full');
+                overlay.classList.toggle('hidden');
+            });
+            overlay.addEventListener('click', () => {
+                sidebar.classList.add('-translate-x-full');
+                overlay.classList.add('hidden');
+            });
+
+            // --- Tabbed Navigation Logic ---
+            
+            const setupTabs = (tabsContainerId, contentClass) => {
+                const tabsContainer = document.getElementById(tabsContainerId);
+                if (!tabsContainer) return;
+                
+                const tabLinks = tabsContainer.querySelectorAll('.tab-link');
+                const tabContents = tabsContainer.parentElement.parentElement.querySelectorAll(contentClass);
+
+                tabsContainer.addEventListener('click', (e) => {
+                    if (e.target.tagName !== 'BUTTON') return;
+                    
+                    const tabId = e.target.dataset.tab;
+                    
+                    tabLinks.forEach(link => link.classList.remove('active'));
+                    e.target.classList.add('active');
+                    
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                        if (content.id === tabId) {
+                            content.classList.add('active');
+                        }
+                    });
+                });
+            };
+
+            setupTabs('operators-tabs', '.tab-content');
+            setupTabs('controlflow-tabs', '.tab-content');
+            
+            // Handle initial section load from hash
+            const initialSection = window.location.hash.substring(1) || 'home';
+            showSection(initialSection);
+
+        });
+    </script>
+</body>
+</html>
