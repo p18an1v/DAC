@@ -1,0 +1,14 @@
+D:\DAC_Prac\CA_collection\CA_collection\obj\Debug\net8.0\CA_collection.GeneratedMSBuildEditorConfig.editorconfig
+D:\DAC_Prac\CA_collection\CA_collection\obj\Debug\net8.0\CA_collection.AssemblyInfoInputs.cache
+D:\DAC_Prac\CA_collection\CA_collection\obj\Debug\net8.0\CA_collection.AssemblyInfo.cs
+D:\DAC_Prac\CA_collection\CA_collection\obj\Debug\net8.0\CA_collection.csproj.CoreCompileInputs.cache
+D:\DAC_Prac\CA_collection\CA_collection\bin\Debug\net8.0\CA_collection.exe
+D:\DAC_Prac\CA_collection\CA_collection\bin\Debug\net8.0\CA_collection.deps.json
+D:\DAC_Prac\CA_collection\CA_collection\bin\Debug\net8.0\CA_collection.runtimeconfig.json
+D:\DAC_Prac\CA_collection\CA_collection\bin\Debug\net8.0\CA_collection.dll
+D:\DAC_Prac\CA_collection\CA_collection\bin\Debug\net8.0\CA_collection.pdb
+D:\DAC_Prac\CA_collection\CA_collection\obj\Debug\net8.0\CA_collection.dll
+D:\DAC_Prac\CA_collection\CA_collection\obj\Debug\net8.0\refint\CA_collection.dll
+D:\DAC_Prac\CA_collection\CA_collection\obj\Debug\net8.0\CA_collection.pdb
+D:\DAC_Prac\CA_collection\CA_collection\obj\Debug\net8.0\CA_collection.genruntimeconfig.cache
+D:\DAC_Prac\CA_collection\CA_collection\obj\Debug\net8.0\ref\CA_collection.dll

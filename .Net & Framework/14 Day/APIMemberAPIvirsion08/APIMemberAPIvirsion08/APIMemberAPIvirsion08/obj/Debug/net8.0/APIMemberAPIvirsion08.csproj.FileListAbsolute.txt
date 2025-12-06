@@ -1,0 +1,70 @@
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\APIMemberAPIvirsion08.csproj.AssemblyReference.cache
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\APIMemberAPIvirsion08.GeneratedMSBuildEditorConfig.editorconfig
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\APIMemberAPIvirsion08.AssemblyInfoInputs.cache
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\APIMemberAPIvirsion08.AssemblyInfo.cs
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\APIMemberAPIvirsion08.csproj.CoreCompileInputs.cache
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\APIMemberAPIvirsion08.MvcApplicationPartsAssemblyInfo.cs
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\APIMemberAPIvirsion08.MvcApplicationPartsAssemblyInfo.cache
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\bin\Debug\net8.0\appsettings.Development.json
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\bin\Debug\net8.0\appsettings.json
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\bin\Debug\net8.0\APIMemberAPIvirsion08.staticwebassets.endpoints.json
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\bin\Debug\net8.0\APIMemberAPIvirsion08.exe
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\bin\Debug\net8.0\APIMemberAPIvirsion08.deps.json
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\bin\Debug\net8.0\APIMemberAPIvirsion08.runtimeconfig.json
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\bin\Debug\net8.0\APIMemberAPIvirsion08.dll
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\bin\Debug\net8.0\APIMemberAPIvirsion08.pdb
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\bin\Debug\net8.0\Microsoft.OpenApi.dll
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\scopedcss\bundle\APIMemberAPIvirsion08.styles.css
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\staticwebassets.build.json
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\staticwebassets.development.json
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\APIMembe.AC383C12.Up2Date
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\APIMemberAPIvirsion08.dll
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\refint\APIMemberAPIvirsion08.dll
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\APIMemberAPIvirsion08.pdb
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\APIMemberAPIvirsion08.genruntimeconfig.cache
+D:\practicedemo\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\ref\APIMemberAPIvirsion08.dll
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\bin\Debug\net8.0\appsettings.Development.json
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\bin\Debug\net8.0\appsettings.json
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\bin\Debug\net8.0\APIMemberAPIvirsion08.staticwebassets.endpoints.json
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\bin\Debug\net8.0\APIMemberAPIvirsion08.exe
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\bin\Debug\net8.0\APIMemberAPIvirsion08.deps.json
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\bin\Debug\net8.0\APIMemberAPIvirsion08.runtimeconfig.json
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\bin\Debug\net8.0\APIMemberAPIvirsion08.dll
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\bin\Debug\net8.0\APIMemberAPIvirsion08.pdb
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\bin\Debug\net8.0\Microsoft.OpenApi.dll
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\APIMemberAPIvirsion08.csproj.AssemblyReference.cache
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\APIMemberAPIvirsion08.GeneratedMSBuildEditorConfig.editorconfig
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\APIMemberAPIvirsion08.AssemblyInfoInputs.cache
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\APIMemberAPIvirsion08.AssemblyInfo.cs
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\APIMemberAPIvirsion08.csproj.CoreCompileInputs.cache
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\APIMemberAPIvirsion08.MvcApplicationPartsAssemblyInfo.cs
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\APIMemberAPIvirsion08.MvcApplicationPartsAssemblyInfo.cache
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\scopedcss\bundle\APIMemberAPIvirsion08.styles.css
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\staticwebassets.build.json
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\staticwebassets.development.json
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\APIMembe.AC383C12.Up2Date
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\APIMemberAPIvirsion08.dll
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\refint\APIMemberAPIvirsion08.dll
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\APIMemberAPIvirsion08.pdb
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\APIMemberAPIvirsion08.genruntimeconfig.cache
+D:\Logic knight\Dot Net\14 Day\APIMemberAPIvirsion08\APIMemberAPIvirsion08\APIMemberAPIvirsion08\obj\Debug\net8.0\ref\APIMemberAPIvirsion08.dll

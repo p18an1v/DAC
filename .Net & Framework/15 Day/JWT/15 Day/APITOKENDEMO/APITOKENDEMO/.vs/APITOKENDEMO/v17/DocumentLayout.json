@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Logic knight\\Dot Net\\15 Day\\APITOKENDEMO\\APITOKENDEMO\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{628A0F72-2645-42BB-8E51-DB2D8E8B6F81}|APITOKENDEMO\\APITOKENDEMO.csproj|d:\\logic knight\\dot net\\15 day\\apitokendemo\\apitokendemo\\apitokendemo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{628A0F72-2645-42BB-8E51-DB2D8E8B6F81}|APITOKENDEMO\\APITOKENDEMO.csproj|solutionrelative:apitokendemo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{628A0F72-2645-42BB-8E51-DB2D8E8B6F81}|APITOKENDEMO\\APITOKENDEMO.csproj|d:\\logic knight\\dot net\\15 day\\apitokendemo\\apitokendemo\\apitokendemo\\controllers\\tokencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{628A0F72-2645-42BB-8E51-DB2D8E8B6F81}|APITOKENDEMO\\APITOKENDEMO.csproj|solutionrelative:apitokendemo\\controllers\\tokencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{628A0F72-2645-42BB-8E51-DB2D8E8B6F81}|APITOKENDEMO\\APITOKENDEMO.csproj|d:\\logic knight\\dot net\\15 day\\apitokendemo\\apitokendemo\\apitokendemo\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{628A0F72-2645-42BB-8E51-DB2D8E8B6F81}|APITOKENDEMO\\APITOKENDEMO.csproj|solutionrelative:apitokendemo\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{628A0F72-2645-42BB-8E51-DB2D8E8B6F81}|APITOKENDEMO\\APITOKENDEMO.csproj|d:\\logic knight\\dot net\\15 day\\apitokendemo\\apitokendemo\\apitokendemo\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{628A0F72-2645-42BB-8E51-DB2D8E8B6F81}|APITOKENDEMO\\APITOKENDEMO.csproj|solutionrelative:apitokendemo\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{628A0F72-2645-42BB-8E51-DB2D8E8B6F81}|APITOKENDEMO\\APITOKENDEMO.csproj|d:\\logic knight\\dot net\\15 day\\apitokendemo\\apitokendemo\\apitokendemo\\repository\\userdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{628A0F72-2645-42BB-8E51-DB2D8E8B6F81}|APITOKENDEMO\\APITOKENDEMO.csproj|solutionrelative:apitokendemo\\repository\\userdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{628A0F72-2645-42BB-8E51-DB2D8E8B6F81}|APITOKENDEMO\\APITOKENDEMO.csproj|d:\\logic knight\\dot net\\15 day\\apitokendemo\\apitokendemo\\apitokendemo\\models\\userinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{628A0F72-2645-42BB-8E51-DB2D8E8B6F81}|APITOKENDEMO\\APITOKENDEMO.csproj|solutionrelative:apitokendemo\\models\\userinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 65,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 148,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserDbContext.cs",
+              "DocumentMoniker": "D:\\Logic knight\\Dot Net\\15 Day\\APITOKENDEMO\\APITOKENDEMO\\APITOKENDEMO\\Repository\\UserDbContext.cs",
+              "RelativeDocumentMoniker": "APITOKENDEMO\\Repository\\UserDbContext.cs",
+              "ToolTip": "D:\\Logic knight\\Dot Net\\15 Day\\APITOKENDEMO\\APITOKENDEMO\\APITOKENDEMO\\Repository\\UserDbContext.cs",
+              "RelativeToolTip": "APITOKENDEMO\\Repository\\UserDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T17:35:34.773Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserInfo.cs",
+              "DocumentMoniker": "D:\\Logic knight\\Dot Net\\15 Day\\APITOKENDEMO\\APITOKENDEMO\\APITOKENDEMO\\Models\\UserInfo.cs",
+              "RelativeDocumentMoniker": "APITOKENDEMO\\Models\\UserInfo.cs",
+              "ToolTip": "D:\\Logic knight\\Dot Net\\15 Day\\APITOKENDEMO\\APITOKENDEMO\\APITOKENDEMO\\Models\\UserInfo.cs",
+              "RelativeToolTip": "APITOKENDEMO\\Models\\UserInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T17:34:25.242Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TokenController.cs",
+              "DocumentMoniker": "D:\\Logic knight\\Dot Net\\15 Day\\APITOKENDEMO\\APITOKENDEMO\\APITOKENDEMO\\Controllers\\TokenController.cs",
+              "RelativeDocumentMoniker": "APITOKENDEMO\\Controllers\\TokenController.cs",
+              "ToolTip": "D:\\Logic knight\\Dot Net\\15 Day\\APITOKENDEMO\\APITOKENDEMO\\APITOKENDEMO\\Controllers\\TokenController.cs",
+              "RelativeToolTip": "APITOKENDEMO\\Controllers\\TokenController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAIwCgAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T17:33:20.939Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Logic knight\\Dot Net\\15 Day\\APITOKENDEMO\\APITOKENDEMO\\APITOKENDEMO\\appsettings.json",
+              "RelativeDocumentMoniker": "APITOKENDEMO\\appsettings.json",
+              "ToolTip": "D:\\Logic knight\\Dot Net\\15 Day\\APITOKENDEMO\\APITOKENDEMO\\APITOKENDEMO\\appsettings.json",
+              "RelativeToolTip": "APITOKENDEMO\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-24T17:31:16.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "D:\\Logic knight\\Dot Net\\15 Day\\APITOKENDEMO\\APITOKENDEMO\\APITOKENDEMO\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "APITOKENDEMO\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "D:\\Logic knight\\Dot Net\\15 Day\\APITOKENDEMO\\APITOKENDEMO\\APITOKENDEMO\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "APITOKENDEMO\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T16:08:08.14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Logic knight\\Dot Net\\15 Day\\APITOKENDEMO\\APITOKENDEMO\\APITOKENDEMO\\Program.cs",
+              "RelativeDocumentMoniker": "APITOKENDEMO\\Program.cs",
+              "ToolTip": "D:\\Logic knight\\Dot Net\\15 Day\\APITOKENDEMO\\APITOKENDEMO\\APITOKENDEMO\\Program.cs",
+              "RelativeToolTip": "APITOKENDEMO\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T16:07:48.195Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

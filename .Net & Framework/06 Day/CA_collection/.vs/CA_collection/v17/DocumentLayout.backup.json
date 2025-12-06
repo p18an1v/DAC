@@ -1,0 +1,96 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\DAC_Prac\\CA_collection\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1EAAB318-897C-43C8-80CA-1EF11CC03B7E}|CA_collection\\CA_collection.csproj|d:\\dac_prac\\ca_collection\\ca_collection\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1EAAB318-897C-43C8-80CA-1EF11CC03B7E}|CA_collection\\CA_collection.csproj|solutionrelative:ca_collection\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EAAB318-897C-43C8-80CA-1EF11CC03B7E}|CA_collection\\CA_collection.csproj|d:\\dac_prac\\ca_collection\\ca_collection\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1EAAB318-897C-43C8-80CA-1EF11CC03B7E}|CA_collection\\CA_collection.csproj|solutionrelative:ca_collection\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EAAB318-897C-43C8-80CA-1EF11CC03B7E}|CA_collection\\CA_collection.csproj|d:\\dac_prac\\ca_collection\\ca_collection\\iempservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1EAAB318-897C-43C8-80CA-1EF11CC03B7E}|CA_collection\\CA_collection.csproj|solutionrelative:ca_collection\\iempservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EAAB318-897C-43C8-80CA-1EF11CC03B7E}|CA_collection\\CA_collection.csproj|d:\\dac_prac\\ca_collection\\ca_collection\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1EAAB318-897C-43C8-80CA-1EF11CC03B7E}|CA_collection\\CA_collection.csproj|solutionrelative:ca_collection\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmployeeService.cs",
+              "DocumentMoniker": "D:\\DAC_Prac\\CA_collection\\CA_collection\\EmployeeService.cs",
+              "RelativeDocumentMoniker": "CA_collection\\EmployeeService.cs",
+              "ToolTip": "D:\\DAC_Prac\\CA_collection\\CA_collection\\EmployeeService.cs",
+              "RelativeToolTip": "CA_collection\\EmployeeService.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAkwCcAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T12:24:26.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IEmpService.cs",
+              "DocumentMoniker": "D:\\DAC_Prac\\CA_collection\\CA_collection\\IEmpService.cs",
+              "RelativeDocumentMoniker": "CA_collection\\IEmpService.cs",
+              "ToolTip": "D:\\DAC_Prac\\CA_collection\\CA_collection\\IEmpService.cs",
+              "RelativeToolTip": "CA_collection\\IEmpService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAASwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T12:19:58.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "D:\\DAC_Prac\\CA_collection\\CA_collection\\Employee.cs",
+              "RelativeDocumentMoniker": "CA_collection\\Employee.cs",
+              "ToolTip": "D:\\DAC_Prac\\CA_collection\\CA_collection\\Employee.cs",
+              "RelativeToolTip": "CA_collection\\Employee.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T12:19:02.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\DAC_Prac\\CA_collection\\CA_collection\\Program.cs",
+              "RelativeDocumentMoniker": "CA_collection\\Program.cs",
+              "ToolTip": "D:\\DAC_Prac\\CA_collection\\CA_collection\\Program.cs",
+              "RelativeToolTip": "CA_collection\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T12:16:11.611Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

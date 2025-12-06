@@ -1,0 +1,35 @@
+Q count occurrence of letter with O(n) with collection
+
+namespace CACollecion
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            string[] arr = { "A", "B", "C", "D", "E", "F", "F", "G", "A" };
+
+            Dictionary<string, int> str = new Dictionary<string, int>();
+
+            foreach(string s in arr)
+            {
+
+                if (str.ContainsKey(s))
+                {
+                    str[s]++;
+                }
+                else
+                {
+                     //adding key and value also
+                    //str[s] = 1;
+                    str.Add(s, 1);
+                }
+
+            }
+
+            Console.WriteLine("Count of A " + str["A"]);
+
+        }
+    }
+}

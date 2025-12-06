@@ -1,0 +1,6 @@
+@APITOKENDEMO_HostAddress = http://localhost:5262
+
+GET {{APITOKENDEMO_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

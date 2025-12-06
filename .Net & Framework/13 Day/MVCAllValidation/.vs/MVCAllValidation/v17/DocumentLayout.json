@@ -1,0 +1,132 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCAllValidation\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F64CB6C7-CC15-4A4B-AC6C-A91C0C5DCC68}|MVCAllValidation\\MVCAllValidation.csproj|d:\\dotnet all\\dotnet\\dotnet all\\dotnet_core\\coreasp_mvc\\examples\\livetech\\mvcallvalidation\\mvcallvalidation\\controllers\\cutomercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F64CB6C7-CC15-4A4B-AC6C-A91C0C5DCC68}|MVCAllValidation\\MVCAllValidation.csproj|solutionrelative:mvcallvalidation\\controllers\\cutomercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64CB6C7-CC15-4A4B-AC6C-A91C0C5DCC68}|MVCAllValidation\\MVCAllValidation.csproj|d:\\dotnet all\\dotnet\\dotnet all\\dotnet_core\\coreasp_mvc\\examples\\livetech\\mvcallvalidation\\mvcallvalidation\\views\\cutomer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F64CB6C7-CC15-4A4B-AC6C-A91C0C5DCC68}|MVCAllValidation\\MVCAllValidation.csproj|solutionrelative:mvcallvalidation\\views\\cutomer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64CB6C7-CC15-4A4B-AC6C-A91C0C5DCC68}|MVCAllValidation\\MVCAllValidation.csproj|d:\\dotnet all\\dotnet\\dotnet all\\dotnet_core\\coreasp_mvc\\examples\\livetech\\mvcallvalidation\\mvcallvalidation\\models\\customermetadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F64CB6C7-CC15-4A4B-AC6C-A91C0C5DCC68}|MVCAllValidation\\MVCAllValidation.csproj|solutionrelative:mvcallvalidation\\models\\customermetadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64CB6C7-CC15-4A4B-AC6C-A91C0C5DCC68}|MVCAllValidation\\MVCAllValidation.csproj|d:\\dotnet all\\dotnet\\dotnet all\\dotnet_core\\coreasp_mvc\\examples\\livetech\\mvcallvalidation\\mvcallvalidation\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F64CB6C7-CC15-4A4B-AC6C-A91C0C5DCC68}|MVCAllValidation\\MVCAllValidation.csproj|solutionrelative:mvcallvalidation\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64CB6C7-CC15-4A4B-AC6C-A91C0C5DCC68}|MVCAllValidation\\MVCAllValidation.csproj|d:\\dotnet all\\dotnet\\dotnet all\\dotnet_core\\coreasp_mvc\\examples\\livetech\\mvcallvalidation\\mvcallvalidation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F64CB6C7-CC15-4A4B-AC6C-A91C0C5DCC68}|MVCAllValidation\\MVCAllValidation.csproj|solutionrelative:mvcallvalidation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64CB6C7-CC15-4A4B-AC6C-A91C0C5DCC68}|MVCAllValidation\\MVCAllValidation.csproj|d:\\dotnet all\\dotnet\\dotnet all\\dotnet_core\\coreasp_mvc\\examples\\livetech\\mvcallvalidation\\mvcallvalidation\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F64CB6C7-CC15-4A4B-AC6C-A91C0C5DCC68}|MVCAllValidation\\MVCAllValidation.csproj|solutionrelative:mvcallvalidation\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCAllValidation\\MVCAllValidation\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "MVCAllValidation\\Models\\ErrorViewModel.cs",
+              "ToolTip": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCAllValidation\\MVCAllValidation\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "MVCAllValidation\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T05:54:16.315Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCAllValidation\\MVCAllValidation\\Program.cs",
+              "RelativeDocumentMoniker": "MVCAllValidation\\Program.cs",
+              "ToolTip": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCAllValidation\\MVCAllValidation\\Program.cs",
+              "RelativeToolTip": "MVCAllValidation\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAADwvxcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T15:54:55.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCAllValidation\\MVCAllValidation\\Views\\Cutomer\\Create.cshtml",
+              "RelativeDocumentMoniker": "MVCAllValidation\\Views\\Cutomer\\Create.cshtml",
+              "ToolTip": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCAllValidation\\MVCAllValidation\\Views\\Cutomer\\Create.cshtml",
+              "RelativeToolTip": "MVCAllValidation\\Views\\Cutomer\\Create.cshtml",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAAAwAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-14T04:50:25.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CutomerController.cs",
+              "DocumentMoniker": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCAllValidation\\MVCAllValidation\\Controllers\\CutomerController.cs",
+              "RelativeDocumentMoniker": "MVCAllValidation\\Controllers\\CutomerController.cs",
+              "ToolTip": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCAllValidation\\MVCAllValidation\\Controllers\\CutomerController.cs",
+              "RelativeToolTip": "MVCAllValidation\\Controllers\\CutomerController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T07:31:35.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CustomerMetadata.cs",
+              "DocumentMoniker": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCAllValidation\\MVCAllValidation\\Models\\CustomerMetadata.cs",
+              "RelativeDocumentMoniker": "MVCAllValidation\\Models\\CustomerMetadata.cs",
+              "ToolTip": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCAllValidation\\MVCAllValidation\\Models\\CustomerMetadata.cs",
+              "RelativeToolTip": "MVCAllValidation\\Models\\CustomerMetadata.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwDQAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T07:12:34.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCAllValidation\\MVCAllValidation\\Models\\Customer.cs",
+              "RelativeDocumentMoniker": "MVCAllValidation\\Models\\Customer.cs",
+              "ToolTip": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCAllValidation\\MVCAllValidation\\Models\\Customer.cs",
+              "RelativeToolTip": "MVCAllValidation\\Models\\Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T07:11:08.512Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 170,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

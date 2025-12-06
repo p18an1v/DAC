@@ -1,0 +1,198 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Logic knight\\Dot Net\\13 Day\\MVCfileup\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FB6FD73B-125C-454A-8827-4B739D308B4C}|MVCfileup\\MVCfileup.csproj|d:\\logic knight\\dot net\\13 day\\mvcfileup\\mvcfileup\\controllers\\languagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB6FD73B-125C-454A-8827-4B739D308B4C}|MVCfileup\\MVCfileup.csproj|solutionrelative:mvcfileup\\controllers\\languagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB6FD73B-125C-454A-8827-4B739D308B4C}|MVCfileup\\MVCfileup.csproj|d:\\logic knight\\dot net\\13 day\\mvcfileup\\mvcfileup\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB6FD73B-125C-454A-8827-4B739D308B4C}|MVCfileup\\MVCfileup.csproj|solutionrelative:mvcfileup\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB6FD73B-125C-454A-8827-4B739D308B4C}|MVCfileup\\MVCfileup.csproj|d:\\logic knight\\dot net\\13 day\\mvcfileup\\mvcfileup\\viewmodels\\programminglanguages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB6FD73B-125C-454A-8827-4B739D308B4C}|MVCfileup\\MVCfileup.csproj|solutionrelative:mvcfileup\\viewmodels\\programminglanguages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB6FD73B-125C-454A-8827-4B739D308B4C}|MVCfileup\\MVCfileup.csproj|d:\\logic knight\\dot net\\13 day\\mvcfileup\\mvcfileup\\controllers\\selctmulticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB6FD73B-125C-454A-8827-4B739D308B4C}|MVCfileup\\MVCfileup.csproj|solutionrelative:mvcfileup\\controllers\\selctmulticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB6FD73B-125C-454A-8827-4B739D308B4C}|MVCfileup\\MVCfileup.csproj|d:\\logic knight\\dot net\\13 day\\mvcfileup\\mvcfileup\\controllers\\fileuploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB6FD73B-125C-454A-8827-4B739D308B4C}|MVCfileup\\MVCfileup.csproj|solutionrelative:mvcfileup\\controllers\\fileuploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB6FD73B-125C-454A-8827-4B739D308B4C}|MVCfileup\\MVCfileup.csproj|d:\\logic knight\\dot net\\13 day\\mvcfileup\\mvcfileup\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB6FD73B-125C-454A-8827-4B739D308B4C}|MVCfileup\\MVCfileup.csproj|solutionrelative:mvcfileup\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB6FD73B-125C-454A-8827-4B739D308B4C}|MVCfileup\\MVCfileup.csproj|d:\\logic knight\\dot net\\13 day\\mvcfileup\\mvcfileup\\views\\language\\selectlanguages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB6FD73B-125C-454A-8827-4B739D308B4C}|MVCfileup\\MVCfileup.csproj|solutionrelative:mvcfileup\\views\\language\\selectlanguages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB6FD73B-125C-454A-8827-4B739D308B4C}|MVCfileup\\MVCfileup.csproj|d:\\logic knight\\dot net\\13 day\\mvcfileup\\mvcfileup\\models\\filemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB6FD73B-125C-454A-8827-4B739D308B4C}|MVCfileup\\MVCfileup.csproj|solutionrelative:mvcfileup\\models\\filemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB6FD73B-125C-454A-8827-4B739D308B4C}|MVCfileup\\MVCfileup.csproj|d:\\logic knight\\dot net\\13 day\\mvcfileup\\mvcfileup\\views\\language\\submitlanguages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB6FD73B-125C-454A-8827-4B739D308B4C}|MVCfileup\\MVCfileup.csproj|solutionrelative:mvcfileup\\views\\language\\submitlanguages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB6FD73B-125C-454A-8827-4B739D308B4C}|MVCfileup\\MVCfileup.csproj|d:\\logic knight\\dot net\\13 day\\mvcfileup\\mvcfileup\\views\\selctmulti\\indexsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB6FD73B-125C-454A-8827-4B739D308B4C}|MVCfileup\\MVCfileup.csproj|solutionrelative:mvcfileup\\views\\selctmulti\\indexsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Logic knight\\Dot Net\\13 Day\\MVCfileup\\MVCfileup\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "MVCfileup\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Logic knight\\Dot Net\\13 Day\\MVCfileup\\MVCfileup\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "MVCfileup\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T07:42:25.011Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FileuploadController.cs",
+              "DocumentMoniker": "D:\\Logic knight\\Dot Net\\13 Day\\MVCfileup\\MVCfileup\\Controllers\\FileuploadController.cs",
+              "RelativeDocumentMoniker": "MVCfileup\\Controllers\\FileuploadController.cs",
+              "ToolTip": "D:\\Logic knight\\Dot Net\\13 Day\\MVCfileup\\MVCfileup\\Controllers\\FileuploadController.cs",
+              "RelativeToolTip": "MVCfileup\\Controllers\\FileuploadController.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwBcAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T07:03:23.756Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SelctmultiController.cs",
+              "DocumentMoniker": "D:\\Logic knight\\Dot Net\\13 Day\\MVCfileup\\MVCfileup\\Controllers\\SelctmultiController.cs",
+              "RelativeDocumentMoniker": "MVCfileup\\Controllers\\SelctmultiController.cs",
+              "ToolTip": "D:\\Logic knight\\Dot Net\\13 Day\\MVCfileup\\MVCfileup\\Controllers\\SelctmultiController.cs",
+              "RelativeToolTip": "MVCfileup\\Controllers\\SelctmultiController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T15:08:41.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SelectLanguages.cshtml",
+              "DocumentMoniker": "D:\\Logic knight\\Dot Net\\13 Day\\MVCfileup\\MVCfileup\\Views\\Language\\SelectLanguages.cshtml",
+              "RelativeDocumentMoniker": "MVCfileup\\Views\\Language\\SelectLanguages.cshtml",
+              "ToolTip": "D:\\Logic knight\\Dot Net\\13 Day\\MVCfileup\\MVCfileup\\Views\\Language\\SelectLanguages.cshtml",
+              "RelativeToolTip": "MVCfileup\\Views\\Language\\SelectLanguages.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-20T15:07:13.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SubmitLanguages.cshtml",
+              "DocumentMoniker": "D:\\Logic knight\\Dot Net\\13 Day\\MVCfileup\\MVCfileup\\Views\\Language\\SubmitLanguages.cshtml",
+              "RelativeDocumentMoniker": "MVCfileup\\Views\\Language\\SubmitLanguages.cshtml",
+              "ToolTip": "D:\\Logic knight\\Dot Net\\13 Day\\MVCfileup\\MVCfileup\\Views\\Language\\SubmitLanguages.cshtml",
+              "RelativeToolTip": "MVCfileup\\Views\\Language\\SubmitLanguages.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-20T15:10:47.305Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LanguageController.cs",
+              "DocumentMoniker": "D:\\Logic knight\\Dot Net\\13 Day\\MVCfileup\\MVCfileup\\Controllers\\LanguageController.cs",
+              "RelativeDocumentMoniker": "MVCfileup\\Controllers\\LanguageController.cs",
+              "ToolTip": "D:\\Logic knight\\Dot Net\\13 Day\\MVCfileup\\MVCfileup\\Controllers\\LanguageController.cs",
+              "RelativeToolTip": "MVCfileup\\Controllers\\LanguageController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T15:06:15.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProgrammingLanguages.cs",
+              "DocumentMoniker": "D:\\Logic knight\\Dot Net\\13 Day\\MVCfileup\\MVCfileup\\ViewModels\\ProgrammingLanguages.cs",
+              "RelativeDocumentMoniker": "MVCfileup\\ViewModels\\ProgrammingLanguages.cs",
+              "ToolTip": "D:\\Logic knight\\Dot Net\\13 Day\\MVCfileup\\MVCfileup\\ViewModels\\ProgrammingLanguages.cs",
+              "RelativeToolTip": "MVCfileup\\ViewModels\\ProgrammingLanguages.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T15:00:28.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FileModel.cs",
+              "DocumentMoniker": "D:\\Logic knight\\Dot Net\\13 Day\\MVCfileup\\MVCfileup\\Models\\FileModel.cs",
+              "RelativeDocumentMoniker": "MVCfileup\\Models\\FileModel.cs",
+              "ToolTip": "D:\\Logic knight\\Dot Net\\13 Day\\MVCfileup\\MVCfileup\\Models\\FileModel.cs",
+              "RelativeToolTip": "MVCfileup\\Models\\FileModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T06:58:29.129Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "D:\\Logic knight\\Dot Net\\13 Day\\MVCfileup\\MVCfileup\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "MVCfileup\\Models\\Employee.cs",
+              "ToolTip": "D:\\Logic knight\\Dot Net\\13 Day\\MVCfileup\\MVCfileup\\Models\\Employee.cs",
+              "RelativeToolTip": "MVCfileup\\Models\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T11:32:23.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IndexSuccess.cshtml",
+              "DocumentMoniker": "D:\\Logic knight\\Dot Net\\13 Day\\MVCfileup\\MVCfileup\\Views\\Selctmulti\\IndexSuccess.cshtml",
+              "RelativeDocumentMoniker": "MVCfileup\\Views\\Selctmulti\\IndexSuccess.cshtml",
+              "ToolTip": "D:\\Logic knight\\Dot Net\\13 Day\\MVCfileup\\MVCfileup\\Views\\Selctmulti\\IndexSuccess.cshtml",
+              "RelativeToolTip": "MVCfileup\\Views\\Selctmulti\\IndexSuccess.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-20T13:53:38.695Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 170,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

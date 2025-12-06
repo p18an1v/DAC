@@ -1,0 +1,148 @@
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\appsettings.Development.json
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\appsettings.json
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\APITOKENDEMO.staticwebassets.endpoints.json
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\APITOKENDEMO.exe
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\APITOKENDEMO.deps.json
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\APITOKENDEMO.runtimeconfig.json
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\APITOKENDEMO.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\APITOKENDEMO.pdb
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.OpenApi.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\APITOKENDEMO.csproj.AssemblyReference.cache
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\APITOKENDEMO.GeneratedMSBuildEditorConfig.editorconfig
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\APITOKENDEMO.AssemblyInfoInputs.cache
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\APITOKENDEMO.AssemblyInfo.cs
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\APITOKENDEMO.csproj.CoreCompileInputs.cache
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\APITOKENDEMO.MvcApplicationPartsAssemblyInfo.cs
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\APITOKENDEMO.MvcApplicationPartsAssemblyInfo.cache
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\scopedcss\bundle\APITOKENDEMO.styles.css
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\staticwebassets.build.json
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\staticwebassets.development.json
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\APITOKEN.C766EC7A.Up2Date
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\APITOKENDEMO.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\refint\APITOKENDEMO.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\APITOKENDEMO.pdb
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\APITOKENDEMO.genruntimeconfig.cache
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\ref\APITOKENDEMO.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Azure.Core.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Azure.Identity.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\System.Memory.Data.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\practicedemo\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\appsettings.Development.json
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\appsettings.json
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\APITOKENDEMO.staticwebassets.endpoints.json
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\APITOKENDEMO.exe
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\APITOKENDEMO.deps.json
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\APITOKENDEMO.runtimeconfig.json
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\APITOKENDEMO.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\APITOKENDEMO.pdb
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Azure.Core.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Azure.Identity.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.OpenApi.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\System.Memory.Data.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\APITOKENDEMO.csproj.AssemblyReference.cache
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\APITOKENDEMO.GeneratedMSBuildEditorConfig.editorconfig
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\APITOKENDEMO.AssemblyInfoInputs.cache
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\APITOKENDEMO.AssemblyInfo.cs
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\APITOKENDEMO.csproj.CoreCompileInputs.cache
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\APITOKENDEMO.MvcApplicationPartsAssemblyInfo.cs
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\APITOKENDEMO.MvcApplicationPartsAssemblyInfo.cache
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\scopedcss\bundle\APITOKENDEMO.styles.css
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\staticwebassets.build.json
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\staticwebassets.development.json
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\APITOKEN.C766EC7A.Up2Date
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\APITOKENDEMO.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\refint\APITOKENDEMO.dll
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\APITOKENDEMO.pdb
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\APITOKENDEMO.genruntimeconfig.cache
+D:\Logic knight\Dot Net\15 Day\APITOKENDEMO\APITOKENDEMO\APITOKENDEMO\obj\Debug\net8.0\ref\APITOKENDEMO.dll

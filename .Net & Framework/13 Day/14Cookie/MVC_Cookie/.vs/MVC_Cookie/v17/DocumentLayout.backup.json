@@ -1,0 +1,131 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Logic knight\\Dot Net\\13 Day\\14Cookie\\MVC_Cookie\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{08306C92-6ABA-4F33-B713-547C3CA93FF8}|MVC_Cookie\\MVC_Cookie.csproj|d:\\logic knight\\dot net\\13 day\\14cookie\\mvc_cookie\\mvc_cookie\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08306C92-6ABA-4F33-B713-547C3CA93FF8}|MVC_Cookie\\MVC_Cookie.csproj|solutionrelative:mvc_cookie\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08306C92-6ABA-4F33-B713-547C3CA93FF8}|MVC_Cookie\\MVC_Cookie.csproj|d:\\logic knight\\dot net\\13 day\\14cookie\\mvc_cookie\\mvc_cookie\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{08306C92-6ABA-4F33-B713-547C3CA93FF8}|MVC_Cookie\\MVC_Cookie.csproj|solutionrelative:mvc_cookie\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08306C92-6ABA-4F33-B713-547C3CA93FF8}|MVC_Cookie\\MVC_Cookie.csproj|d:\\logic knight\\dot net\\13 day\\14cookie\\mvc_cookie\\mvc_cookie\\views\\login\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{08306C92-6ABA-4F33-B713-547C3CA93FF8}|MVC_Cookie\\MVC_Cookie.csproj|solutionrelative:mvc_cookie\\views\\login\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08306C92-6ABA-4F33-B713-547C3CA93FF8}|MVC_Cookie\\MVC_Cookie.csproj|d:\\logic knight\\dot net\\13 day\\14cookie\\mvc_cookie\\mvc_cookie\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08306C92-6ABA-4F33-B713-547C3CA93FF8}|MVC_Cookie\\MVC_Cookie.csproj|solutionrelative:mvc_cookie\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08306C92-6ABA-4F33-B713-547C3CA93FF8}|MVC_Cookie\\MVC_Cookie.csproj|d:\\logic knight\\dot net\\13 day\\14cookie\\mvc_cookie\\mvc_cookie\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{08306C92-6ABA-4F33-B713-547C3CA93FF8}|MVC_Cookie\\MVC_Cookie.csproj|solutionrelative:mvc_cookie\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08306C92-6ABA-4F33-B713-547C3CA93FF8}|MVC_Cookie\\MVC_Cookie.csproj|d:\\logic knight\\dot net\\13 day\\14cookie\\mvc_cookie\\mvc_cookie\\models\\userlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08306C92-6ABA-4F33-B713-547C3CA93FF8}|MVC_Cookie\\MVC_Cookie.csproj|solutionrelative:mvc_cookie\\models\\userlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "D:\\Logic knight\\Dot Net\\13 Day\\14Cookie\\MVC_Cookie\\MVC_Cookie\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "MVC_Cookie\\Controllers\\LoginController.cs",
+              "ToolTip": "D:\\Logic knight\\Dot Net\\13 Day\\14Cookie\\MVC_Cookie\\MVC_Cookie\\Controllers\\LoginController.cs*",
+              "RelativeToolTip": "MVC_Cookie\\Controllers\\LoginController.cs*",
+              "ViewState": "AgIAACMAAAAAAAAAAAAgwDUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-10-07T08:18:44.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Logic knight\\Dot Net\\13 Day\\14Cookie\\MVC_Cookie\\MVC_Cookie\\Program.cs",
+              "RelativeDocumentMoniker": "MVC_Cookie\\Program.cs",
+              "ToolTip": "D:\\Logic knight\\Dot Net\\13 Day\\14Cookie\\MVC_Cookie\\MVC_Cookie\\Program.cs",
+              "RelativeToolTip": "MVC_Cookie\\Program.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwB0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-10-07T08:18:44.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Logic knight\\Dot Net\\13 Day\\14Cookie\\MVC_Cookie\\MVC_Cookie\\Views\\Login\\Create.cshtml",
+              "RelativeDocumentMoniker": "MVC_Cookie\\Views\\Login\\Create.cshtml",
+              "ToolTip": "D:\\Logic knight\\Dot Net\\13 Day\\14Cookie\\MVC_Cookie\\MVC_Cookie\\Views\\Login\\Create.cshtml",
+              "RelativeToolTip": "MVC_Cookie\\Views\\Login\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2023-10-07T08:18:45.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Logic knight\\Dot Net\\13 Day\\14Cookie\\MVC_Cookie\\MVC_Cookie\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "MVC_Cookie\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Logic knight\\Dot Net\\13 Day\\14Cookie\\MVC_Cookie\\MVC_Cookie\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "MVC_Cookie\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2023-10-08T04:57:06.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Logic knight\\Dot Net\\13 Day\\14Cookie\\MVC_Cookie\\MVC_Cookie\\Views\\Login\\Index.cshtml",
+              "RelativeDocumentMoniker": "MVC_Cookie\\Views\\Login\\Index.cshtml",
+              "ToolTip": "D:\\Logic knight\\Dot Net\\13 Day\\14Cookie\\MVC_Cookie\\MVC_Cookie\\Views\\Login\\Index.cshtml",
+              "RelativeToolTip": "MVC_Cookie\\Views\\Login\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2023-10-07T08:18:45.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserLogin.cs",
+              "DocumentMoniker": "D:\\Logic knight\\Dot Net\\13 Day\\14Cookie\\MVC_Cookie\\MVC_Cookie\\Models\\UserLogin.cs",
+              "RelativeDocumentMoniker": "MVC_Cookie\\Models\\UserLogin.cs",
+              "ToolTip": "D:\\Logic knight\\Dot Net\\13 Day\\14Cookie\\MVC_Cookie\\MVC_Cookie\\Models\\UserLogin.cs",
+              "RelativeToolTip": "MVC_Cookie\\Models\\UserLogin.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-10-07T08:18:45.873Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 170,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@if(@ViewBag.CookieValue!=null){
+        @ViewBag.CookieValue
+
+
+    <a asp-action="Lgout">Delete</a>
+}
+else
+{
+
+    <h1> you have not logged in </h1>
+    <a asp-action="Create">Create  login</a>
+
+}

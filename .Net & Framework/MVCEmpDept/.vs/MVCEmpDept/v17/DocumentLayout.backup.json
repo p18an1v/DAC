@@ -1,0 +1,183 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCEmpDept\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CDB12041-061C-4BF2-A384-3DE39DA8D687}|MVCEmpDept\\MVCEmpDept.csproj|d:\\dotnet all\\dotnet\\dotnet all\\dotnet_core\\coreasp_mvc\\examples\\livetech\\mvcempdept\\mvcempdept\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDB12041-061C-4BF2-A384-3DE39DA8D687}|MVCEmpDept\\MVCEmpDept.csproj|solutionrelative:mvcempdept\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDB12041-061C-4BF2-A384-3DE39DA8D687}|MVCEmpDept\\MVCEmpDept.csproj|d:\\dotnet all\\dotnet\\dotnet all\\dotnet_core\\coreasp_mvc\\examples\\livetech\\mvcempdept\\mvcempdept\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDB12041-061C-4BF2-A384-3DE39DA8D687}|MVCEmpDept\\MVCEmpDept.csproj|solutionrelative:mvcempdept\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDB12041-061C-4BF2-A384-3DE39DA8D687}|MVCEmpDept\\MVCEmpDept.csproj|d:\\dotnet all\\dotnet\\dotnet all\\dotnet_core\\coreasp_mvc\\examples\\livetech\\mvcempdept\\mvcempdept\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDB12041-061C-4BF2-A384-3DE39DA8D687}|MVCEmpDept\\MVCEmpDept.csproj|solutionrelative:mvcempdept\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDB12041-061C-4BF2-A384-3DE39DA8D687}|MVCEmpDept\\MVCEmpDept.csproj|d:\\dotnet all\\dotnet\\dotnet all\\dotnet_core\\coreasp_mvc\\examples\\livetech\\mvcempdept\\mvcempdept\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDB12041-061C-4BF2-A384-3DE39DA8D687}|MVCEmpDept\\MVCEmpDept.csproj|solutionrelative:mvcempdept\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDB12041-061C-4BF2-A384-3DE39DA8D687}|MVCEmpDept\\MVCEmpDept.csproj|d:\\dotnet all\\dotnet\\dotnet all\\dotnet_core\\coreasp_mvc\\examples\\livetech\\mvcempdept\\mvcempdept\\controllers\\errorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDB12041-061C-4BF2-A384-3DE39DA8D687}|MVCEmpDept\\MVCEmpDept.csproj|solutionrelative:mvcempdept\\controllers\\errorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDB12041-061C-4BF2-A384-3DE39DA8D687}|MVCEmpDept\\MVCEmpDept.csproj|d:\\dotnet all\\dotnet\\dotnet all\\dotnet_core\\coreasp_mvc\\examples\\livetech\\mvcempdept\\mvcempdept\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDB12041-061C-4BF2-A384-3DE39DA8D687}|MVCEmpDept\\MVCEmpDept.csproj|solutionrelative:mvcempdept\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDB12041-061C-4BF2-A384-3DE39DA8D687}|MVCEmpDept\\MVCEmpDept.csproj|d:\\dotnet all\\dotnet\\dotnet all\\dotnet_core\\coreasp_mvc\\examples\\livetech\\mvcempdept\\mvcempdept\\models\\baseresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDB12041-061C-4BF2-A384-3DE39DA8D687}|MVCEmpDept\\MVCEmpDept.csproj|solutionrelative:mvcempdept\\models\\baseresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDB12041-061C-4BF2-A384-3DE39DA8D687}|MVCEmpDept\\MVCEmpDept.csproj|d:\\dotnet all\\dotnet\\dotnet all\\dotnet_core\\coreasp_mvc\\examples\\livetech\\mvcempdept\\mvcempdept\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CDB12041-061C-4BF2-A384-3DE39DA8D687}|MVCEmpDept\\MVCEmpDept.csproj|solutionrelative:mvcempdept\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDB12041-061C-4BF2-A384-3DE39DA8D687}|MVCEmpDept\\MVCEmpDept.csproj|d:\\dotnet all\\dotnet\\dotnet all\\dotnet_core\\coreasp_mvc\\examples\\livetech\\mvcempdept\\mvcempdept\\service\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDB12041-061C-4BF2-A384-3DE39DA8D687}|MVCEmpDept\\MVCEmpDept.csproj|solutionrelative:mvcempdept\\service\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCEmpDept\\MVCEmpDept\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "MVCEmpDept\\Models\\Employee.cs",
+              "ToolTip": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCEmpDept\\MVCEmpDept\\Models\\Employee.cs",
+              "RelativeToolTip": "MVCEmpDept\\Models\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T13:41:47.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ErrorController.cs",
+              "DocumentMoniker": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCEmpDept\\MVCEmpDept\\Controllers\\ErrorController.cs",
+              "RelativeDocumentMoniker": "MVCEmpDept\\Controllers\\ErrorController.cs",
+              "ToolTip": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCEmpDept\\MVCEmpDept\\Controllers\\ErrorController.cs",
+              "RelativeToolTip": "MVCEmpDept\\Controllers\\ErrorController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T13:41:05.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCEmpDept\\MVCEmpDept\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "MVCEmpDept\\Models\\ErrorViewModel.cs",
+              "ToolTip": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCEmpDept\\MVCEmpDept\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "MVCEmpDept\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T13:33:30.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Department.cs",
+              "DocumentMoniker": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCEmpDept\\MVCEmpDept\\Models\\Department.cs",
+              "RelativeDocumentMoniker": "MVCEmpDept\\Models\\Department.cs",
+              "ToolTip": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCEmpDept\\MVCEmpDept\\Models\\Department.cs",
+              "RelativeToolTip": "MVCEmpDept\\Models\\Department.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T13:33:24.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BaseResponseDTO.cs",
+              "DocumentMoniker": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCEmpDept\\MVCEmpDept\\Models\\BaseResponseDTO.cs",
+              "RelativeDocumentMoniker": "MVCEmpDept\\Models\\BaseResponseDTO.cs",
+              "ToolTip": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCEmpDept\\MVCEmpDept\\Models\\BaseResponseDTO.cs",
+              "RelativeToolTip": "MVCEmpDept\\Models\\BaseResponseDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T13:33:21.365Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCEmpDept\\MVCEmpDept\\appsettings.json",
+              "RelativeDocumentMoniker": "MVCEmpDept\\appsettings.json",
+              "ToolTip": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCEmpDept\\MVCEmpDept\\appsettings.json",
+              "RelativeToolTip": "MVCEmpDept\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-16T13:31:04.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCEmpDept\\MVCEmpDept\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "MVCEmpDept\\Controllers\\EmployeeController.cs",
+              "ToolTip": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCEmpDept\\MVCEmpDept\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "MVCEmpDept\\Controllers\\EmployeeController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T13:30:52.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IEmployeeService.cs",
+              "DocumentMoniker": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCEmpDept\\MVCEmpDept\\Service\\IEmployeeService.cs",
+              "RelativeDocumentMoniker": "MVCEmpDept\\Service\\IEmployeeService.cs",
+              "ToolTip": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCEmpDept\\MVCEmpDept\\Service\\IEmployeeService.cs",
+              "RelativeToolTip": "MVCEmpDept\\Service\\IEmployeeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T03:32:00.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCEmpDept\\MVCEmpDept\\Program.cs",
+              "RelativeDocumentMoniker": "MVCEmpDept\\Program.cs",
+              "ToolTip": "D:\\Dotnet All\\Dotnet\\Dotnet All\\Dotnet_core\\coreASP_MVC\\Examples\\Livetech\\MVCEmpDept\\MVCEmpDept\\Program.cs",
+              "RelativeToolTip": "MVCEmpDept\\Program.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAABUAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T14:19:36.291Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 170,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
