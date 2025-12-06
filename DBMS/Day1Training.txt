@@ -1,0 +1,620 @@
+MySQL -uroot -ptest@123
+
+ show databases;
+
+create database trainingdb;
+
+show databases;
+select database();
+
+use trainingdb;
+
+show tables;
+
+
+create table test(id int, name varchar(100));
+
+show tables;
+
+desc test;
+
+select * from test;
+
+-- single row insert with column names
+insert into test(id,name) values(1,'a');
+
+-- single row insert without column names
+insert into test values(2,'b');
+
+--multi row insert
+
+insert into test values(3,'c'),(4,'d'),(5,'e'),(6,'f');
+
+insert into test(id) values(7);
+--null means value not yet defined it doesn't mean blank or 0
+
+select id,name from test;
+
+select name from test;
+
+
+select id,name from test where id=1;
+select id,name from test where id!=1;
+select id,name from test where id<>1;
+
+select id,name from test where id in (1,3,5);
+
+
+select id,name from test where id not in (1,3,5);
+
+select id,name from test where name  in ('a','b');
+
+select id,name from test where name not in ('a','b');
+
+
+select * from test where name is null;
+select * from test where name is not null;
+
+--between
+select * from test where id between 1 and 5;
+
+select * from test where id not between 1 and 5;
+select * from test where name between 'a' and 'c';
+
+insert into test values(8,'abcdef'),(9,'dedeasae'),(10,'efrgrgabcccc');
+
+
+select * from test where name like '%a%';
+
+select * from test where name like 'a%';
+
+select * from test where name like '%a';
+
+-- % mean 0 or more than 0 characters;
+
+-- _ means exactly 1 character
+
+-- all the names where second character is b
+
+select * from test where name like '_b%';
+
+
+select * from test where name not like '_b%';
+
+
+
+
+select * from test where name between 'a' and 'd';
+
+
+create table t1 (c1 int, c2 varchar(100) , c3 date);
+
+
+
+insert into t1 values(1,'a','2025-02-20');
+
+select now();
+
+select current_date();
+select curdate();
+
+select current_time();
+select curtime();
+
+
+select year(current_date());
+select month(current_date());
+
+select day(current_date());
+
+
+select * from test;
+
+update test set name='xyz' where id=10;
+
+
+update test set name='john',id=12 where id=9;
+
+
+delete from test  where id=12;
+
+-- command to start transaction
+
+start transaction;
+delete from test;
+insert into test values(100,'ff');
+update test set name='abc' where id=100;
+rollback;
+
+insert into test values(1,'a');
+
+start transaction;
+delete from test;
+start transaction; -- auto executes commit;
+insert into test values(100,'ff');
+update test set name='abc' where id=100;
+rollback;
+
+
+-- add a column
+
+alter table test add c1 int;
+
+
+insert into test values(1,'a',1);
+
+
+
+
+-- drop a column
+
+alter table test drop column c1 ;
+
+-- add a column
+alter table test add c1 int;
+
+-- drop a column
+alter table test drop column c1 ;
+
+-- add a column
+alter table test add c1 int default 10;
+
+alter table test add c2 int default 10,c3 int; -- this will not work
+
+alter table test modify column name varchar(200);
+
+alter table test modify column id int not null;
+
+insert into test (name,c1) values('a',11); -- fails as null is not allowed in id and id doesn't have a default value
+
+alter table test rename to test2;
+
+alter table test2 rename to test;
+
+alter table test rename column name to name2;
+alter table test rename column name2 to name;
+
+
+
+-- unique key
+
+create table t_uk (id int unique , name varchar(100));
+
+insert into t_uk values(1,'a'); -- works
+insert into t_uk values(1,'b'); --  fails
+
+
+insert into t_uk values(null,'a'); -- works
+insert into t_uk values(null,'b'); -- works
+insert into t_uk(name) values('b'); -- works
+
+-- multi unique keys
+
+create table t_uk_multi(c1 int unique, c2 int, c3 varchar(100) unique);
+
+insert into t_uk_multi values(1,1,'a');
+insert into t_uk_multi values(2,1,'a'); -- fails
+
+insert into t_uk_multi values(1,1,'b'); -- fails
+
+-- Composite unique key
+create table t_uk_comp(c1 int , c2 int, c3 varchar(100), unique(c1,c3));
+
+insert into t_uk_comp values(1,1,'a');
+insert into t_uk_comp values(2,1,'a'); -- works
+
+insert into t_uk_comp values(1,1,'b'); -- works
+insert into t_uk_comp values(1,3,'b'); --  fails
+
+
+-- primary key
+
+create table t_pk(id int primary key, name varchar(100));
+insert into t_pk values(1,'a'); -- works
+insert into t_pk values(1,'b'); -- fails
+insert into t_pk values(null,'b'); -- fails
+
+
+
+-- multi pk not allowed
+
+create table t_pk_multi(c1 int primary key, c2 int primary key, c3 int);
+
+-- comp pk
+create table t_pk_comp(c1 int, c2 int, c3 varchar(100), primary key(c1,c3));
+
+
+-- not null
+
+create table t_nn(id int not null , name varchar(100));
+
+insert into t_nn values(null,'a'); -- fails
+insert into t_nn(name) values('a'); -- fails
+
+
+
+-- check constraint
+
+create table t_cc(eid int, ename varchar(100), salary int check(salary>=100));
+
+insert into t_cc values(1,'a',50); -- fails
+insert into t_cc values(1,'a',500); -- works
+insert into t_cc values(1,'a',null); -- works
+
+
+-- FK
+
+create table t_parent(deptid int primary key , deptname varchar(100));
+
+create table t_child(eid int, ename varchar(100), deptid int,
+foreign key fk1 (deptid) references t_parent(deptid));
+
+insert into t_child values(1,'a',1); -- fails
+insert into t_child values(1,'a',null); -- works
+insert into t_parent values(1,'Hr');
+insert into t_child values(1,'a',1); 
+
+	
+-- default
+
+create table t_def (id int, name varchar(100), salary int default 1000);
+insert into t_def(id,name) values(1,'a');
+insert into t_def(id,name,salary) values(1,'a',null);
+
+
+drop table t1;
+create table t1(c1 int, c2 varchar(5));
+create table t2(c1 int, c3 varchar(5));
+insert into t1 values(1,'a'),(2,'b'),(3,'c');
+insert into t2 values(3,'x'),(4,'y'),(5,'z');
+-- cross join
+-- new syntax/ansi standard syntax
+select * from t1 cross join t2;
+select t1.*,c3 from t1 cross join t2;
+
+-- old syntax syntax
+select * from t1 , t2;
+select t1.*,c3 from t1 , t2;
+
+-- inner join
+-- new syntax/ansi standard syntax
+select * from t1 inner join t2 on t1.c1=t2.c1;
+select t1.*,c3 from t1 inner join t2 on t1.c1=t2.c1;
+select t1.*,c3 from t1  join t2 on t1.c1=t2.c1;
+
+
+-- old syntax syntax
+select * from t1 , t2 where t1.c1=t2.c1;
+select t1.*,c3 from t1 , t2 where t1.c1=t2.c1;
+
+
+-- Left join
+-- new syntax/ansi standard syntax
+select * from t1 left join t2 on t1.c1=t2.c1;
+select * from t1 left outer join t2 on t1.c1=t2.c1;
+select t1.*,c3 from t1 left join t2 on t1.c1=t2.c1;
+select t1.*,c3 from t1  left join t2 on t1.c1=t2.c1;
+
+
+-- right  join
+-- new syntax/ansi standard syntax
+select * from t1 right  join t2 on t1.c1=t2.c1;
+select * from t1 right  outer join t2 on t1.c1=t2.c1;
+select t1.*,c3 from t1 right  join t2 on t1.c1=t2.c1;
+select t1.*,c3 from t1  right  join t2 on t1.c1=t2.c1;
+
+
+-- full  join
+-- new syntax/ansi standard syntax
+select * from t1 full  join t2 on t1.c1=t2.c1;
+
+
+-- we will see the workaround to implement full join in MySQL shortly
+
+
+-- set operators
+create table a(id int);
+create table b(id int);
+insert into a values(1),(2),(3);
+insert into b values(3),(4),(5);
+
+select * from a
+union 
+select * from b;
+
+select * from b
+union 
+select * from a;
+
+
+select * from a
+union all
+select * from b;
+
+select * from b
+union all
+select * from a;
+
+select * from a
+intersect
+select * from b;
+
+select * from b
+intersect
+select * from a;
+
+
+select * from a
+except
+select * from b;
+
+select * from b
+except
+select * from a;
+
+
+-- full  join
+-- new syntax/ansi standard syntax
+
+select * from t1 left join t2 on t1.c1=t2.c1
+union 
+select * from t1 right join t2 on t1.c1=t2.c1;
+
+-- aggregate functions
+
+select * from t_uk;
+
+select count(*) from t_uk;
+select count(1) from t_uk;
+
+select count(name) from t_uk;
+select count(id) from t_uk;
+
+select count(distinct name) from t_uk;
+
+insert into t_uk values(100,'bvbb');
+select sum(id) from t_uk;
+select max(id) from t_uk;
+select min(id) from t_uk;
+
+select avg(id) from t_uk;
+
+
+create table dept(deptid int, deptname varchar(100));
+insert into dept values(1,'HR'),(2,'IT'),(3,'Finance'),(4,'OPR');
+create table emp(eid int, ename varchar(100), salary int , deptid int);
+
+insert into emp
+with recursive tab
+as
+(Select 1 eid, cast('a1' as char(100)) as ename,rand()*10000 salary,1 deptid 
+union all
+select eid+1,concat('a',eid+1),rand()*10000 salary,mod(eid,3)+1
+from tab where eid<100)
+ select * from tab;
+
+
+select * from emp;
+
+--ename, deptname,salary
+
+select deptname,ename, salary
+from emp join dept
+on emp.deptid=dept.deptid;
+
+
+-- total salary of all employee
+
+
+select sum(salary) `total_salary
+from emp join dept
+on emp.deptid=dept.deptid;
+
+
+-- total salary of all employee by each dept
+
+
+select deptname,sum(salary) total_salary
+from emp right join dept
+on emp.deptid=dept.deptid
+group by deptname;
+
+
+
+select deptname,sum(salary) total_salary
+from emp right join dept
+on emp.deptid=dept.deptid
+group by deptname
+having sum(salary)>160000;
+
+select deptname,ename, salary
+from emp join dept
+on emp.deptid=dept.deptid
+order by deptname,salary desc;
+
+
+Queries:
+
+1. Display the name of all employees whose salary is between 500 and 1300
+
+select ename,salary from emp where salary between 500 and 1300;
+select ename,salary from emp where salary >= 500 and salary<= 1300;
+
+
+
+2. Display the name of all employees who are in HR dept
+
+-- sub query
+
+select ename,'HR' deptname from emp where deptid=(select deptid from dept where deptname='HR');
+
+-- join
+select deptname,ename
+from emp join dept
+on emp.deptid=dept.deptid
+where deptname='HR';
+
+select deptname,ename
+from emp , dept
+where emp.deptid=dept.deptid
+and deptname='HR';
+
+
+
+
+
+3. Display the name of all the dept and count of all the employees in that dept.
+select deptname,count(eid) employee_count
+from emp right join dept
+on emp.deptid=dept.deptid
+group by deptname;
+
+
+4. Display the name , deptname and  salary of the employee whose salary is highest.
+select ename,deptname,salary
+from emp  join dept
+on emp.deptid=dept.deptid
+order by salary desc limit 1;
+
+
+5. Display the name , deptname and  salary of the employee whose salary is lowest.
+
+select ename,deptname,salary
+from emp  join dept
+on emp.deptid=dept.deptid
+order by salary asc limit 1;
+
+
+select ename,deptname,salary
+from emp  join dept
+on emp.deptid=dept.deptid
+order by 3 limit 1;
+
+
+
+
+6. Display the name , deptname of employee whose salary is second highest.
+select ename,deptname,salary
+from emp  join dept
+on emp.deptid=dept.deptid
+order by salary desc limit 1 offset 1;
+
+
+select ename,deptname,salary
+from emp  join dept
+on emp.deptid=dept.deptid
+order by salary desc limit 1,1;
+
+
+7. display the name, deptname of top five earning employees.
+
+select ename,deptname,salary
+from emp  join dept
+on emp.deptid=dept.deptid
+order by salary desc limit 5;
+
+9. Display the avg salary of each dept.
+10.Display the min and max salary of each dept.
+
+select deptname,avg(salary) avgsal,max(salary) max_sal, min(salary) min_sal
+from emp right join dept
+on emp.deptid=dept.deptid
+group by deptname;
+
+
+
+create table emp_rank(eid int, ename varchar(100),salary int, deptid int);
+insert into emp_rank values(1,'a',100,1);
+insert into emp_rank values(2,'b',200,2);
+insert into emp_rank values(3,'c',100,1);
+insert into emp_rank values(4,'d',200,2);
+insert into emp_rank values(5,'e',50,1);
+insert into emp_rank values(6,'f',60,2);
+insert into emp_rank values(7,'g',70,1);
+
+select * , 
+row_number() over(order by salary desc) rn,
+rank() over(order by salary desc) rnk,
+dense_rank() over(order by salary desc) drnk
+from emp_rank;
+
+
+select * , 
+row_number() over(partition by deptid order by salary desc) rn,
+rank() over(partition by deptid order by salary desc) rnk,
+dense_rank() over(partition by deptid order by salary desc) drnk
+from emp_rank;
+
+
+
+8. Display the deptname, name of top 5 earning employees from each dept.
+
+
+select deptname,ename,salary from 
+(select deptname,ename,salary,
+row_number() over(partition by deptname order by salary desc) rn
+from emp join dept
+on emp.deptid=dept.deptid) as  t
+where rn<=5;
+
+
+select ename,salary,
+case 
+when salary>=1500 then 'High'
+when salary>=1000 then 'Above Avg'
+when salary>=500 then 'Below Avg'
+else 'Low' 
+end Salary_bucket
+from emp;
+
+create table marks(roll int, sub varchar(5), marks int);
+insert into marks values(1,'M',98);
+insert into marks values(1,'E',97);
+insert into marks values(1,'H',96);
+insert into marks values(2,'M',90);
+insert into marks values(2,'E',92);
+insert into marks values(2,'H',20);
+insert into marks values(3,'M',36);
+insert into marks values(3,'E',38);
+insert into marks values(3,'H',39);
+
+
+
+
+select roll,
+min(marks) ,avg(marks)  from marks
+group by roll;
+
+select roll,
+case when min(marks)>=35 and avg(marks)>=40 then 'Pass'
+else 'Fail' end Result from marks
+group by roll;
+
+
+
+select deptname from dept
+where not exists
+(select 1 from emp where emp.deptid=dept.deptid);
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
