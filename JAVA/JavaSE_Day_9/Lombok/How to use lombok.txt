@@ -1,0 +1,66 @@
+1) download Lombok from
+
+https://projectlombok.org/download
+
+2) copy the downloaded "Lombok.jar" at the desired place.
+
+3) double click on "Lombok.jar", select "eclipse.exe" from the eclipse installation folder and press "install" button
+
+3) go to eclipse
+
+create a new java project
+
+right click on the project
+
+build classpath
+
+add external jar files
+
+select  -  Lombok.jar from the folder you have placed the jar file.
+
+right click on the package 
+new
+	class
+
+MyClass [ do not select main function ]
+
+inside generated "MyClass" write following annotation:
+
+package core;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data  // for setters,getters,toString ,equals and hashcode
+@NoArgsConstructor // Adds a no-argument constructor
+@AllArgsConstructor
+public class MyClass {
+
+	private int num;
+
+}
+
+right click on project
+new class
+Demo - with main function
+
+
+import core.MyClass;
+public class Demo
+{
+	public static void main(String args[])
+	{
+		MyClass m1=new MyClass(100); 
+		MyClass m2=new MyClass(100);
+		System.out.println(m1.getNum()+"\t"+m2.getNum());
+		System.out.println(m1);
+		System.out.println(m2);
+		System.out.println(m1.equals(m2));
+		System.out.println(m1.hashCode());
+		System.out.println(m2.hashCode());
+	}
+}
+
+
+make sure "Demo" class runs with the desired output.

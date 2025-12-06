@@ -1,0 +1,25 @@
+/*
+
+Even though an enum can implements Externalizable, the JVM ignores it.
+Why? Because enums already have a parent class (Enum) that fixes their serialization behavior.
+The JVM never lets serialization create a ‘new copy’ of an enum, otherwise it would break the rule that enum constants are unique.
+So your writeExternal and readExternal are just ignored.
+*/
+
+enum MySingleton implements Externalizable {
+    INSTANCE;
+    int value = 42;
+
+	@Override
+	public void writeExternal(ObjectOutput out) throws IOException {
+		// TODO Auto-generated method stub
+		System.out.println("inside writeExternal of Enum");
+		
+	}
+
+	@Override
+	public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+		// TODO Auto-generated method stub
+		System.out.println("inside readExternal of Enum");
+	}
+}

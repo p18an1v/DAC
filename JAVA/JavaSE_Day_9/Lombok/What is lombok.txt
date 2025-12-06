@@ -1,0 +1,1 @@
+Lombok is a Java library that can generate known patterns of code for us, allowing us to reduce the boilerplate code like setters,getters,toString,equals etc. 

@@ -1,0 +1,11 @@
+For application-level enums (loaded by the system/application class loader), the class loader lives until the JVM shuts down.
+
+So, those enums are GC’ed only when the JVM exits.
+
+Normal objects → can be GC’ed once all references are gone.
+
+Enum constants → are special singletons tied to their class.
+
+They live as long as their enum class is loaded.
+
+In a normal application, that means they are only garbage collected when the JVM shuts down.

@@ -1,0 +1,10 @@
+static <T> void disp(List<T> mylist)
+	{
+		System.out.println(mylist.get(0));
+	}
+    public static void main(String args[])
+    {
+       List<String> ref1=new ArrayList<String>();
+       ref1.add("hello");
+       disp(ref1);
+    }

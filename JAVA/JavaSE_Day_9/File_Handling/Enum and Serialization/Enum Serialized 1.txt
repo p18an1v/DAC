@@ -1,0 +1,103 @@
+package mypack;
+
+/*
+s1 = null only affects your local variable
+
+You are not “removing” the enum constant from the JVM.
+
+MySingleton.INSTANCE still exists in memory because 
+enum constants are class-level singletons created when 
+the enum class is loaded.
+
+So nulling out s1 just means your reference variable 
+no longer points to it. The object itself is still alive.
+
+During deserialization
+
+The JVM sees "INSTANCE" in the serialized file.
+
+Instead of creating a new object, it looks up 
+MySingleton.INSTANCE from the enum’s internal table.
+
+It returns that same object (the one already in the JVM).
+
+Why did you see false?
+
+Because we are now comparing:
+
+System.out.println(s1 == s2);  // s1 is null, s2 is INSTANCE
+
+
+That will always print false since null == <object> is false.
+
+If we write:
+
+System.out.println(MySingleton.INSTANCE == s2);
+
+
+We will get true. 
+*/
+
+
+
+
+import java.io.*;
+
+enum MySingleton implements Serializable {
+    INSTANCE;
+    int value = 42;
+}
+public class Test {
+    public static void main(String[] args) throws Exception {
+        MySingleton s1 = MySingleton.INSTANCE;
+        s1.value = 99;
+
+        // Serialize
+        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("c:\\temp\\singleton.ser"));
+        oos.writeObject(s1);
+        oos.close();
+
+        // Reset value
+        s1.value = 0;
+
+        s1=null;  // what if we make s1 null
+
+        // Deserialize
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("c:\\temp\\singleton.ser"));
+        MySingleton s2 = (MySingleton) ois.readObject();
+        ois.close();
+
+        System.out.println(s1 == s2);      // false
+        System.out.println(MySingleton.INSTANCE==s2);  // true
+        System.out.println(s2.value);      // 0  and not 99
+    }
+}
+
+/*
+ * Why enum constants cannot be garbage collected ?
+ * 
+ * enum MySingleton {
+    INSTANCE;   // like public static final MySingleton INSTANCE = new MySingleton();
+}
+
+Every enum constant is implicitly public static final.
+
+That means the JVM itself holds a final static reference 
+to INSTANCE.
+
+You cannot nullify that reference because it’s final.
+
+When we say:
+
+
+MySingleton s1 = MySingleton.INSTANCE;
+s1 = null;
+
+we remove local reference (s1).
+
+But the real static reference (MySingleton.INSTANCE) 
+still exists and points to the object.
+
+That’s why the enum object cannot be garbage collected.
+
+*/

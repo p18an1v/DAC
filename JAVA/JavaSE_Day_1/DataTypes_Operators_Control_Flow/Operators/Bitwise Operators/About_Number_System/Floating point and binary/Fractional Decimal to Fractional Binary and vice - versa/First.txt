@@ -1,0 +1,38 @@
+suppose decimal number is given
+		0.875
+
+how to find out its binary ?
+
+on the left side of dot (.) we have 0 , so nothing can be done.
+
+	.875  *  2
+
+			1.750
+
+			1.500
+
+			1.000
+
+we have to stop as after the dot (.)  all zeros are there.
+
+so, binary representation of decimal number 0.875  is
+			0.111
+
+
+now lets' convert  binary  
+			0.111  to  decimal 
+
+left side of dot (.) is 0, so nothing can be done
+
+right side of dot (.) is  111
+
+1     			1                      1
+
+2raise to -1       2 raise to -2	   2 raise to -3
+
+
+1* 1/2         +    1* 1/4          +    1*  1/8
+
+0.50           +    0.25            +    0.125  
+
+0.500          +    0.250           +    0.125   =  0.875
