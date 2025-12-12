@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Real-Time Form Validation Using jQuery</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+</head>
+<body>
+
+<div id="content">
+	<form id="jform" action="a.html" method="post">
+		<fieldset>
+			<legend>Personal Info</legend>
+			<p>
+				<label for="fullname" class="block">Full name:</label>
+				<input type="text" name="fullname" id="fullname" /><span id="sp1"></span>
+			</p>
+			<p>
+				<label for="birthday" class="block">Day of birth <small>(dd-mm-yyyy)</small>:</label>
+				<input type="text" name="birthday" id="birthday" /><span id="sp2"></span>
+			</p>
+			
+			<button type="button" id="send">submit</button>
+		</p>
+	</form>
+</div><!-- content -->
+
+<script type="text/javascript" src="jquery-1.9.1.js" charset="utf-8"></script>
+<script type="text/javascript" src="validate1.js" charset="utf-8"></script>
+</body>
+</html>

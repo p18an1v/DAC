@@ -1,0 +1,67 @@
+<html>
+<head>
+<style> .err{color:red;}</style>
+<script type="text/javascript" src="jquery-1.9.1.js" charset="utf-8"></script>
+<script>
+$(document).ready(function(){
+function chkuid()
+{var u=$("#uid")
+alert("hi")
+if(u.val().length==0)
+{$("#ue").text("enter valid data");
+return false
+}
+else{$("#ue").text(" ");
+return true; }
+
+}
+
+function chkpass()
+{var p=$("#pass")
+if(p.val().length==0)
+{$("#pe").text("enter valid password");
+return false}
+else{$("#pe").text(" ");
+return true; }
+
+}
+
+function chkmob()
+{
+var m=$("#mob")
+if(m.val().length==0)
+{$("#me").text("enter valid mobile");
+return false
+}
+else{$("#me").text(" ");
+return true; }
+}
+
+function chkfinal()
+{
+var userid=chkuid();
+var upassword=chkpass();
+var mobile=chkmob();
+if(userid&&upassword&&mobile)
+return true;
+else
+return false;
+
+}
+
+
+$("#frm").submit(chkfinal)
+$("#uid").change(chkuid)
+$("#pass").change(chkpass)
+$("#mob").change(chkmob)
+});
+</script>
+
+</head>
+<form id="frm">
+userid<input id="uid"/><span id="ue" class="err"></span>
+password<input type="password" id="pass"/><span id="pe" class="err"></span>
+Mobile<input type="text" id="mob"/><span id="me" class="err"></span>
+<input type="submit"/>
+</form>
+</html>

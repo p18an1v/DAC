@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="jquery-1.9.1.js"></script>
+<script>
+$(document).ready(function() {
+
+var b="";
+$("#btn").click(function()
+{var flag="true";
+	var sum=0;
+	if($("#ch1:checked"))
+	
+		sum=sum+parseInt($("#ch1").val);
+	
+	
+	if($("#ch1:checked"))
+	
+		sum=sum+$("#ch1").val;
+	
+	
+	alert(sum)
+		
+		
+});
+
+
+
+
+
+
+});
+
+
+
+
+</script>
+
+</head>
+<body>
+<pre>
+<form id="frm" action="a.html">
+
+C prog.<input  type="checkbox" id="ch1" value="200"/>200
+PHP<input  type="checkbox" id="ch2" value="450"/>450
+
+
+password:<input type="password" name="ps"/>
+<input type="button" id="btn" value="get data"/>
+</form>
+
+</pre>
+                
+<DIV ID="DD">dd</DIV>
+
+</body>
+</html>
+

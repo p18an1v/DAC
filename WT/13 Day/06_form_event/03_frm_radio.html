@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html><head><script src="jquery-1.9.1.js"></script>
+<script>
+$(document).ready(function() {
+var b="";
+$("#btn").click(function()
+{
+	var n1=parseInt($("#t1").val());
+	var n2=parseInt($("#t2").val());
+
+	if($('input[name="ch"]:checked').val()=="+")
+	{var n3=n1+n2;
+	$("#t3").val(n3);
+	}
+	else if($('input[name="ch"]:checked').val()=="-")
+	{
+	var n3=n1-n2;
+	$("#t3").val(n3);
+	}	
+	else
+	$("#DD").text("enter data");
+});
+});
+</script>
+</head><body>
+<pre>
+<form id="frm" action="a.html">
+no1<input   id="t1"/>
+no2<input  id="t2"/>
+no3<input   id="t3" disabled/>
+<input  type="radio" name="ch" value="+"/>+
+<input  type="radio" name="ch" value="-"/>-
+<input type="button" id="btn" value="get data"/>
+</form>
+</pre>                
+<div id="DD">dd</div>
+</body></html>
+

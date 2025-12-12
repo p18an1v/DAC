@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery-1.9.1.js">
+</script>
+
+<script>
+
+
+
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $.get("demo_test.php",function(data,status){
+      alert("Data: " + data + "\nStatus: " + status);
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<button>Send an HTTP GET request to a page and get the result back</button>
+
+<h3>
+Syntax:
+
+$.get(URL,callback);
+The required URL parameter specifies the URL you wish to request.
+
+The optional callback parameter is the name of a function to 
+be executed if the request succeeds.</h2>
+</body>
+</html>
+

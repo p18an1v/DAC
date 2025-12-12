@@ -1,0 +1,79 @@
+<html>
+  <head>
+
+    <title>Using Ajax with XML</title>
+<script src="jquery-1.9.1.js"></script>
+    <script language = "javascript">
+
+      var products;
+
+     
+      
+
+    
+    function setproducts()
+    {
+      document.getElementById('targetDiv').innerHTML = 
+        "You selected " + products[document.getElementById           
+          ('productsList').selectedIndex].firstChild.data;
+    }
+
+    </script>
+  </head>
+
+  <body>
+
+    <h1>Using Ajax with XML</h1>
+
+    <form>
+      <select size="1" id="productsList" 
+        onchange="setproducts()">
+        <option>Select an item</option>
+      </select>
+      <br>
+      <br>
+      <input type = "button" value = "Select products 1" 
+        id="btn1"> 
+      
+    </form>
+
+    <div class="result" width =100 height=100>Your selection will appear here.</div>
+<script>
+
+$("#btn1").click(function() {
+
+alert("hi");
+
+$.ajax({
+  url: 'products1.xml',
+  type:'post',
+statusCode:{200:function(c) {alert("data"+c);}},
+contentType:'application/x-www-form-urlencoded',
+ 
+  success: function(d) {
+    
+ products = d.getElementsByTagName("item");
+            listproducts();
+    alert(d);}
+
+  });
+
+      function listproducts ()
+      {
+        var loopIndex;
+        var selectControl = document.getElementById('productsList');
+
+        for (loopIndex = 0; loopIndex < products.length; loopIndex++ )
+        {
+            selectControl.options[loopIndex] = new 
+               Option(products[loopIndex].firstChild.data);
+        }
+    }
+
+
+});
+</script>
+
+  </body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html><head><script src="jquery-1.9.1.js"></script>
+<script>
+$(document).ready(function() {
+$("#btn").click(function()
+{	var sum=0;
+var a=$("input[name='ch1']").prop("checked")
+var b=$("input[name='ch2']").prop("checked")
+var t=$('input[name=ch1]:checked').val();
+alert("ch1 text"+t)
+alert("ch1 bool"+a)
+alert("ch2 bool"+b)
+if(a)
+{s1=$('input[name=ch1]:checked').val()
+alert(s1);
+alert(a)
+ sum=sum+parseInt(s1)
+}
+if(b)
+{  var s2= $('input[name="ch2"]').val()
+  sum=sum+parseInt(s2)
+}
+//$("#DD").append(sum);
+$("#DD").text("ans="+sum);
+    }); 
+ });
+</script></head><body>
+<pre>
+<form id="frm" name="frm"action="a.html">
+C prog.<input  type="checkbox" name="ch1" value="200"/>200
+PHP<input  type="checkbox" name="ch2" value="450"/>450
+<input type="button" id="btn" value="get data"/>
+</form>
+</pre>            
+<div id="DD">ans= </div>
+</body>
+</html>
+

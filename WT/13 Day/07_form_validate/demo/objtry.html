@@ -1,0 +1,31 @@
+<html>
+<head>
+<script src="jquery-1.9.1.js"></script>
+<script>
+$(document).ready(function(){ 
+
+var jval={
+'obj1': function(){alert("in obj1");},
+
+'obj2':function(){alert("in obj2");}
+
+
+};
+
+$("#btn").click( function()
+
+	{ 
+
+	jval.obj1();
+        jval.obj2(); 
+	});
+
+
+});
+</script>
+</head>
+
+<body>
+<input type="button" id="btn" value="button"/>
+</body>
+</html>

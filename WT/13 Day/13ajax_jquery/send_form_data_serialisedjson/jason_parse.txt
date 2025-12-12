@@ -1,0 +1,32 @@
+As of jQuery 3.0, $.parseJSON is deprecated.
+
+ To parse JSON strings use the native 
+
+JSON.parse method instead.
+
+-----------------------------------------------------------
+A common use of JSON is to exchange data to/from a web server.
+
+When receiving data from a web server, the data is always a string.
+
+Parse the data with JSON.parse(), and the data becomes a JavaScript object.
+---------------------------------------------
+
+
+
+
+Stringify a JavaScript Object
+Imagine we have this object in JavaScript:
+
+var obj = { name: "John", age: 30, city: "New York" };
+Use the JavaScript function JSON.stringify() to convert it into a string.
+
+var myJSON = JSON.stringify(obj);
+The result will be a string following the JSON notation.
+
+myJSON is now a string, and ready to be sent to a server:
+
+Example
+var obj = { name: "John", age: 30, city: "New York" };
+var myJSON = JSON.stringify(obj);
+document.getElementById("demo").innerHTML = myJSON;

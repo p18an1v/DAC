@@ -1,0 +1,63 @@
+<html>  <head>   <title>An Ajax demo</title> 
+<script src="jquery-1.9.1.js"></script>
+  </head> 
+  <body>
+    <H1>An Ajax demo</H1>
+    <form>
+      <input type = "button" value = "Fetch the message" 
+         id="btn1"> 
+<input type = "button" value = "second btn"          id="btn2"> 
+    </form>
+
+    <div class="result">   </div>
+	
+	<hr/>
+      <p>The fetched message will appear here.
+observe no submit button
+</p> 
+<p>Notes: ll modern browsers (IE7+, Firefox, Chrome, Safari, and Opera) have a built-in XMLHttpRequest object.
+
+Syntax for creating an XMLHttpRequest object:
+
+variable=new XMLHttpRequest();
+most of the browser support this method
+but
+
+
+  
+<script>
+$("#btn1").click(function() {
+$.ajax({
+  url: 'choosem.php',
+  type: 'POST',
+  contentType:'application/x-www-form-urlencoded',
+  data: {d:this.getAttribute('id')},
+  success: function(d) {
+    $('.result').html(d);
+    alert('Load was performed.');
+  }
+});
+
+});
+
+
+$("#btn2").click(function() {
+
+$.ajax({
+  url: 'choosem.php',
+  type: 'POST',
+contentType:'application/x-www-form-urlencoded',
+ data: {d:this.getAttribute('id')},
+  success: function(d) {
+    $('.result').html(d);
+    alert('Load was performed.');
+  },
+  error : function( xhr, status )
+  {    alert("Sorry, there was a problem!");
+}
+});
+
+});
+</script>
+  </body> 
+</html>

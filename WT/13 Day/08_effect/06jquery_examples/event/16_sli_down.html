@@ -1,0 +1,32 @@
+<script src="../jquery-1.9.1.js">
+</script>
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideDown("slow");
+  });
+});
+</script>
+ <style type="text/css"> 
+#panel,#flip
+{ padding:5px;
+text-align:center;
+background-color:#e5eecc;
+border:solid 1px #c3c3c3;
+}
+#panel
+{
+padding:50px;
+display:none;
+}
+</style>
+</head><body>
+ <div id="flip">Click to slide down panel</div>
+<div id="panel">Hello world!</div>
+<hr/>
+Syntax:
+$(selector).slideUp(speed,callback);
+The optional speed parameter specifies the duration of the effect. It can take the following values: "slow", "fast", or milliseconds.
+The optional callback parameter is the name of a function to be executed after the sliding completes.
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html><head>
+<script src="jquery-1.9.1.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+  alert("hi");
+    $("#div1").load("demo_test.txt");
+  });
+});
+</script>
+</head><body>
+<div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+<button>Get External Content</button>
+<h2>
+(selector).load(URL,data,callback);
+The required URL parameter specifies the URL you wish to load.
+The optional data parameter specifies a set of querystring key/value pairs to send along with the request.
+The optional callback parameter is the name of a function to be executed after the load() method is completed.</h2>
+<hr/>
+<h2>The optional callback parameter specifies a callback function to run when the load() method is completed. The callback function can have different parameters:
+responseTxt - contains the resulting content if the call succeed
+statusTxt - contains the status of the call
+xhr - contains the XMLHttpRequest object</h2>
+<hr/><h4>
+With the jQuery AJAX methods, you can request text, HTML, XML, or JSON from a remote server using both HTTP Get and HTTP Post - And you can load the external data directly into the selected HTML elements of your web page!
+<hr/>
+Note	Without jQuery, AJAX coding can be a bit tricky!
+
+Writing regular AJAX code can be a bit tricky, because different browsers have different syntax for AJAX implementation. This means that you will have to write extra code to test for different browsers. However, the jQuery team has taken care of this for us, so that we can write AJAX functionality with only one single line of code.
+</h4>
+<h2>
+This method is the simplest way to fetch data from the server. It is roughly equivalent to $.get(url, data, success) except that it is a method rather than global function and it has an implicit callback function.
+</h2>
+</body>
+</html>
+
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+width:10px;
+height:10px;
+padding :20px;  
+border :2px solid green;
+
+</style>
+
+<script src="jquery-1.9.1.js"></script>
+<script>
+$(document).ready(function(){
+  $("#d1").click(function(){
+  $("#d1").css("background-color","yellow")
+  });
+
+$("#d2").click(function(){
+  $("#d2").css("background-color","green")
+  });
+  
+$("#d3").click(function(){
+  $("#d3").css("background-color","red")
+  });
+  
+  
+  
+$("#d4").click(function(){
+  $("#d4").css("background-color","pink")
+  });
+  var p;
+  $("#btn").click(function(){
+   p = $( "div" ).detach();
+  });
+  $("#ba").click(function(){
+    if ( p ) {
+    p.appendTo( "body" );
+   
+  } 
+});
+  
+  });
+</script></head>
+<body>
+<button id="btn">detache</button>
+<button id="ba">attache</button>
+<table>
+<tr>
+<td><div id="d1"> p.</div></td>
+<td><div id="d2">p.</div></td>
+</tr>
+<tr>
+<td><div id="d3"> p.</div></td>
+<td><div id="d4"> p.</div></td>
+</tr>
+</table>
+
+</body>
+</html>
+
