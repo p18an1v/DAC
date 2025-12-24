@@ -1,0 +1,42 @@
+package mypack;
+import java.io.*;
+
+
+// All enums are Serializable by default
+
+/*
+ * enum MySingleton  is equivalent to
+ * 
+ * public final class MySingleton extends java.lang.Enum
+ * 
+ * class Enum already implements Serializable
+ */
+
+enum MySingleton
+{
+    INSTANCE;
+    int value = 42;
+}
+public class Test {
+    public static void main(String[] args) throws Exception {
+        MySingleton s1 = MySingleton.INSTANCE;
+        s1.value = 99;
+
+        // Serialize
+        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("c:\\temp\\singleton.ser"));
+        oos.writeObject(s1);
+        oos.close();
+
+        // Reset value
+        s1.value = 0;
+
+        // Deserialize
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("c:\\temp\\singleton.ser"));
+        MySingleton s2 = (MySingleton) ois.readObject();
+        ois.close();
+
+        System.out.println(s1 == s2);      // true 
+        System.out.println(s2.value);      // 0  and not 99
+    }
+}
+
