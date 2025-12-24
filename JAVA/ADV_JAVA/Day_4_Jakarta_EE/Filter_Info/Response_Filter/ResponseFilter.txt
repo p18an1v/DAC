@@ -1,0 +1,20 @@
+import jakarta.servlet.*;
+import jakarta.servlet.annotation.WebFilter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class ResponseFilter implements Filter {
+
+    @Override
+    public void doFilter(ServletRequest request, 
+                         ServletResponse response,
+                         FilterChain chain) throws IOException, ServletException {
+
+        // Let the request continue to the servlet
+        chain.doFilter(request, response);
+
+        // After servlet has written the response → filter adds footer
+        PrintWriter out = response.getWriter();
+        out.println("<br><br>---- Response Modified by Filter ----");
+    }
+}

@@ -1,0 +1,10 @@
+even after adding dependencies inside pom.xml , why errors are not going quickly inside intelij,  they go immediately in the eclipse 
+
+
+perform the following step:
+
+Ctrl + F9 → Rebuild Project
+(Equivalent to Eclipse’s Project → Build)
+
+make sure errors go
+

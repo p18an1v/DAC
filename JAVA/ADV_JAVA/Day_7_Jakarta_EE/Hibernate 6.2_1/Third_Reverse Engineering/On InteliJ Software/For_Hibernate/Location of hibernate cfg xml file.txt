@@ -1,0 +1,1 @@
+copy hibernate.cfg.xml inside "src/main/resources" folder.

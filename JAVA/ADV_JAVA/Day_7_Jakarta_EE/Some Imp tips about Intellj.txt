@@ -1,0 +1,32 @@
+download IntelliJ IDEA Ultimate
+
+from
+
+https://www.jetbrains.com/idea/download/other.html
+
+
+type
+sout and press tab -  System.out.println
+
+souf and press tab -  System.out.printf
+
+
+How to change the font inside Intelij ultimate ?
+
+File
+	settings
+		editor
+			font
+
+
+While creating new project
+	select "maven"
+
+
+copy  "hibernate.cfg.xml"
+
+inside "resources" folder
+
+
+on the file editor window  select
+	Add to hibernate facet configuration

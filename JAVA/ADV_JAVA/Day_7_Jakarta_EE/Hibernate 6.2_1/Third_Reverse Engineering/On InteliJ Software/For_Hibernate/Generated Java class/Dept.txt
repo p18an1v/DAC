@@ -1,0 +1,43 @@
+package mypack;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "dept")
+public class Dept {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "deptno", nullable = false)
+    private Integer id;
+
+    @Column(name = "dname", length = 20)
+    private String dname;
+
+    @Column(name = "loc", length = 30)
+    private String loc;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getDname() {
+        return dname;
+    }
+
+    public void setDname(String dname) {
+        this.dname = dname;
+    }
+
+    public String getLoc() {
+        return loc;
+    }
+
+    public void setLoc(String loc) {
+        this.loc = loc;
+    }
+
+}

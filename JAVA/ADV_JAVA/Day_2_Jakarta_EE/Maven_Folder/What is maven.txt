@@ -1,0 +1,37 @@
+Maven is tool used for 
+a) dependencies
+b) build
+c) documentation
+
+The main use of maven is instead of copying required jar file/s inside lib physically and making the project heavy we can make our project use dependencies (reqd. jar file/files) from the local repository ( some folder on your system ). That way our project remains light weight.
+
+
+central repository- on internet
+
+local repository - c:\users
+
+remote repository - this is a customized repository made by programmers.
+
+What is the sequence in which dependencies are searched by application?
+
+a) local repository
+	if dependency (jar file) is available , it is used.
+
+b) central repository-
+	if dependency is not available in the local repository, it is searched inside central repository. If it is available, it is downloaded into local repository.
+
+c) remote repository -
+	sometimes if a dependency is not available inside central repository and if the remote repository name is specified in the pom.xml, dependency will be searched in that particular remote repository and downloaded inside local repository.
+
+How to use Maven in java?
+ans: To use maven in java there are two ways:
+
+a) create a project (dynamic or java project)
+	configure
+		convert to maven project
+
+or
+
+b) create maven project
+
+org.apache.maven.archetypes    maven.archetype.quickstart    1.5
